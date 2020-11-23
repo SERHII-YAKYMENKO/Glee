@@ -4,223 +4,199 @@
 @import 'global';
 
 .header {
-  padding: 42px 0;
+  padding: 45px 0 47px;
 
   &__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1770px;
-    margin: 0 auto;
-  }
-
-  .logo {
-    display: flex;
-    align-items: center;
-
-    &__name {
-      margin-right: 150px;
-      padding-left: 12px;
-      @extend %rubik-500;
-      font-size: 36px;
-      line-height: 1.6;
-      color: $default;
-    }
+    @include dflex-between;
   }
 }
 
 .menu {
+  @include dflex-between;
+  @extend %rubik-500;
+  font-size: 15px;
+
+  &-nav {
+    margin-right: 330px;
+  }
 
   &__list {
     display: flex;
   }
 
-  &__list-item+.menu__list-item {
-    padding-left: 35px;
-  }
+  &__item {
+    &+& {
+      margin-left: 35px;
 
-  &__list-link {
-    font-size: 16px;
-    line-height: 1.3;
-    @extend %rubik-500;
-    color: $default;
+      color: 0.3s;
+    }
+
+    &:hover {
+      color: $color-title-accent;
+    }
   }
 }
 
-.user-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.toolbar {
+
+  &__list {
+    @include dflex-between;
+  }
+
+  &__item {
+    @include dflex-between;
+  }
 
   &__link {
-    position: relative;
-    display: flex;
-    justify-content: center;
-  }
 
-  &__link--search {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 20px;
-    background-color: #edf1f4;
-  }
+    &--search {
+      @include toolbar-item1;
+      background-color: $color-search;
+      background-image: url('../images/icons/search.svg');
+    }
 
-  &__favorite {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 180px;
-    height: 50px;
-    border-radius: 50px;
-    margin-right: 17px;
-    padding-top: 12px;
-    background-color: $bg-bnner;
-  }
+    &--likes {
+      margin-left: 20px;
+      @include toolbar-item2;
+      background-color: $color-banner;
+      background-image: url('../images/icons/likes.svg');
+    }
 
-  &__link--toolbar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: $accent;
-  }
+    &-num1 {
+      @include toolbar-num;
+      left: 55px;
+    }
 
-  &__num {
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    top: -6px;
-    right: -10px;
-    border-radius: 50%;
-    font-size: 10px;
-    line-height: 1.6;
-    text-align: center;
-    color: $title;
-    background-color: #fff;
-  }
+    &--cart {
+      margin-right: 20px;
+      @include toolbar-item3;
+      background-color: $color-banner;
+      background-image: url('../images/icons/cart.svg');
 
-  &__segment {
-    position: absolute;
-    height: 32px;
-    top: -13px;
-    right: -35px;
-    border-right: 1px solid #fde7d3;
+      &::before {
+        position: absolute;
+        content: '';
+        height: 32px;
+        left: 0;
+        top: 9px;
+        border-left: 1px solid #fde7d3;
+      }
+    }
+
+    &-num2 {
+      @include toolbar-num;
+      left: 42px;
+    }
+
+    &--bar {
+      @include toolbar-item1;
+      background-color: $color-button;
+      background-image: url('../images/icons/bar.svg');
+    }
   }
 }
 
 .footer-top {
-  display: flex;
-  padding: 85px 0 65px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 33px;
+  padding: 90px 0 65px;
+  border-bottom: 1px solid $color-footer-line;
   @extend %rubik-400;
   font-size: 14px;
-  border-bottom: 1px solid #dae4e9;
+  color: $color-footer-text;
 
-  &__item {
-    align-items: baseline;
+  &__logo {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__upper,
+  &__title {
+    text-transform: uppercase;
   }
 
   &__contact,
-  &__nav {
-    width: 200px;
-    margin-right: 100px;
+  &__about,
+  &__account {
+    max-width: 200px;
+    width: 100%;
   }
 
-  &__item-form {
-    max-width: 270px;
-  }
-
-  .logo {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-
-    &__name {
-      padding-left: 12px;
-      @extend %rubik-500;
-      font-size: 36px;
-      line-height: 1.6;
-      color: $default;
-    }
-  }
-
-  &__adress,
-  &__phone,
-  &__email {
-    display: block;
-    color: $footer;
-  }
-
-  &__adress,
+  &__address,
   &__phone {
-    margin-bottom: 15px;
+    display: block;
+    margin-bottom: 17px;
   }
 
   &__title {
-    margin-bottom: 22px;
-    margin-top: 25px;
+    padding-top: 10px;
+    margin-bottom: 21px;
     @extend %dmsans-700;
     font-size: 16px;
-    line-height: 1.3;
-    text-transform: uppercase;
-    color: #1f2044;
+    color: $color-footer-title;
   }
 
-  &__link {
-    display: block;
-    margin-bottom: 12px;
-    color: $footer;
+  &__item {
+    margin-bottom: 14px;
+  }
+
+  &__signup {
+    max-width: 280px;
+    width: 100%;
   }
 
   &__text {
-    margin-bottom: 35px;
-    line-height: 1.45;
+    margin-bottom: 40px;
   }
 
   &__form-input {
-    max-width: 170px;
+    max-width: 168px;
     width: 100%;
-    padding: 10px 15px 10px;
+    padding: 13px 10px 13px 15px;
     border: none;
-    outline: none;
     @extend %dmsans-400;
     font-size: 14px;
-    background-color: $form;
+    line-height: 1;
+    color: $color-placeholder;
+    background-color: $color-form-bg;
 
     &::placeholder {
       @extend %dmsans-400;
       font-size: 12px;
-      color: #234969;
+      color: $color-placeholder;
     }
   }
 
   &__form-btn {
-    border: none;
-    padding: 9px 16px;
-    @extend %dmsans-400;
-    font-size: 14px;
+    padding: 15px 15px 14px 15px;
     color: #fff;
-    background-color: $accent;
-    cursor: pointer;
+    background-color: $color-button;
   }
 }
 
-.footer-bottom {
-  display: flex;
-  height: 90px;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 14px;
+.footer-bootom {
+  @include dflex-between;
+  padding: 30px 0;
+  color: $color-footer-text;
   @extend %rubik-400;
+  font-size: 14px;
 
-  &__nav-items {
-    display: flex;
-    justify-content: space-between;
+  &__list {
+    @include dflex-between;
   }
 
-  &__nav-item+.footer-bottom__nav-item {
-    margin-left: 12px;
-    padding-left: 20px;
-    border-left: 1px solid $footer;
+  &__item {
+    &+& {
+      position: relative;
+      margin-left: 32px;
+    }
+
+    &+&::before {
+      position: absolute;
+      content: '|';
+      left: -17px;
+    }
   }
 }
 

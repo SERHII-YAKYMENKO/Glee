@@ -1,18 +1,21 @@
 html,
 body {
-  height: 100%;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  //text-rendering: optimizeLegibility;
+  text-rendering: optimizeSpeed;
 }
 
 body {
-  color: $default;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  @extend %dmsans-500;
   font-size: 16px;
   line-height: 1.3;
-  display: flex;
-  flex-direction: column;
-}
-
-.main {
-  flex-grow: 1;
+  color: $color-primary;
+  background-color: $color-background;
 }
 
 .container {
@@ -20,3 +23,68 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.external-container {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:visited {
+    color: inherit;
+    text-decoration: none;
+    outline: 0;
+  }
+
+  &:focus,
+  &:active,
+  &:hover {
+    color: inheritr;
+    text-decoration: none;
+    outline: 0;
+  }
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+input {
+  &:focus {
+    outline: none;
+  }
+}
+
+[disabled] {
+  pointer-events: none;
+  opacity: 0.5
+}
+
+.br {
+  display: block;
+}
+
+/**
+ * Disable horizontal scroll
+ */
+.overflow-x {
+  overflow-x: hidden;
+}
+
+// h1,
+// h2,
+// h3 {
+//   font-family: $header-font;
+//   font-weight: bold;
+// }
