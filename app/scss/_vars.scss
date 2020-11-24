@@ -1,4 +1,3 @@
-// -4398
 $color-background: #fff;
 
 // ** color header **//
@@ -37,45 +36,6 @@ $color-placeholder: #234969;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-@mixin toolbar-item1 {
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-}
-
-@mixin toolbar-item2 {
-  position: relative;
-  background-position: 62% 65%;
-  background-repeat: no-repeat;
-  width: 88px;
-  height: 52px;
-  border-radius: 25px 0 0 25px;
-}
-
-@mixin toolbar-item3 {
-  position: relative;
-  background-position: 45% 65%;
-  background-repeat: no-repeat;
-  width: 88px;
-  height: 52px;
-  border-radius: 0 25px 25px 0;
-}
-@mixin toolbar-num {
-  position: absolute;
-  top: 17px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  text-align: center;
-  @extend %dmsans-400;
-  font-size: 10px;
-  line-height: 1.7;
-  color: $color-header-title;
-  background-color: #fff;
 }
 
 %dmsans-400 {

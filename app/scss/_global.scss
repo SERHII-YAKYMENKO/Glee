@@ -1,6 +1,5 @@
 html,
 body {
-
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 
@@ -29,6 +28,50 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+@each $icons-default in 'search''likes''cart''bar' {
+  .toolbar__link--#{$icons-default} {
+    background-image: url('../images/icons/#{$icons-default}.svg');
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto,
+      cover;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 25px;
+    background-color: $color-search;
+    z-index: 50;
+  }
+}
+
+@each $icons-resize in 'likes''cart' {
+  .toolbar__link--#{$icons-resize} {
+    min-width: 90px;
+    background-position: 60% 60%;
+    border-radius: 25px 0 0 25px;
+    background-color: $color-banner;
+    margin-left: 20px;
+  }
+}
+
+@each $toolbar-num in 'num1''num2' {
+  .toolbar__link-#{$toolbar-num} {
+    position: absolute;
+    top: 13px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    text-align: center;
+    @extend %dmsans-400;
+    font-size: 10px;
+    line-height: 1.7;
+    color: $color-header-title;
+    background-color: #fff;
+    left: 55px;
+  }
+}
+
 
 a {
   color: inherit;
@@ -81,10 +124,3 @@ input {
 .overflow-x {
   overflow-x: hidden;
 }
-
-// h1,
-// h2,
-// h3 {
-//   font-family: $header-font;
-//   font-weight: bold;
-// }
