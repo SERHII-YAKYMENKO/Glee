@@ -29,7 +29,7 @@ body {
   padding: 0 15px;
 }
 
-@each $icons-default in 'search''likes''cart''bar' {
+@each $icons-default in $icons-toolbar {
   .toolbar__link--#{$icons-default} {
     background-image: url('../images/icons/#{$icons-default}.svg');
     position: relative;
@@ -45,7 +45,7 @@ body {
   }
 }
 
-@each $icons-resize in 'likes''cart' {
+@each $icons-resize in $icons-toolbar-resize {
   .toolbar__link--#{$icons-resize} {
     min-width: 90px;
     background-position: 60% 60%;
@@ -55,12 +55,13 @@ body {
   }
 }
 
-@each $toolbar-num in 'num1''num2' {
+@each $toolbar-num in $span-toolbar {
   .toolbar__link-#{$toolbar-num} {
     position: absolute;
     top: 13px;
     width: 16px;
     height: 16px;
+    left: 55px;
     border-radius: 50%;
     text-align: center;
     @extend %dmsans-400;
@@ -68,10 +69,75 @@ body {
     line-height: 1.7;
     color: $color-header-title;
     background-color: #fff;
-    left: 55px;
   }
 }
 
+@each $support in $icons-support {
+  .support__icon--#{$support} {
+    background-image: url('../images/icons/#{$support}.svg');
+    background-repeat: no-repeat;
+    background-size: auto, cover;
+    min-width: 50px;
+    min-height: 49px;
+    z-index: 50;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 35%;
+      left: 75%;
+      border-radius: 10px;
+      background-color: $color-button;
+      opacity: 0.5;
+    }
+  }
+}
+
+@mixin pro {
+  @each $normal in $icons-gray {
+    .products__link--#{$normal} {
+      background-image: url('../images/icons/icons-gray/#{$normal}.svg');
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto, cover;
+      min-width: 45px;
+      min-height: 45px;
+      left: 20%;
+      border-radius: 23px;
+      z-index: 50;
+      transition: all 0.2s;
+      background-color: #fff;
+
+      &:hover {
+        background-color: $color-button;
+        box-shadow: 0px 6px 25px rgba(37, 37, 37, 0.05);
+
+        &.products__link--search {
+          background-image: url('../images/icons/icons-white/search.svg');
+        }
+
+        &.products__link--cart {
+          background-image: url('../images/icons/icons-white/cart.svg');
+        }
+
+        &.products__link--likes {
+          background-image: url('../images/icons/icons-white/likes.svg');
+        }
+      }
+    }
+  }
+}
+
+.title {
+  font-size: 36px;
+  text-align: center;
+  color: $color-title-accent;
+  @extend %dmsans-700;
+}
 
 a {
   color: inherit;
@@ -118,9 +184,6 @@ input {
   display: block;
 }
 
-/**
- * Disable horizontal scroll
- */
 .overflow-x {
   overflow-x: hidden;
 }

@@ -4,11 +4,10 @@ $color-background: #fff;
 // menu. subtitle banner heaer. button under 1 section
 $color-primary: #436372;
 $color-search: #edf1f4;
-// menu bar. bacgroud banner
 $color-banner: #fcd7b6;
 
 //** section banner **//
-// banner title. name cards. title cards. text cards
+// name cards. title cards. text cards
 $color-header-title: #243f4d;
 $color-dots-def: #fde3cc;
 $color-title-cards: #414141;
@@ -16,7 +15,7 @@ $color-text-cards: #585858;
 $color-line-cards: #e8e4df;
 
 // ** color main **//
-// toolbar. banner button. other button. color price. color section #2
+// color price. color section #2
 $color-button: #a3bbc8;
 $color-form-bg: #fef7f0;
 $color-title-accent: #191919;
@@ -32,10 +31,29 @@ $color-footer-text: #7b7b7b;
 $color-footer-line: #dae4e9;
 $color-placeholder: #234969;
 
-@mixin dflex-between {
+//** toolbar **//
+$icons-toolbar: ("search", "likes", "cart", "bar");
+$icons-toolbar-resize: ("likes", "cart");
+$span-toolbar: ("num1", "num2");
+
+//** support **//
+$icons-support: ("support", "delivery", "payment");
+
+//** products **//
+$icons-products: ("search", "cart", "likes");
+$icons-gray: ("search", "cart", "likes");
+$icons-white: ("search", "cart", "likes");
+
+%dflex-between {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+%btn {
+  background-color: $color-button;
+  color: #fff;
+  padding: 20px 50px 20px 20px;
 }
 
 %dmsans-400 {

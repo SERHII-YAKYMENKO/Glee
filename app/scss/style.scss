@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .header {
@@ -8,7 +9,7 @@
 }
 
 .menu {
-  @include dflex-between;
+  @extend %dflex-between;
   @extend %rubik-500;
   font-size: 15px;
 
@@ -42,11 +43,11 @@
 .toolbar {
 
   &__list {
-    @include dflex-between;
+    @extend %dflex-between;
   }
 
   &__item {
-    @include dflex-between;
+    @extend %dflex-between;
   }
 
   &__link {
@@ -133,9 +134,9 @@
   }
 
   &__form-input {
+    padding: 13px 10px 13px 15px;
     max-width: 168px;
     width: 100%;
-    padding: 13px 10px 13px 15px;
     border: none;
     @extend %dmsans-400;
     font-size: 14px;
@@ -152,20 +153,19 @@
 
   &__form-btn {
     padding: 15px 15px 14px 15px;
-    color: #fff;
-    background-color: $color-button;
+    @extend %btn;
   }
 }
 
 .footer-bootom {
-  @include dflex-between;
+  @extend %dflex-between;
   padding: 30px 0;
   color: $color-footer-text;
   @extend %rubik-400;
   font-size: 14px;
 
   &__list {
-    @include dflex-between;
+    @extend %dflex-between;
   }
 
   &__item {
@@ -178,6 +178,280 @@
       position: absolute;
       content: '|';
       left: -17px;
+    }
+  }
+}
+
+.slider {
+
+  &-wrapper {
+    position: relative;
+    min-height: 76vh;
+    z-index: 10;
+    background-color: $color-banner;
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 12%;
+      left: 51%;
+      min-width: 634px;
+      min-height: 634px;
+      border-radius: 50%;
+      z-index: -1;
+      background-image: linear-gradient(-90deg, #fff 0%, $color-banner);
+    }
+  }
+
+  &__item {
+    @extend %dflex-between;
+    margin-bottom: 205px;
+  }
+
+  &__title {
+    margin: 215px 0 27px;
+    max-width: 500px;
+    width: 100%;
+    @extend %rubik-500;
+    font-size: 72px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $color-header-title;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    max-width: 370px;
+    @extend %rubik-400;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  &__btn {
+    @extend %btn;
+    padding: 23px 103px 21px 30px;
+    align-items: center;
+
+    &::after {
+      position: absolute;
+      content: '';
+      background-size: cover;
+      min-width: 22px;
+      min-height: 9px;
+      transform: translate(62px, 2px);
+      background-image: url('../images/icons/arrows-right-btn.svg');
+    }
+  }
+
+  .slick-slide img {
+    margin-top: 275px;
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+
+    li {
+
+      &+li {
+        margin-left: 14px;
+      }
+
+      button {
+        position: relative;
+        min-width: 29px;
+        min-height: 29px;
+        border-radius: 50%;
+        @extend %rubik-500;
+        font-size: 11px;
+        line-height: 1;
+        color: $color-header-title;
+        background-color: #fde3cc;
+      }
+    }
+
+    .slick-active {
+      button {
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+.support {
+  margin-bottom: 61px;
+
+  &__items {
+    @extend %dflex-between;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    background-color: $color-form-bg;
+  }
+
+  &__item {
+    display: flex;
+    margin: 0 auto;
+    max-width: 300px;
+  }
+
+  &__box {
+    margin-left: 30px;
+  }
+
+  &__title {
+    margin-bottom: 3px;
+    @extend %dmsans-700;
+    font-size: 18px;
+  }
+
+  &__text {
+    @extend %dmsans-400;
+    line-height: 1.8;
+  }
+}
+
+.products {
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__filter {
+    text-align: center;
+  }
+
+  &__btn {
+    margin-bottom: 80px;
+    text-align: center;
+    @extend %dmsans-700;
+    font-size: 16px;
+    color: $color-menu-title;
+
+    &+& {
+      margin-left: 25px;
+    }
+
+    &:hover {
+      color: $color-title-accent;
+    }
+  }
+
+  .mixitup-control-active {
+    color: $color-title-accent;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 30px;
+    margin-bottom: 185px;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 0 20px;
+    background-color: transparent;
+    min-width: 270px;
+    min-height: 380px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 25px rgba(37, 37, 37, 0.05);
+    background-color: #fff;
+  }
+
+  &__list {
+    display: none;
+    @include pro;
+  }
+
+  &__item:hover .products__list {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    z-index: 9999;
+  }
+
+  &__link--cart {
+    margin: 0 15px;
+  }
+
+  &__name {
+    @extend %dmsans-500;
+    line-height: 2;
+    color: $color-header-title;
+  }
+
+  &__price {
+    @extend %dmsans-700;
+    color: $color-button;
+  }
+
+  &-carts {
+    @extend %dflex-between;
+
+    &__item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      min-width: 49%;
+      min-height: 385px;
+      background-color: $color-cards-product;
+    }
+
+    &__img {
+      position: absolute;
+      content: '';
+      top: -28%;
+      left: 16%;
+    }
+
+    &__lighting {
+      margin-top: auto;
+      margin-left: 45%;
+      padding-bottom: 100px;
+      max-width: 340px;
+      width: 100%;
+    }
+
+    &__name {
+      margin-bottom: 15px;
+      @extend %dmsans-700;
+      font-size: 26px;
+      color: $color-header-title;
+    }
+
+    &__text {
+      margin-bottom: 30px;
+      @extend %rubik-400;
+      font-size: 16px;
+      line-height: 1.8;
+      color: $color-header-title;
+    }
+
+    &__btn {
+      position: relative;
+      @extend %btn;
+      padding: 20px 88px 20px 18px;
+      align-items: center;
+      border-radius: 5px;
+      border: 1px solid $color-primary;
+      background-color: rgba(36, 63, 77, 0);
+      color: $color-primary;
+
+      &::after {
+        position: absolute;
+        content: '';
+        background-size: cover;
+        min-width: 22px;
+        min-height: 9px;
+        transform: translate(45px, 5px);
+        background-image: url('../images/icons/arrows-gray-right.svg');
+      }
     }
   }
 }
