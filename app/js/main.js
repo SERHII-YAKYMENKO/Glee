@@ -1,9 +1,18 @@
 $(function () {
-  $('.slider__inner').slick({
+  $('.top-slider__items').slick({
     dots: true,
-    arrows: false
+    arrows: false,
+    fade: true,
+    autoplay: true,
+    autoplaySpeed: 3000
   });
-
-  var mixer = mixitup('.products');
+  
+  $('.filter__btn').on('click', function () {
+    $('.filter__btn.active').removeClass('active');
+    $(this).addClass('active');
+  });
+  
+  var mixer1 = mixitup('.production');
+  var mixer2 = mixitup('.design');
 
 });

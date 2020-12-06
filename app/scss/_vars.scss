@@ -1,60 +1,28 @@
 $color-background: #fff;
-
-// ** color header **//
-// menu. subtitle banner heaer. button under 1 section
+$color-accent: #191919;
 $color-primary: #436372;
-$color-search: #edf1f4;
-$color-banner: #fcd7b6;
 
-//** section banner **//
-// name cards. title cards. text cards
-$color-header-title: #243f4d;
-$color-dots-def: #fde3cc;
+$color-title-header: #243f4d;
+$color-title-menu: #8b8b8b;
 $color-title-cards: #414141;
+$color-title-design: #1a1a1a;
+$color-title-footer: #1f2044;
+
 $color-text-cards: #585858;
-$color-line-cards: #e8e4df;
+$color-text-footer: #7b7b7b;
 
-// ** color main **//
-// color price. color section #2
 $color-button: #a3bbc8;
+$color-banner: #fcd7b6;
+$color-dots-def: #fde3cc;
+$color-line-cards: #e8e4df;
+$color-search: #edf1f4;
 $color-form-bg: #fef7f0;
-$color-title-accent: #191919;
-// title menu section default
-$color-menu-title: #8b8b8b;
 $color-cards-product: #feefe2;
-$color-view-all: #262626;
+$color-design: #f8f8f8;
+$color-view: #262626;
 $color-date: #222933;
-
-//** color footer **//
-$color-footer-title: #1f2044;
-$color-footer-text: #7b7b7b;
 $color-footer-line: #dae4e9;
 $color-placeholder: #234969;
-
-//** toolbar **//
-$icons-toolbar: ("search", "likes", "cart", "bar");
-$icons-toolbar-resize: ("likes", "cart");
-$span-toolbar: ("num1", "num2");
-
-//** support **//
-$icons-support: ("support", "delivery", "payment");
-
-//** products **//
-$icons-products: ("search", "cart", "likes");
-$icons-gray: ("search", "cart", "likes");
-$icons-white: ("search", "cart", "likes");
-
-%dflex-between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-%btn {
-  background-color: $color-button;
-  color: #fff;
-  padding: 20px 50px 20px 20px;
-}
 
 %dmsans-400 {
   font-family: 'DMSans-Regular', sans-serif;
@@ -86,7 +54,10 @@ $icons-white: ("search", "cart", "likes");
   font-weight: 700;
 }
 
-%myriadpro-400 {
-  font-family: 'MyriadPro-Regular', sans-serif;
-  font-weight: 400;
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
 }

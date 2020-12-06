@@ -1,0 +1,125 @@
+@mixin btn {
+  padding: 20px 50px 20px 20px;
+  @extend %rubik-500;
+  font-size: 15px;
+  color: $color-background;
+  background-color: $color-button;
+}
+
+@mixin pro {
+  @each $normal in "search""cart""likes" {
+    .product__link--#{$normal} {
+      background-image: url('../images/icons/icons-gray/#{$normal}.svg');
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto, cover;
+      width: 45px;
+      height: 45px;
+      left: 20%;
+      border-radius: 23px;
+      z-index: 50;
+      background-color: $color-background;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        background-color: $color-button;
+        box-shadow: 0 0 10px 10px $color-button;
+
+        &.product__link--search {
+          background-image: url('../images/icons/icons-white/search.svg');
+        }
+
+        &.product__link--cart {
+          background-image: url('../images/icons/icons-white/cart.svg');
+        }
+
+        &.product__link--likes {
+          background-image: url('../images/icons/icons-white/likes.svg');
+        }
+      }
+    }
+  }
+}
+
+@mixin form {
+  .form__input {
+    padding: 13px 10px 13px 15px;
+    max-width: 168px;
+    width: 100%;
+    border: none;
+    @extend %dmsans-400;
+    font-size: 14px;
+    line-height: 1;
+    color: $color-placeholder;
+    background-color: $color-form-bg;
+
+    &::placeholder {
+      @extend %dmsans-400;
+      font-size: 12px;
+      color: $color-placeholder;
+    }
+  }
+
+  .form__btn {
+    @include btn;
+    margin-left: -4px;
+    padding: 15px 15px 14px 15px;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0 10px 4px $color-button;
+      color: $color-accent;
+    }
+  }
+}
+
+@each $icons-default in "search""likes""cart""bar" {
+  .toolbar__link--#{$icons-default} {
+    background-image: url('../images/icons/#{$icons-default}.svg');
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto, cover;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 50%;
+    background-color: $color-search;
+    z-index: 50;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0 10px 4px $color-button;
+    }
+  }
+}
+
+@each $icons-resize in "likes""cart" {
+  .toolbar__link--#{$icons-resize} {
+    min-width: 90px;
+    background-position: 50% 60%;
+    border-radius: 25px 0 0 25px;
+    background-color: $color-banner;
+    margin-left: 20px;
+  }
+}
+
+@each $support in "support""delivery""payment" {
+  .support__item--#{$support} {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -30%;
+      left: -20%;
+      background-image: url('../images/icons/#{$support}.svg');
+      background-repeat: no-repeat;
+      background-size: auto, cover;
+      min-width: 60px;
+      min-height: 60px;
+      transform: translate(-50%, 50%);
+    }
+  }
+}

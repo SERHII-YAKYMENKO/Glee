@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 500" width="1920" height="500">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #e5e5e5 } 
+	</style>
+	<g id="video">
+		<path id="Rectangle 70" class="shp0" d="M0 0.19L1920 0.19L1920 500.19L0 500.19L0 0.19Z" />
+	</g>
+</svg>
