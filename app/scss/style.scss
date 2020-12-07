@@ -234,7 +234,7 @@
   &__link {
     @include btn;
     padding: 20px 110px 20px 20px;
-    background-color: $color-background;
+    background-color: #ccc;
     z-index: 100;
     transition: all 0.5s ease-in-out;
 
@@ -643,19 +643,23 @@
     justify-content: space-between;
     flex-direction: column;
     margin: 0 auto;
-    max-width: 300px;
+    max-width: 299px;
     width: 100%;
     min-height: 110px;
     font-size: 18px;
     color: $color-view;
+    position: relative;
   }
 
   &__link {
-    letter-spacing: 1.5px;
+    // letter-spacing: 1.5px;
+    @extend %dmsans-500;
   }
 
   &__signature {
-    margin-top: auto;
+    position: absolute;
+    bottom: -8px;
+    padding-top: 12px;
     border-top: 1px solid #e0e0e0;
     @extend %rubik-400;
     font-size: 12px;
@@ -665,9 +669,37 @@
   }
 
   &__time {
-    margin-right: 30px;
+    margin-right: 40px;
+    margin-left: 15px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url('../images/icons/calendar.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 12px;
+      height: 13px;
+      top: 0;
+      left: -17px;
+    }
   }
 
+  &__autor {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url('../images/icons/user.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 13px;
+      height: 13px;
+      top: 0;
+      left: -17px;
+    }
+  }
   .partner {
     padding-top: 265px;
     padding-bottom: 85px;
