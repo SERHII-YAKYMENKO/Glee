@@ -10,6 +10,7 @@ $color-title-footer: #1f2044;
 
 $color-text-cards: #585858;
 $color-text-footer: #7b7b7b;
+$color-text-white: #fff;
 
 $color-button: #a3bbc8;
 $color-banner: #fcd7b6;
@@ -23,6 +24,25 @@ $color-view: #262626;
 $color-date: #222933;
 $color-footer-line: #dae4e9;
 $color-placeholder: #234969;
+$color-signature-border: #e0e0e0;
+$color-box-shadow: rgba(37, 37, 37, 0.05);
+
+%btn {
+  padding: 20px 50px 20px 20px;
+  @extend %rubik-500;
+  font-size: 15px;
+  color: $color-text-white;
+  background-color: $color-button;
+}
+
+%statistic-icons {
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: auto, cover;
+  top: -49px;
+  left: 25%;
+  transform: translate(0, -50%);
+}
 
 %dmsans-400 {
   font-family: 'DMSans-Regular', sans-serif;
@@ -39,6 +59,11 @@ $color-placeholder: #234969;
   font-weight: 700;
 }
 
+%rubik-300 {
+  font-family: 'Rubik-Light', sans-serif;
+  font-weight: 300;
+}
+
 %rubik-400 {
   font-family: 'Rubik-Regular', sans-serif;
   font-weight: 400;
@@ -47,6 +72,15 @@ $color-placeholder: #234969;
 %rubik-500 {
   font-family: 'Rubik-Medium', sans-serif;
   font-weight: 500;
+}
+
+%rubik-700 {
+  font-family: 'Rubik-Bold', sans-serif;
+  font-weight: 700;
+}
+%poppins-600 {
+  font-family: 'Poppins-SemiBold', sans-serif;
+  font-weight: 600;
 }
 
 %poppins-700 {

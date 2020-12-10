@@ -22,26 +22,97 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 
-  &__external {
+  @include rmin(321.98) {
+    max-width: 300px;
+  }
+
+  @include rmin(439.98) {
+    max-width: 430px;
+  }
+
+  @include r(580) {
+    padding: 0 5px
+  }
+
+  @include rmin(575.98) {
+    max-width: 540px;
+  }
+
+  @include rmin(767.98) {
+    max-width: 720px;
+  }
+
+  @include rmin(991.98) {
+    max-width: 960px;
+  }
+
+  @include rmin(1219.98) {
+    max-width: 1200px;
+  }
+
+  &--external {
     max-width: 1800px;
+
+    @include rmin(1200) {
+      max-width: 1800px;
+    }
   }
 }
 
+// .container {
+//   max-width: 1200px;
+//   margin: 0 auto;
+//   padding: 0 15px;
+
+//   &--external {
+//     max-width: 1800px;
+//   }
+// }
+
 .title {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
   font-size: 36px;
   text-align: center;
   color: $color-accent;
   @extend %dmsans-700;
 
+  @include r (1200) {
+    font-size: 32px;
+    max-width: 600px;
+  }
+
   &--top {
     display: none;
     font-size: 80px;
     text-transform: uppercase;
+
+    @include r (1200) {
+      font-size: 60px;
+    }
+
+    @include r (992) {
+      font-size: 40px;
+    }
+
+    @include r (768) {
+      font-size: 32px;
+    }
+
+    @include r (440) {
+      font-size: 28px;
+    }
   }
 }
 
-.mixitup-control-active {
-  color: $color-accent;
+.firstletter {
+  float: left;
+  @extend %rubik-500;
+  font-size: 140px;
+  color: $color-button;
+  line-height: 1;
 }
 
 .filter {
@@ -57,12 +128,20 @@ body {
     color: $color-title-menu;
     transition: all 0.5s ease-in-out;
 
+    @include r (1200) {
+      margin-bottom: 40px;
+    }
+
     &.active {
       color: $color-accent;
     }
 
-    &+& {
-      margin-left: 30px;
+    &:not(:last-child) {
+      margin-right: 30px;
+
+      @include r (1200) {
+        margin-bottom: 20px;
+      }
     }
 
     &:hover {
@@ -76,72 +155,47 @@ body {
   color: transparent;
 }
 
-// @each $icons-default in "search""likes""cart""bar" {
-//   .toolbar__link--#{$icons-default} {
-//     background-image: url('../images/icons/#{$icons-default}.svg');
-//     position: relative;
-//     background-position: center;
-//     background-repeat: no-repeat;
-//     background-size: auto, cover;
-//     min-width: 50px;
-//     min-height: 50px;
-//     border-radius: 50%;
-//     background-color: $color-search;
-//     z-index: 50;
-//     cursor: pointer;
-//     transition: all 0.5s ease-in-out;
+.breadcrumbs {
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
 
-//     &:hover {
-//       box-shadow: 0 0 10px 4px $color-button;
-//     }
-//   }
-// }
+  &__item {
+    font-size: 14px;
+    color: $color-button;
+    line-height: 2;
+    @extend %rubik-400;
+    padding-right: 20px;
+    position: relative;
 
-// @each $icons-resize in "likes""cart" {
-//   .toolbar__link--#{$icons-resize} {
-//     min-width: 90px;
-//     background-position: 50% 60%;
-//     border-radius: 25px 0 0 25px;
-//     background-color: $color-banner;
-//     margin-left: 20px;
-//   }
-// }
+    &::after {
+      position: absolute;
+      content: '/';
+      top: 0;
+      right: 6px;
+    }
 
-// @each $support in "support""delivery""payment" {
-//   .support__item--#{$support} {
-//     position: relative;
+    &:last-child {
+      // color: $color-title-menu;
+      padding-right: 0;
 
-//     &::after {
-//       content: '';
-//       position: absolute;
-//       top: -30%;
-//       left: -20%;
-//       background-image: url('../images/icons/#{$support}.svg');
-//       background-repeat: no-repeat;
-//       background-size: auto, cover;
-//       min-width: 60px;
-//       min-height: 60px;
-//       transform: translate(-50%, 50%);
-//     }
-//   }
-// }
-
-.contact {
-  max-width: 200px;
-  width: 100%;
+      &::after {
+        display: none;
+      }
+    }
+  }
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
 
-  &:visited {
-    text-decoration: none;
-  }
+:focus-visible {
+  outline: 4px dashed darkorange;
 
-  &:focus,
-  &:active,
-  &:hover {
-    text-decoration: none;
+  @include r (1200) {
+    outline: 2px dashed darkorange;
   }
 }

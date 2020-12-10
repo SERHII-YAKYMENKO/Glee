@@ -1,0 +1,208 @@
+.blog {
+
+  &__view-link {
+    position: relative;
+    padding-right: 24px;
+    margin-left: 23px;
+    @extend %dmsans-700;
+    color: $color-view;
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    background-image: url('../images/icons/arrows-blog-right.svg');
+
+    @include r(992) {
+      margin-top: 20px;
+      border: 1px solid $color-button;
+      padding: 10px 25px 10px 10px;
+      border-radius: 5px;
+      background-position: 95% 50%;
+
+      &:hover {
+        background-color: $color-button;
+      }
+    }
+  }
+
+  &__box-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 42px;
+
+    @include r(1200) {
+      margin-bottom: 30px;
+    }
+
+    @include r(992) {
+      margin-bottom: 20px;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__news {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    margin-bottom: -170px;
+    overflow: hidden;
+
+    @include r(1200) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+  }
+
+  .news {
+    position: relative;
+    padding-bottom: 30px;
+    max-width: 370px;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 6px 25px $color-box-shadow;
+    background-color: $color-background;
+
+    &:hover {
+      box-shadow: inset 0 0 0 1px $color-button;
+    }
+
+    &__img {
+      margin-bottom: 30px;
+      max-width: 370px;
+      width: 100%;
+      max-height: 250px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      overflow: hidden;
+    }
+
+    &__tag {
+      position: absolute;
+      top: 249px;
+      max-width: 103px;
+      width: 100%;
+      transform: translate(28%, -50%);
+      border-radius: 15px;
+      text-align: center;
+      @extend %poppins-700;
+      font-size: 14px;
+      line-height: 2;
+      text-transform: uppercase;
+      color: $color-text-white;
+      background-color: $color-button;
+
+      &:hover {
+        box-shadow: 0 0 10px 4px $color-button;
+      }
+    }
+
+    &__content {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 5;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      margin: 0 auto;
+      max-width: 299px;
+      width: 100%;
+      min-height: 110px;
+      font-size: 18px;
+      color: $color-view;
+      position: relative;
+
+      @include r(1200) {
+        width: 80%;
+        font-size: 16px;
+      }
+    }
+
+    &__link {
+      @extend %dmsans-500;
+      transition: color 0.5s;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+
+    &__signature {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      position: absolute;
+      bottom: -8px;
+      padding-top: 12px;
+      border-top: 1px solid $color-signature-border;
+      @extend %rubik-400;
+      font-size: 12px;
+      line-height: 2;
+      text-transform: uppercase;
+      color: $color-date;
+    }
+
+    &__time {
+      margin: 0 40px 0 15px;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 12px;
+        height: 13px;
+        top: 0;
+        left: -17px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url('../images/icons/calendar.svg');
+      }
+    }
+
+    &__autor {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 13px;
+        height: 13px;
+        top: 0;
+        left: -17px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url('../images/icons/user.svg');
+      }
+    }
+  }
+
+  .partner {
+    padding: 265px 0 85px;
+    background-color: $color-form-bg;
+    z-index: -1;
+
+    &__list {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      @include r(1200) {
+        flex-wrap: wrap;
+        gap: 50px;
+      }
+    }
+
+    &__item {
+      overflow: hidden;
+
+      @include r(1200) {
+        padding: 10px;
+        max-width: 200px;
+        max-height: 200px;
+      }
+    }
+  }
+}

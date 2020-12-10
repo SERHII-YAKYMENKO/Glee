@@ -1,0 +1,47 @@
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__link {
+    font-size: 0;
+    color: transparent;
+
+    &:hover {
+      box-shadow: 0 0 10px 4px $color-button;
+    }
+
+    &--cart {
+      margin: 0 20px 0 0;
+      border-radius: 0 25px 25px 0;
+
+      &::before {
+        position: absolute;
+        content: '';
+        min-height: 32px;
+        left: 0;
+        top: 9px;
+        border-left: 1px solid $color-background;
+      }
+    }
+
+    span {
+      position: absolute;
+      top: 13px;
+      left: 48px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      text-align: center;
+      @extend %dmsans-400;
+      font-size: 10px;
+      line-height: 1.7;
+      color: $color-title-header;
+      background-color: $color-background;
+    }
+
+    &--bar {
+      background-color: $color-button;
+    }
+  }
+}

@@ -1,0 +1,197 @@
+.team {
+  margin-bottom: 115px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__about {
+    max-width: 310px;
+    width: 100%;
+    margin-right: 90px;
+  }
+
+  &__title {
+    text-align: start;
+    color: $color-title-header;
+    padding-bottom: 18px;
+  }
+
+  &__text {
+    line-height: 1.9;
+    color: $color-title-header;
+    @extend %rubik-400;
+    padding-bottom: 45px;
+  }
+
+  &__link-btn {
+    position: relative;
+    padding: 15px 62px 15px 10px;
+    @extend %btn;
+    @extend %poppins-600;
+    font-size: 15px;
+    line-height: 2;
+    color: $color-text-white;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0 10px 4px $color-button;
+      color: $color-accent;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 22px;
+      right: 26px;
+      width: 15px;
+      height: 11px;
+      background-image: url('../images/icons/arrows-right-white.svg');
+    }
+  }
+
+  &__social {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 30px;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    max-width: 370px;
+    width: 100%;
+    height: 380px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    width: 100%;
+    height: 320px;
+  }
+
+  &__box {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 25px;
+    top: 72%;
+    max-width: 325px;
+    width: 100%;
+    height: 110px;
+    box-shadow: 0px 6px 28px $color-box-shadow;
+    background-color: $color-background;
+  }
+
+  &__name {
+    padding: 25px 0 10px;
+    font-size: 22px;
+    line-height: 1.1;
+    @extend %dmsans-700;
+  }
+
+  &__post {
+    @extend %rubik-400;
+    line-height: 1.9;
+    color: #565872;
+  }
+
+  &__list {
+    display: flex;
+    margin-top: 35px;
+  }
+
+  &__icon {
+    display: flex;
+    max-width: 41px;
+    width: 100%;
+    height: 41px;
+    border-radius: 21px;
+    background-color: #f6f6f6;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &:hover {
+      box-shadow: 0 0 10px 4px $color-button;
+      color: $color-accent;
+    }
+  }
+
+  &__link {
+    position: relative;
+    width: 17px;
+    height: 17px;
+    top: 21px;
+    left: 20px;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('../images/icons/icons-team/instagram-gray.svg');
+
+    &--google {
+      width: 23px;
+      height: 15px;
+      left: 18px;
+      background-image: url('../images/icons/icons-team/google-gray.svg');
+    }
+  }
+}
+
+// &__link {
+//   position: relative;
+//   width: 41px;
+//   height: 41px;
+//   border-radius: 21px;
+//   background-color: #f6f6f6;
+//   transition: all 0.5s;
+
+//   &:hover {
+//     box-shadow: 0 0 10px 4px $color-button;
+//     color: $color-accent;
+//   }
+
+//   &--instagram {
+
+//     &::after {
+//       position: absolute;
+//       content: '';
+//       width: 17px;
+//       height: 17px;
+//       top: 21px;
+//       left: 20px;
+//       transform: translate(-50%, -50%);
+//       background-size: cover;
+//       background-repeat: no-repeat;
+//       background-image: url('../images/icons/icons-team/instagram-gray.svg');
+//     }
+//   }
+
+//   &--google {
+
+//     &::after {
+//       position: absolute;
+//       content: '';
+//       width: 23px;
+//       height: 15px;
+//       top: 21px;
+//       left: 18px;
+//       transform: translate(-50%, -50%);
+//       background-size: cover;
+//       background-repeat: no-repeat;
+//       background-image: url('../images/icons/icons-team/google-gray.svg');
+//       z-index: 100;
+//     }
+//   }
+// }

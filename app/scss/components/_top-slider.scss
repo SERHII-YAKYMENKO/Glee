@@ -1,0 +1,274 @@
+.top-slider {
+
+  &__wrapper {
+    position: relative;
+    z-index: 10;
+    background-color: $color-banner;
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 12%;
+      left: 54%;
+      max-width: 634px;
+      width: 100%;
+      height: 634px;
+      border-radius: 50%;
+      z-index: -1;
+      background-image: linear-gradient(-90deg, $color-text-white 0%, $color-banner);
+      overflow: hidden;
+
+      @include r(1440) {
+        left: 59%;
+        top: 8%;
+        max-width: 480px;
+        width: 100%;
+        height: 480px;
+      }
+
+      @include r(1200) {
+        display: none;
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    right: 0;
+    bottom: 412px;
+    transform: translateY(50%);
+    overflow: hidden;
+    max-width: 640px;
+    width: 100%;
+
+    @include r(1440) {
+      width: 70%;
+      bottom: 170px;
+    }
+
+    @include r(1200) {
+      width: 50%;
+    }
+
+    @include r(992) {
+      width: 40%;
+    }
+
+    @include r(768) {
+      bottom: 50px;
+      width: 40%;
+    }
+
+    @include r(480) {
+      width: 0;
+    }
+  }
+
+  &__content {
+    display: inline-block;
+    padding-top: 215px;
+    padding-left: 10px;
+    padding-bottom: 300px;
+
+    @include r(1440) {
+      padding-top: 110px;
+      padding-left: 10px;
+      padding-bottom: 160px;
+    }
+
+    @include r(1200) {
+      padding-top: 70px;
+      padding-left: 10px;
+      padding-bottom: 80px;
+    }
+
+    @include r(768) {
+      padding-top: 30px;
+      padding-left: 10px;
+      padding-bottom: 40px;
+    }
+  }
+
+  &__title {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    margin-bottom: 25px;
+    max-width: 500px;
+    width: 100%;
+    @extend %rubik-500;
+    font-size: 72px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $color-title-header;
+
+    @include r(1200) {
+      margin-bottom: 20px;
+      width: 80%;
+      font-size: 50px;
+    }
+
+    @include r(992) {
+      margin-bottom: 15px;
+      width: 70%;
+      font-size: 40px;
+    }
+
+    @include r(768) {
+      margin-bottom: 10px;
+      font-size: 26px;
+    }
+
+    @include r(480) {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    margin-bottom: 60px;
+    max-width: 370px;
+    width: 100%;
+    @extend %rubik-400;
+    font-size: 18px;
+    line-height: 1.5;
+
+    @include r(1200) {
+      margin-bottom: 40px;
+      width: 90%;
+    }
+
+    @include r(992) {
+      margin-bottom: 30px;
+      width: 80%;
+    }
+
+    @include r(768) {
+      margin-bottom: 20px;
+    }
+
+    @include r(480) {
+      width: 100%;
+    }
+  }
+
+  &__link {
+    @extend %btn;
+    padding: 20px 110px 20px 20px;
+    z-index: 100;
+    transition: all 0.5s ease-in-out;
+    background-image: url('../images/icons/arrows-right-btn.svg');
+    background-repeat: no-repeat;
+    background-position: 85% 50%;
+
+    @include r(1200) {
+      padding: 15px 70px 15px 15px;
+    }
+
+    @include r(990) {
+      padding: 10px 50px 10px 10px;
+      font-size: 14px;
+    }
+
+    @include r(768) {
+      background-image: none;
+      padding: 10px 15px 10px 10px;
+    }
+
+    &:hover {
+      box-shadow: 0 0 10px 4px $color-button;
+      color: $color-accent;
+      background-image: url('../images/icons/arrows-accent-right.svg');
+
+      @include r(768) {
+        background-image: none;
+      }
+    }
+  }
+
+  .slick-dots {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    transform: translateY(-50%);
+
+    @include r(1440) {
+      bottom: 10px;
+    }
+  }
+
+  li {
+
+    &:not(:last-child) {
+      margin-right: 14px;
+    }
+
+    button {
+      position: relative;
+      min-width: 29px;
+      min-height: 29px;
+      border-radius: 50%;
+      @extend %rubik-500;
+      font-size: 11px;
+      line-height: 1;
+      color: $color-title-header;
+      background-color: $color-dots-def;
+
+      @include r(990) {
+        min-width: 20px;
+        min-height: 20px;
+      }
+
+      @include r(768) {
+        display: none;
+      }
+    }
+  }
+
+  .slick-active {
+    button {
+      background-color: $color-background;
+    }
+  }
+}
+
+//  &__img img {
+//    position: absolute;
+//    right: 0;
+//    bottom: 412px;
+//    transform: translateY(50%);
+//    overflow: hidden;
+//    max-width: 640px;
+//    width: 100%;
+//    position: absolute;
+//    width: 100%;
+//    height: 100%;
+//    left: 0;
+//    top: 0;
+
+//    @include r(1440) {
+//      max-width: 540px;
+//      bottom: 250px;
+//    }
+
+//    @include r(1200) {
+//      max-width: 440px;
+//    }
+
+//    @include r(992) {
+//      max-width: 300px;
+//    }
+
+//    @include r(768) {
+//      bottom: -25px;
+//      max-width: 250px;
+//      transform: translateY(-50%);
+//    }
+//  }

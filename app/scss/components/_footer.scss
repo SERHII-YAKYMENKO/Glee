@@ -1,0 +1,103 @@
+.footer {
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 90px 0 57px;
+    border-bottom: 1px solid $color-footer-line;
+    @extend %rubik-400;
+    font-size: 14px;
+    color: $color-text-footer;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    padding-top: 10px;
+    margin-bottom: 21px;
+    @extend %dmsans-700;
+    font-size: 16px;
+    color: $color-title-footer;
+    text-transform: uppercase;
+  }
+
+  &__up-text {
+    text-transform: uppercase;
+  }
+
+  .contact {
+    max-width: 200px;
+    width: 100%;
+  }
+
+  @each $width-item in 'about''account' {
+    .footer__#{$width-item} {
+      max-width: 200px;
+      width: 100%;
+    }
+  }
+
+  &__signup {
+    max-width: 272px;
+    width: 100%;
+    @include form;
+  }
+
+  @each $addres-margin in 'address''phone' {
+    .footer__#{$addres-margin} {
+      display: block;
+      margin-bottom: 17px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 14px;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+  }
+
+  @each $color-hover in 'link''phone''email' {
+    .footer__#{$color-hover} {
+      transition: color 0.5s ease-in-out;
+
+      &:hover {
+        color: $color-accent
+      }
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0;
+    @extend %rubik-400;
+    font-size: 14px;
+    color: $color-text-footer;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__box {
+
+    &:not(:last-child) {
+      margin-right: 30px;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '|';
+        right: -17px;
+      }
+    }
+  }
+}

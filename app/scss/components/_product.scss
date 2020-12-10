@@ -1,0 +1,231 @@
+.product {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 40px 20px 340px 20px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 25px $color-box-shadow;
+  background-color: $color-background;
+
+  @include r(1200) {
+    padding: 40px 20px 280px 20px;
+  }
+
+  &__img {
+    position: absolute;
+    padding: 10px;
+    overflow: hidden;
+    transform: translateY(50%);
+    bottom: 65%;
+  }
+
+  &__about {
+    position: absolute;
+    bottom: 40px;
+  }
+
+  &__list {
+    position: absolute;
+    display: none;
+    @include pro;
+    top: 53%;
+    transform: translateY(-50%);
+  }
+
+  &__name {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    @extend %dmsans-500;
+    line-height: 2;
+    color: $color-title-header;
+  }
+
+  &__price {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    @extend %dmsans-700;
+    color: $color-button;
+  }
+
+  &__link--cart {
+    margin: 0 15px;
+  }
+
+  &:hover &__list {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    z-index: 9999;
+  }
+
+  &__light {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+
+    @include r(992) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 30px;
+    }
+
+    .lighting {
+      position: relative;
+      padding: 40px 120px 100px 20px;
+      background-color: $color-cards-product;
+
+      @include r(1200) {
+        padding: 20px 120px 50px 20px;
+      }
+
+      &__img {
+        position: absolute;
+        top: -95px;
+        right: 610px;
+        max-width: 350px;
+        width: auto;
+        height: 400px;
+        transform: translateX(50%);
+
+        @include rmin(320) {
+          top: 150px;
+          right: 0;
+          left: -20px;
+          height: 150px;
+        }
+
+        @include rmin(767.98) {
+          top: 100px;
+          right: 0;
+          left: -20px;
+          height: 200px;
+        }
+
+        @include rmin(1199.98) {
+          top: -90px;
+          right: 610px;
+          left: 35px;
+          max-width: 350px;
+          height: 400px;
+          transform: translateX(50%);
+        }
+
+        @include r(992) {
+          height: 210px;
+          top: 40px;
+        }
+      }
+
+      &__box {
+        margin-top: 40px;
+        margin-left: 55%;
+        max-width: 340px;
+        width: 100%;
+        color: $color-title-header;
+
+        @include rmin(320) {
+          width: 50%;
+          margin-left: 65%;
+        }
+
+        @include rmin(768.98) {
+          width: 60%;
+          margin-left: 55%;
+        }
+
+        @include r(1200) {
+          max-width: 300px;
+          margin-left: 45%;
+        }
+
+        @include r(992) {
+          width: 100%;
+        }
+      }
+
+      &__name {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        margin-bottom: 15px;
+        @extend %dmsans-700;
+        font-size: 26px;
+
+        @include r(992) {
+          font-size: 22px;
+        }
+
+        @include r(440) {
+          font-size: 18px;
+        }
+      }
+
+      &__text {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        margin-bottom: 50px;
+        @extend %rubik-400;
+        line-height: 1.8;
+        position: relative;
+      }
+
+      &__link {
+        @extend %btn;
+        padding: 20px 88px 20px 18px;
+        align-items: center;
+        border-radius: 5px;
+        border: 1px solid $color-primary;
+        background-color: rgba(36, 63, 77, 0);
+        color: $color-primary;
+        transition: all 0.3s ease-in-out;
+        background-image: url('../images/icons/arrows-gray-right.svg');
+        background-repeat: no-repeat;
+        background-position: 85% 50%;
+
+        @include r(1200) {
+          padding: 15px 70px 15px 15px;
+        }
+
+        @include r(990) {
+          padding: 10px 50px 10px 10px;
+          font-size: 14px;
+        }
+
+        @include r(768) {
+          background-image: none;
+          padding: 10px 15px 10px 10px;
+        }
+
+        &:hover {
+          box-shadow: 0 0 5px 2px $color-button;
+          background-color: $color-button;
+          border-color: $color-button;
+          color: $color-accent;
+        }
+      }
+    }
+  }
+}
+
+
+// position: absolute;
+// top: -100px;
+// right: 26vw;
+// bottom: 0;
+// max-width: 350px;
+// width: 100%;
+// height: 400px;
+
+// @include r(1200) {
+//   left: 3%;
+// }

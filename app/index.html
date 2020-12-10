@@ -10,8 +10,9 @@
 </head>
 
 <body>
-  <header class="header">
-    <div class="container container__external">
+  <header class="header" id="fixed">
+    <div class="container container--external">
+      <div class="anchor"></div>
       <nav class="menu">
         <a class="logo header__logo" href="#">
           <img class="logo__img" src="images/logo.png" alt="logotype">
@@ -46,7 +47,7 @@
           </a>
           <a class="toolbar__link toolbar__link--cart" href="#">
             Basket with goods
-            <span>10</span>
+            <span>0</span>
           </a>
           <button class="toolbar__link toolbar__link--bar">
             Navigation button
@@ -58,14 +59,14 @@
 
   <main class="main">
 
-    <div class="container container__external">
+    <div class="container container--external">
       <h1 class="title title--top">
         Classic furniture from Europe
       </h1>
     </div>
 
     <section class="top-slider">
-      <div class="container container__external">
+      <div class="container container--external">
         <div class="top-slider__wrapper">
           <div class="container">
             <div class="top-slider__items">
@@ -74,9 +75,11 @@
                   <p class="top-slider__title">
                     Smart and trendy
                   </p>
-                  <p class="top-slider__text">
-                    Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                  </p>
+                  <div class="top-slider__text">
+                    <p>
+                      Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                    </p>
+                  </div>
                   <a class="top-slider__link" href="#">
                     Shop Now
                   </a>
@@ -88,9 +91,11 @@
                   <p class="top-slider__title">
                     Smart and trendy
                   </p>
-                  <p class="top-slider__text">
-                    Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                  </p>
+                  <div class="top-slider__text">
+                    <p>
+                      Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                    </p>
+                  </div>
                   <a class="top-slider__link" href="#">
                     Shop Now
                   </a>
@@ -102,9 +107,11 @@
                   <p class="top-slider__title">
                     Smart and trendy
                   </p>
-                  <p class="top-slider__text">
-                    Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                  </p>
+                  <div class="top-slider__text">
+                    <p>
+                      Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                    </p>
+                  </div>
                   <a class="top-slider__link" href="#">
                     Shop Now
                   </a>
@@ -118,7 +125,7 @@
     </section>
 
     <div class="support">
-      <div class="container container__external">
+      <div class="container container--external">
         <ul class="support__list">
           <li class="support__item support__item--support">
             <span>Support 24/7.</span>
@@ -149,27 +156,27 @@
           Products of the week
         </h2>
         <ul class="filter production__filter">
-          <li class="filter__btn" data-filter="all">All</li>
-          <li class="filter__btn" data-filter=".furnitures">Furnitures</li>
-          <li class="filter__btn" data-filter=".chairs">Chairs</li>
-          <li class="filter__btn" data-filter=".lighting">Lighting</li>
-          <li class="filter__btn" data-filter=".decor">Decor</li>
+          <li class="filter__btn" data-filter="all" tabindex="0">All</li>
+          <li class="filter__btn" data-filter=".furnitures" tabindex="0">Furnitures</li>
+          <li class="filter__btn" data-filter=".chairs" tabindex="0">Chairs</li>
+          <li class="filter__btn" data-filter=".lighting" tabindex="0">Lighting</li>
+          <li class="filter__btn" data-filter=".decor" tabindex="0">Decor</li>
         </ul>
         <div class="production__content">
-          <article class="product mix furnitures">
+          <article class="product mix furnitures" tabindex="0">
             <img class="product__img" src="images/item-1.png" alt="#">
             <div class="product__list">
-              <a class="product__link product__link--search" href="#">
+              <a class="product__link product__link--search" href="#" tabindex="0">
                 <p class="interactions">
                   view product in detail
                 </p>
               </a>
-              <button class="product__link product__link--cart">
+              <button class="product__link product__link--cart" tabindex="0">
                 <p class="interactions">
                   add to сart
                 </p>
               </button>
-              <button class="product__link product__link--likes">
+              <button class="product__link product__link--likes" tabindex="0">
                 <p class="interactions">
                   add to favorites
                 </p>
@@ -184,20 +191,20 @@
               </span>
             </div>
           </article>
-          <article class="product mix chairs">
+          <article class="product mix chairs" tabindex="0">
             <img class="product__img" src="images/item-2.png" alt="#">
             <div class="product__list">
-              <a class="product__link product__link--search" href="#">
+              <a class="product__link product__link--search" href="#" tabindex="0">
                 <p class="interactions">
                   view product in detail
                 </p>
               </a>
-              <button class="product__link product__link--cart">
+              <button class="product__link product__link--cart" tabindex="0">
                 <p class="interactions">
                   add to сart
                 </p>
               </button>
-              <button class="product__link product__link--likes">
+              <button class="product__link product__link--likes" tabindex="0">
                 <p class="interactions">
                   add to favorites
                 </p>
@@ -212,20 +219,20 @@
               </span>
             </div>
           </article>
-          <article class="product mix chairs">
+          <article class="product mix chairs" tabindex="0">
             <img class="product__img" src="images/item-3.png" alt="#">
             <div class="product__list">
-              <a class="product__link product__link--search" href="#">
+              <a class="product__link product__link--search" href="#" tabindex="0">
                 <p class="interactions">
                   view product in detail
                 </p>
               </a>
-              <button class="product__link product__link--cart">
+              <button class="product__link product__link--cart" tabindex="0">
                 <p class="interactions">
                   add to сart
                 </p>
               </button>
-              <button class="product__link product__link--likes">
+              <button class="product__link product__link--likes" tabindex="0">
                 <p class="interactions">
                   add to favorites
                 </p>
@@ -240,20 +247,20 @@
               </span>
             </div>
           </article>
-          <article class="product mix decor">
+          <article class="product mix decor" tabindex="0">
             <img class="product__img" src="images/item-4.png" alt="#">
             <div class="product__list">
-              <a class="product__link product__link--search" href="#">
+              <a class="product__link product__link--search" href="#" tabindex="0">
                 <p class="interactions">
                   view product in detail
                 </p>
               </a>
-              <button class="product__link product__link--cart">
+              <button class="product__link product__link--cart" tabindex="0">
                 <p class="interactions">
                   add to сart
                 </p>
               </button>
-              <button class="product__link product__link--likes">
+              <button class="product__link product__link--likes" tabindex="0">
                 <p class="interactions">
                   add to favorites
                 </p>
@@ -268,20 +275,20 @@
               </span>
             </div>
           </article>
-          <article class="product mix furnitures">
+          <article class="product mix furnitures" tabindex="0">
             <img class="product__img" src="images/item-5.png" alt="#">
             <div class="product__list">
-              <a class="product__link product__link--search" href="#">
+              <a class="product__link product__link--search" href="#" tabindex="0">
                 <p class="interactions">
                   view product in detail
                 </p>
               </a>
-              <button class="product__link product__link--cart">
+              <button class="product__link product__link--cart" tabindex="0">
                 <p class="interactions">
                   add to сart
                 </p>
               </button>
-              <button class="product__link product__link--likes">
+              <button class="product__link product__link--likes" tabindex="0">
                 <p class="interactions">
                   add to favorites
                 </p>
@@ -296,20 +303,20 @@
               </span>
             </div>
           </article>
-          <article class="product mix chairs">
+          <article class="product mix chairs" tabindex="0">
             <img class="product__img" src="images/item-6.png" alt="#">
             <div class="product__list">
-              <a class="product__link product__link--search" href="#">
+              <a class="product__link product__link--search" href="#" tabindex="0">
                 <p class="interactions">
                   view product in detail
                 </p>
               </a>
-              <button class="product__link product__link--cart">
+              <button class="product__link product__link--cart" tabindex="0">
                 <p class="interactions">
                   add to сart
                 </p>
               </button>
-              <button class="product__link product__link--likes">
+              <button class="product__link product__link--likes" tabindex="0">
                 <p class="interactions">
                   add to favorites
                 </p>
@@ -324,20 +331,20 @@
               </span>
             </div>
           </article>
-          <article class="product mix chairs">
+          <article class="product mix chairs" tabindex="0">
             <img class="product__img" src="images/item-7.png" alt="#">
             <div class="product__list">
-              <a class="product__link product__link--search" href="#">
+              <a class="product__link product__link--search" href="#" tabindex="0">
                 <p class="interactions">
                   view product in detail
                 </p>
               </a>
-              <button class="product__link product__link--cart">
+              <button class="product__link product__link--cart" tabindex="0">
                 <p class="interactions">
                   add to сart
                 </p>
               </button>
-              <button class="product__link product__link--likes">
+              <button class="product__link product__link--likes" tabindex="0">
                 <p class="interactions">
                   add to favorites
                 </p>
@@ -352,20 +359,20 @@
               </span>
             </div>
           </article>
-          <article class="product mix decor">
+          <article class="product mix decor" tabindex="0">
             <img class="product__img" src="images/item-8.png" alt="#">
             <div class="product__list">
-              <a class="product__link product__link--search" href="#">
+              <a class="product__link product__link--search" href="#" tabindex="0">
                 <p class="interactions">
                   view product in detail
                 </p>
               </a>
-              <button class="product__link product__link--cart">
+              <button class="product__link product__link--cart" tabindex="0">
                 <p class="interactions">
                   add to сart
                 </p>
               </button>
-              <button class="product__link product__link--likes">
+              <button class="product__link product__link--likes" tabindex="0">
                 <p class="interactions">
                   add to favorites
                 </p>
@@ -382,11 +389,11 @@
           </article>
         </div>
       </div>
-      <div class="container container__external ">
+      <div class="container container--external">
         <div class="product__light">
-          <article class="lighting">
+          <article class="lighting" tabindex="0">
             <img class="lighting__img" src="images/led1.png" alt="#">
-            <div class="lighting__lighting">
+            <div class="lighting__box">
               <h3 class="lighting__name">
                 Mirum Notare Tellus
               </h3>
@@ -398,9 +405,9 @@
               </a>
             </div>
           </article>
-          <article class="lighting">
+          <article class="lighting" tabindex="0">
             <img class="lighting__img" src="images/led2.png" alt="#">
-            <div class="lighting__lighting">
+            <div class="lighting__box">
               <h3 class="lighting__name">
                 Malesuada Tempor Euismod
               </h3>
@@ -413,7 +420,7 @@
             </div>
           </article>
         </div>
-      </div>
+      </div> 
     </section>
 
     <section class="design">
@@ -422,117 +429,117 @@
           New Design
         </h2>
         <ul class="filter">
-          <li class="filter__btn" data-filter="all">All</li>
-          <li class="filter__btn" data-filter=".furnitures">Furnitures</li>
-          <li class="filter__btn" data-filter=".chairs">Chairs</li>
-          <li class="filter__btn" data-filter=".lighting">Lighting</li>
-          <li class="filter__btn" data-filter=".decor">Decor</li>
+          <li class="filter__btn" data-filter="all" tabindex="0">All</li>
+          <li class="filter__btn" data-filter=".furnitures" tabindex="0">Furnitures</li>
+          <li class="filter__btn" data-filter=".chairs" tabindex="0">Chairs</li>
+          <li class="filter__btn" data-filter=".lighting" tabindex="0">Lighting</li>
+          <li class="filter__btn" data-filter=".decor" tabindex="0">Decor</li>
         </ul>
         <div class="design__content">
-          <article class="product product--design mix furnitures">
-            <img class="product__img product__img--img" src="images/item-9.png" alt="#">
-            <div class="product__list">
-              <a class="product__link product__link--search" href="#">
+          <article class="design__item mix furnitures" tabindex="0">
+            <img class="design__img" src="images/item-9.png" alt="#">
+            <div class="design__list">
+              <a class="design__link" href="#">
                 <p class="interactions">
                   view product in detail
                 </p>
               </a>
             </div>
-            <div class="product__about product__about--about">
-              <h3 class="product__name product__name--name">
+            <div class="design__about">
+              <h3 class="design__name">
                 Beat Flat Pendant Black
               </h3>
-              <span class="product__price product__price--price">
+              <span class="design__price">
                 Classic
               </span>
             </div>
           </article>
-          <article class="product product--design mix decor">
-            <img class="product__img product__img--img" src="images/item-10.png" alt="#">
-            <div class="product__list">
-              <a class="product__link product__link--search" href="#">
+          <article class="design__item mix decor" tabindex="0">
+            <img class="design__img" src="images/item-10.png" alt="#">
+            <div class="design__list">
+              <a class="design__link" href="#">
                 <p class="interactions">
                   view product in detail
                 </p>
               </a>
             </div>
-            <div class="product__about product__about--about">
-              <h3 class="product__name product__name--name">
+            <div class="design__about">
+              <h3 class="design__name">
                 Lampe Sur Pieds Bamboo
               </h3>
-              <span class="product__price product__price--name">
+              <span class="design__price">
                 Classic
               </span>
             </div>
           </article>
-          <article class="product product--design mix furnitures">
-            <img class="product__img product__img--img" src="images/item-11.png" alt="#">
-            <div class="product__list">
-              <a class="product__link product__link--search" href="#">
+          <article class="design__item mix furnitures" tabindex="0">
+            <img class="design__img" src="images/item-11.png" alt="#">
+            <div class="design__list">
+              <a class="design__link" href="#">
                 <p class="interactions">
                   view product in detail
                 </p>
               </a>
             </div>
-            <div class="product__about product__about--about">
-              <h3 class="product__name product__name--name">
+            <div class="design__about">
+              <h3 class="design__name">
                 Rattan Rocking Chair
               </h3>
-              <span class="product__price product__price--price">
+              <span class="design__price">
                 Classic
               </span>
             </div>
           </article>
-          <article class="product product--design mix chairs">
-            <img class="product__img product__img--img" src="images/item-12.png" alt="#">
-            <div class="product__list">
-              <a class="product__link product__link--search" href="#">
+          <article class="design__item mix chairs" tabindex="0">
+            <img class="design__img" src="images/item-12.png" alt="#">
+            <div class="design__list">
+              <a class="design__link" href="#">
                 <p class="interactions">
                   view product in detail
                 </p>
               </a>
             </div>
-            <div class="product__about product__about--about">
-              <h3 class="product__name product__name--name">
+            <div class="design__about">
+              <h3 class="design__name">
                 Rattan Rocking Chair
               </h3>
-              <span class="product__price product__price--price">
+              <span class="design__price">
                 Classic
               </span>
             </div>
           </article>
-          <article class="product product--design mix decor">
-            <img class="product__img product__img--img" src="images/item-13.png" alt="#">
-            <div class="product__list">
-              <a class="product__link product__link--search" href="#">
+          <article class="design__item mix decor" tabindex="0">
+            <img class="design__img" src="images/item-13.png" alt="#">
+            <div class="design__list">
+              <a class="design__link" href="#">
                 <p class="interactions">
                   view product in detail
                 </p>
               </a>
             </div>
-            <div class="product__about product__about--about">
-              <h3 class="product__name product__name--name">
+            <div class="design__about">
+              <h3 class="design__name">
                 Rattan Rocking Chair
               </h3>
-              <span class="product__price product__price--price">
+              <span class="design__price">
                 Classic
               </span>
             </div>
           </article>
-          <article class="product product--design mix decor">
-            <img class="product__img product__img--img" src="images/item-14.png" alt="#">
-            <div class="product__list">
-              <a class="product__link product__link--search" href="#">
+          <article class="design__item mix decor" tabindex="0">
+            <img class="design__img" src="images/item-14.png" alt="#">
+            <div class="design__list">
+              <a class="design__link" href="#">
                 <p class="interactions">
                   view product in detail
                 </p>
               </a>
             </div>
-            <div class="product__about product__about--about">
-              <h3 class="product__name product__name--name">
+            <div class="design__about">
+              <h3 class="design__name">
                 Lampe Sur Pieds Bamboo
               </h3>
-              <span class="product__price product__price--price">
+              <span class="design__price">
                 Classic
               </span>
             </div>
@@ -541,11 +548,9 @@
       </div>
     </section>
 
-    <div class="presentation">
+    <div class="presentation" style="background-image: url(images/video-presentation.jpg);" tabindex="0">
       <a class="presentation__link" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
-        <div class="presentation__video">
-          <img class="presentation__img" src="images/video-presentation.jpg" alt="#">
-        </div>
+        <p class="interactions">video presentation this product</p>
       </a>
     </div>
 
@@ -560,57 +565,57 @@
           </a>
         </div>
         <div class="blog__news">
-          <div class="blog__item">
-            <div class="blog__item-img">
+          <article class="news">
+            <div class="news__img">
               <img src="images/blog-item1.jpg" alt="#">
-              <p class="blog__tag">news</p>
+              <p class="news__tag">news</p>
             </div>
-            <div class="blog__content">
-              <a class="blog__link" href="#">
+            <div class="news__content">
+              <a class="news__link" href="#">
                 <p>
                   Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
                 </p>
               </a>
-              <div class="blog__signature">
-                <time class="blog__time" datetime='2020-01-28'>28 january, 2020</time>
-                <autor class="blog__autor">by admin</autor>
+              <div class="news__signature">
+                <time class="news__time" datetime="2020-01-28">28 january, 2020</time>
+                <autor class="news__autor">by admin</autor>
               </div>
             </div>
-          </div>
-          <div class="blog__item">
-            <div class="blog__item-img">
+          </article>
+          <article class="news">
+            <div class="news__img">
               <img src="images/blog-item2.jpg" alt="#">
-              <p class="blog__tag">news</p>
+              <p class="news__tag">news</p>
             </div>
-            <div class="blog__content">
-              <a class="blog__link" href="#">
+            <div class="news__content">
+              <a class="news__link" href="#">
                 <p>
                   Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
                 </p>
               </a>
-              <div class="blog__signature">
-                <time class="blog__time" datetime='2020-01-28'>28 january, 2020</time>
-                <autor class="blog__autor">by admin</autor>
+              <div class="news__signature">
+                <time class="news__time" datetime="2020-01-28">28 january, 2020</time>
+                <autor class="news__autor">by admin</autor>
               </div>
             </div>
-          </div>
-          <div class="blog__item">
-            <div class="blog__item-img">
+          </article>
+          <article class="news">
+            <div class="news__img">
               <img src="images/blog-item3.jpg" alt="#">
-              <p class="blog__tag">news</p>
+              <p class="news__tag">news</p>
             </div>
-            <div class="blog__content">
-              <a class="blog__link" href="#">
+            <div class="news__content">
+              <a class="news__link" href="#">
                 <p>
                   Rncididunt ut labore et dolore magna aliqua. Ut enim
                 </p>
               </a>
-              <div class="blog__signature">
-                <time class="blog__time" datetime='2020-01-28'>28 january, 2020</time>
-                <autor class="blog__autor">by admin</autor>
+              <div class="news__signature">
+                <time class="news__time" datetime="2020-01-28">28 january, 2020</time>
+                <autor class="news__autor">by admin</autor>
               </div>
             </div>
-          </div>
+          </article>
         </div>
       </div>
       <div class="partner">
@@ -635,9 +640,10 @@
         </div>
       </div>
     </section>
+
   </main>
 
-  <footer class="footer">
+  <!-- <footer class="footer">
     <div class="container">
       <div class="footer__content">
         <div class="footer__connection">
@@ -734,7 +740,9 @@
           </p>
           <form class="form" action="#">
             <input class="form__input" type="email" name="email address" placeholder="Email address" required
-              id="email"><label for="email"></label>
+              id="email">
+            <label for="email">
+            </label>
             <button class="form__btn" type="submit">Subscribe</button>
           </form>
         </div>
@@ -759,7 +767,7 @@
         </ul>
       </div>
     </div>
-  </footer>
+  </footer> -->
 
   <script src="js/main.min.js"></script>
 </body>

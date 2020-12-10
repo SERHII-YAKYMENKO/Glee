@@ -1,0 +1,94 @@
+.about {
+  margin-bottom: 115px;
+
+  &__wrapper {
+    margin: 0 auto 120px;
+    padding: 30px 0;
+    background-color: $color-search;
+  }
+
+  &__title {
+    @extend %rubik-300;
+    color: $color-date;
+    line-height: 1.1;
+
+    &--content {
+      margin-bottom: 30px;
+      text-align: start;
+      color: $color-title-header;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 125px;
+    max-height: 62vh;
+    overflow: hidden;
+  }
+
+  &__img {
+    margin-right: 45px;
+    transform: translateY(-11%);
+  }
+
+  &__content {
+    padding-top: 60px;
+  }
+
+  &__firstletter {
+    padding-right: 21px;
+    padding-left: 4px;
+    @extend %rubik-700;
+  }
+
+  &__text {
+    margin-bottom: 60px;
+    @extend %rubik-400;
+    line-height: 1.9;
+    color: $color-title-header;
+  }
+
+  &__working {
+    margin: 35px 0;
+    @extend %rubik-400;
+    line-height: 2;
+    color: $color-title-header;
+  }
+
+  &__statistics {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 40px;
+    border-top: 2px solid #e6eaf0;
+    @extend %dmsans-700;
+    line-height: 1;
+    color: $color-title-header;
+
+    span {
+      font-size: 36px;
+    }
+  }
+}
+
+@each $icons-about in "projects""revenue""awards" {
+  .about__item--#{$icons-about} {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-size: auto, cover;
+      top: -20px;
+      left: -30px;
+      width: 43px;
+      height: 40px;
+      transform: translate(-50%, 50%);
+      background-image: url('../images/icons/icons-about/#{$icons-about}.svg');
+    }
+  }
+}
