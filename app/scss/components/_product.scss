@@ -5,227 +5,199 @@
   align-items: center;
   flex-wrap: wrap;
   text-align: center;
-  padding: 40px 20px 340px 20px;
+  padding: 25px 10px 38px 10px;
+  // padding: 40px 20px 110px 20px;
+  // padding: 40px 20px 340px 20px;
   border-radius: 10px;
   box-shadow: 0px 6px 25px $color-box-shadow;
   background-color: $color-background;
 
-  @include r(1200) {
-    padding: 40px 20px 280px 20px;
+  &--line {
+    justify-content: flex-start;
+    padding: 0;
+    border-radius: 0px;
+    box-shadow: none;
+
+    &:not(:last-child) {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__img-box {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15px;
+    max-width: 250px;
+    width: 100%;
+    min-height: 250px;
+    background-color: #fefefe;
+
+    &--line {
+      padding: 45px 15px 15px;
+      margin-right: 65px;
+      max-width: 365px;
+      min-height: 500px;
+      border: 2px solid #f2f2f2;
+    }
   }
 
   &__img {
     position: absolute;
-    padding: 10px;
-    overflow: hidden;
-    transform: translateY(50%);
-    bottom: 65%;
-  }
+    transform: translate(-50%, 50%);
+    bottom: 135px;
+    padding: 5px;
 
-  &__about {
-    position: absolute;
-    bottom: 40px;
+    &--line {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translate(0, 0);
+      bottom: 0;
+      padding: 0;
+    }
   }
 
   &__list {
     position: absolute;
-    display: none;
-    @include pro;
+    opacity: 0;
     top: 53%;
     transform: translateY(-50%);
+    transition: all 0.3s;
+
+    @include r(768) {
+      position: relative;
+      display: flex;
+      margin: 0 auto;
+      transform: translateY(165px);
+    }
+
+    &--line {
+      display: flex;
+      // position: relative;
+      opacity: 1;
+      // pointer-events: none;
+    }
+
   }
 
-  &__name {
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    @extend %dmsans-500;
-    line-height: 2;
-    color: $color-title-header;
+  &:hover &__list {
+
+    @include rmin(768) {
+      position: absolute;
+      display: flex;
+      opacity: 1;
+      align-items: center;
+      width: 100%;
+      z-index: 900;
+    }
   }
 
-  &__price {
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-    @extend %dmsans-700;
-    color: $color-button;
+  // &--line:hover .product__list--line {
+
+  //   @include rmin(768) {
+  //     pointer-events: none;
+  //   }
+  // }
+
+  &__link {
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto, cover;
+    width: 45px;
+    height: 45px;
+    left: 20%;
+    border-radius: 23px;
+    z-index: 50;
+    background-color: $color-background;
+    box-shadow: 0 0 10px 4px $color-button;
+
+    @include r(768) {
+      left: 0;
+      width: 40px;
+      height: 40px;
+    }
+
+    &--search {
+      background-image: url('../images/icons/icons-gray/search.svg')
+    }
+
+    &--cart {
+      background-image: url('../images/icons/icons-gray/cart.svg')
+    }
+
+    &--likes {
+      background-image: url('../images/icons/icons-gray/likes.svg')
+    }
+
+    &:hover {
+      opacity: 1;
+
+      @include rmin(768) {
+        background-color: $color-button;
+        box-shadow: 0 0 10px 10px $color-button;
+
+        &.product__link--search {
+          background-image: url('../images/icons/icons-white/search.svg');
+        }
+
+        &.product__link--cart {
+          background-image: url('../images/icons/icons-white/cart.svg');
+        }
+
+        &.product__link--likes {
+          background-image: url('../images/icons/icons-white/likes.svg');
+        }
+      }
+    }
   }
 
   &__link--cart {
     margin: 0 15px;
   }
 
-  &:hover &__list {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    z-index: 9999;
+  &__about {
+    &--line {
+      text-align: left;
+    }
   }
 
-  &__light {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 30px;
+  &__name {
+    @extend %lineclump;
+    @extend %dmsans-500;
+    line-height: 2;
+    color: $color-title-header;
 
-    @include r(992) {
-      grid-template-columns: repeat(1, 1fr);
-      gap: 30px;
+    &--line {
+      margin-bottom: 15px;
+      @extend %rubik-400;
+      font-size: 40px;
+      line-height: 0.661;
+      color: #333;
     }
+  }
 
-    .lighting {
-      position: relative;
-      padding: 40px 120px 100px 20px;
-      background-color: $color-cards-product;
+  &__price {
+    @extend %lineclump;
+    -webkit-line-clamp: 1;
+    @extend %dmsans-700;
+    color: $color-button;
 
-      @include r(1200) {
-        padding: 20px 120px 50px 20px;
-      }
-
-      &__img {
-        position: absolute;
-        top: -95px;
-        right: 610px;
-        max-width: 350px;
-        width: auto;
-        height: 400px;
-        transform: translateX(50%);
-
-        @include rmin(320) {
-          top: 150px;
-          right: 0;
-          left: -20px;
-          height: 150px;
-        }
-
-        @include rmin(767.98) {
-          top: 100px;
-          right: 0;
-          left: -20px;
-          height: 200px;
-        }
-
-        @include rmin(1199.98) {
-          top: -90px;
-          right: 610px;
-          left: 35px;
-          max-width: 350px;
-          height: 400px;
-          transform: translateX(50%);
-        }
-
-        @include r(992) {
-          height: 210px;
-          top: 40px;
-        }
-      }
-
-      &__box {
-        margin-top: 40px;
-        margin-left: 55%;
-        max-width: 340px;
-        width: 100%;
-        color: $color-title-header;
-
-        @include rmin(320) {
-          width: 50%;
-          margin-left: 65%;
-        }
-
-        @include rmin(768.98) {
-          width: 60%;
-          margin-left: 55%;
-        }
-
-        @include r(1200) {
-          max-width: 300px;
-          margin-left: 45%;
-        }
-
-        @include r(992) {
-          width: 100%;
-        }
-      }
-
-      &__name {
-        display: -webkit-box;
-        overflow: hidden;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-        margin-bottom: 15px;
-        @extend %dmsans-700;
-        font-size: 26px;
-
-        @include r(992) {
-          font-size: 22px;
-        }
-
-        @include r(440) {
-          font-size: 18px;
-        }
-      }
-
-      &__text {
-        display: -webkit-box;
-        overflow: hidden;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 3;
-        margin-bottom: 50px;
-        @extend %rubik-400;
-        line-height: 1.8;
-        position: relative;
-      }
-
-      &__link {
-        @extend %btn;
-        padding: 20px 88px 20px 18px;
-        align-items: center;
-        border-radius: 5px;
-        border: 1px solid $color-primary;
-        background-color: rgba(36, 63, 77, 0);
-        color: $color-primary;
-        transition: all 0.3s ease-in-out;
-        background-image: url('../images/icons/arrows-gray-right.svg');
-        background-repeat: no-repeat;
-        background-position: 85% 50%;
-
-        @include r(1200) {
-          padding: 15px 70px 15px 15px;
-        }
-
-        @include r(990) {
-          padding: 10px 50px 10px 10px;
-          font-size: 14px;
-        }
-
-        @include r(768) {
-          background-image: none;
-          padding: 10px 15px 10px 10px;
-        }
-
-        &:hover {
-          box-shadow: 0 0 5px 2px $color-button;
-          background-color: $color-button;
-          border-color: $color-button;
-          color: $color-accent;
-        }
-      }
+    &--line {
+      @extend %rubik-400;
+      font-size: 30px;
+      line-height: 1.5;
+      color: #333;
     }
+  }
+
+  &__text {
+    max-width: 430px;
+    width: 100%;
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 2;
+    text-align: left;
   }
 }
-
-
-// position: absolute;
-// top: -100px;
-// right: 26vw;
-// bottom: 0;
-// max-width: 350px;
-// width: 100%;
-// height: 400px;
-
-// @include r(1200) {
-//   left: 3%;
-// }

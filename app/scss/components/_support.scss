@@ -5,6 +5,10 @@
     margin-bottom: 25px;
   }
 
+  @include r(992) {
+    margin-bottom: 15px;
+  }
+
   &__list {
     display: flex;
     justify-content: space-around;
@@ -12,20 +16,23 @@
     background-color: $color-form-bg;
 
     @include r(1200) {
-      padding: 10px 0;
+      padding: 25px 0;
     }
 
     @include r(992) {
-      display: block;
-      padding: 10px 0;
-      margin: 0 auto;
+      padding: 20px 0;
+    }
+
+    @include r(768) {
+      flex-direction: column;
     }
   }
 
   &__item {
     position: relative;
-    margin-left: 65px;
-    max-width: 220px;
+    padding-left: 65px;
+    background-repeat: no-repeat;
+    max-width: 280px;
     width: 100%;
     @extend %dmsans-700;
     font-size: 18px;
@@ -33,76 +40,37 @@
     color: $color-title-cards;
 
     @include r(992) {
-      margin: 10px auto 5px;
+      padding-left: 60px;
+      max-width: 240px;
+    }
+
+    @include r(768) {
+      max-width: 350px;
+      margin: 0 auto;
+ 
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
     }
 
     &--support {
-
-      &::after {
-        position: absolute;
-        content: '';
-        background-repeat: no-repeat;
-        top: 0;
-        left: -50%;
-        transform: translate(50%, 0);
-        min-width: 60px;
-        min-height: 60px;
-        background-image: url('../images/icons/support.svg');
-
-        @include r(440) {
-          display: none;
-        }
-      }
+      background-image: url('../images/icons/support.svg');
     }
 
     &--delivery {
-
-      &::after {
-        position: absolute;
-        content: '';
-        background-repeat: no-repeat;
-        top: 0;
-        left: -50%;
-        transform: translate(50%, 0);
-        min-width: 60px;
-        min-height: 60px;
-        background-image: url('../images/icons/delivery.svg');
-
-        @include r(440) {
-          display: none;
-        }
-      }
+      background-image: url('../images/icons/delivery.svg');
     }
 
     &--payment {
-
-      &::after {
-        position: absolute;
-        content: '';
-        background-repeat: no-repeat;
-        top: 0;
-        left: -50%;
-        transform: translate(50%, 0);
-        min-width: 60px;
-        min-height: 60px;
-        background-image: url('../images/icons/payment.svg');
-
-        @include r(440) {
-          display: none;
-        }
-      }
+      background-image: url('../images/icons/payment.svg');
     }
 
     &:not(:last-child)::before {
       position: absolute;
       content: '';
-      min-height: 172px;
+      min-height: 170px;
       transform: translate(19vw, -25%);
       border-left: 1px solid $color-line-cards;
-
-      @include r(1440) {
-        transform: translate(22vw, -25%);
-      }
 
       @include r(1200) {
         display: none;
@@ -111,41 +79,21 @@
   }
 
   &__text {
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    @extend %lineclump;
+    -webkit-line-clamp: 4;
     @extend %dmsans-400;
     font-size: 16px;
     color: $color-text-cards;
 
-    @include r(440) {
+    @include r(992) {
       font-size: 14px;
+      -webkit-line-clamp: 5;
     }
   }
 
   span {
-    @include r(440) {
+    @include r(992) {
       font-size: 16px;
     }
   }
 }
-
-// @each $support in "support""delivery""payment" {
-//   .support__item--#{$support} {
-//     position: relative;
-
-//     &::after {
-//       content: '';
-//       position: absolute;
-//       top: -30%;
-//       left: -20%;
-//       background-image: url('../images/icons/#{$support}.svg');
-//       background-repeat: no-repeat;
-//       background-size: auto, cover;
-//       min-width: 60px;
-//       min-height: 60px;
-//       transform: translate(-50%, 50%);
-//     }
-//   }
-// }

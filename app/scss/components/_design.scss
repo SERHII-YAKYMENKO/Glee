@@ -19,92 +19,135 @@
     gap: 35px 30px;
 
     @include r(992) {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 35px 30px;
+      gap: 30px 25px;
     }
 
     @include r(768) {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px 15px;
+    }
+
+    @include r(480) {
+      grid-template-columns: repeat(1, 1fr);
       gap: 15px 0;
     }
   }
 
   &__item {
     position: relative;
-    display: block;
-    text-align: left;
+    // display: block;
+    // text-align: left;
+    // max-width: 300px;
+    // width: 100%;
+    // padding: 10px;
     padding: 20px 120px 220px 120px;
     border-radius: 5px;
     background-color: $color-design;
     overflow: hidden;
-    box-shadow: none;
+    // box-shadow: none;
+
+    @include r(768) {
+      // padding: 20px 95px 220px 95px;
+    }
 
     @include r(480) {
-      padding: 20px 120px 320px 120px;
+      // padding: 20px 120px 320px 120px;
     }
   }
 
-  &__link {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    transition: all 0.5s;
-    z-index: 100;
+  // &__link {
+  //   position: absolute;
+  //   left: 0;
+  //   right: 0;
+  //   top: 0;
+  //   bottom: 0;
+  //   transition: all 0.5s;
+  //   z-index: 100;
 
-    &:hover {
-      box-shadow: inset 0 0 0 1px $color-button;
-    }
-  }
+  //   &:hover {
+  //     box-shadow: inset 0 0 0 1px $color-button;
+  //   }
+  // }
 
   &__name {
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    margin-bottom: 10px;
+    @extend %lineclump;
     font-size: 20px;
     @extend %dmsans-700;
-    line-height: 1;
     color: $color-title-design;
-    margin-bottom: 15px;
 
-    @include r(1200) {
+    @include r(768) {
+      margin-bottom: 5px;
       font-size: 18px;
     }
   }
 
   &__price {
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-box-orient: vertical;
+    @extend %lineclump;
     -webkit-line-clamp: 1;
     font-size: 16px;
     @extend %dmsans-700;
     color: $color-button;
 
-    @include r(992) {
+    @include r(768) {
       font-size: 14px;
     }
   }
 
-  &__img {
+  &__img-box {
     position: absolute;
-    bottom: 30px;
-    left: 260px;
-    transform: translateX(-50%);
 
-    @include r(480) {
-      max-height: 180px;
-    }
+    // top: 50px;
+    bottom: 30px;
+    left: 160px;
+    // right: 50px;
+    // transform: translate(0%, 50%);
+    // transform: translateX(50%);
+    //  position: relative;
+    //  padding: 5px;
+    //  margin-top: 50px;
+    //  margin-left: 85px;
+    max-width: 280px;
+    width: 100%;
+    min-height: 240px;
+    overflow: hidden;
   }
+
+  &__img {
+    //  position: absolute;
+    //  transform: translate(-50%, 30%);
+    //  bottom: 70px;
+    //  left: 270px;
+  }
+
+
+  // &__img-box {
+  // position: absolute;
+  // bottom: 30px;
+  // left: 260px;
+  // transform: translateX(-50%);
+  // max-width: 200px;
+  // width: 100%;
+  // height: auto;
+  // }
+
+
+  // &__img {
+  // position: absolute;
+  // bottom: 30px;
+  // left: 260px;
+  // transform: translateX(-50%);
+
+  // @include r(480) {
+  //   max-height: 180px;
+  // }
+  // }
 
   &__about {
     position: absolute;
-    top: 35px;
-    left: 40px;
-    max-width: 175px;
+    top: 30px;
+    left: 35px;
+    max-width: 200px;
+    width: 100%;
   }
 }

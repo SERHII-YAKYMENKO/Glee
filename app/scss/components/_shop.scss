@@ -1,0 +1,28 @@
+.shop {
+  padding-bottom: 125px;
+
+  &__content {
+   width: 100%;
+  }
+
+  &__product {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 30px;
+    margin-bottom: 105px;
+
+    &--line {
+      display: block;
+    }
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__filters {
+    margin-right: 30px;
+    max-width: 270px;
+    width: 100%;
+  }
+}

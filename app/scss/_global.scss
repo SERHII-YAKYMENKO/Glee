@@ -7,6 +7,11 @@ body {
   text-rendering: optimizeSpeed;
 }
 
+// .hover {
+//   -webkit-user-select: none;
+//   -webkit-touch-callout: none;
+// }
+
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -22,66 +27,36 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 
-  @include rmin(321.98) {
-    max-width: 300px;
-  }
-
-  @include rmin(439.98) {
-    max-width: 430px;
-  }
-
-  @include r(580) {
-    padding: 0 5px
-  }
-
-  @include rmin(575.98) {
-    max-width: 540px;
-  }
-
-  @include rmin(767.98) {
-    max-width: 720px;
-  }
-
-  @include rmin(991.98) {
-    max-width: 960px;
-  }
-
-  @include rmin(1219.98) {
-    max-width: 1200px;
-  }
-
   &--external {
     max-width: 1800px;
-
-    @include rmin(1200) {
-      max-width: 1800px;
-    }
   }
 }
 
-// .container {
-//   max-width: 1200px;
-//   margin: 0 auto;
-//   padding: 0 15px;
-
-//   &--external {
-//     max-width: 1800px;
-//   }
-// }
-
 .title {
-  display: -webkit-box;
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  font-size: 36px;
+  margin-bottom: 25px;
+  @extend %lineclump;
   text-align: center;
-  color: $color-accent;
   @extend %dmsans-700;
+  font-size: 36px;
+  color: $color-accent;
 
   @include r (1200) {
     font-size: 32px;
-    max-width: 600px;
+    margin-bottom: 20px;
+  }
+
+  @include r (992) {
+    margin-bottom: 15px;
+    font-size: 28px;
+  }
+
+  @include r (768) {
+    font-size: 24px;
+  }
+
+  @include r (480) {
+    margin-bottom: 10px;
+    font-size: 20px;
   }
 
   &--top {
@@ -89,21 +64,21 @@ body {
     font-size: 80px;
     text-transform: uppercase;
 
-    @include r (1200) {
+    @include r(1200) {
       font-size: 60px;
     }
 
-    @include r (992) {
-      font-size: 40px;
-    }
+    // @include r(992) {
+    //   font-size: 40px;
+    // }
 
-    @include r (768) {
-      font-size: 32px;
-    }
+    // @include r(768) {
+    //   font-size: 32px;
+    // }
 
-    @include r (440) {
-      font-size: 28px;
-    }
+    // @include r(440) {
+    //   font-size: 28px;
+    // }
   }
 }
 
@@ -111,8 +86,8 @@ body {
   float: left;
   @extend %rubik-500;
   font-size: 140px;
-  color: $color-button;
   line-height: 1;
+  color: $color-button;
 }
 
 .filter {
@@ -128,20 +103,36 @@ body {
     color: $color-title-menu;
     transition: all 0.5s ease-in-out;
 
-    @include r (1200) {
+    @include r(1200) {
       margin-bottom: 40px;
     }
 
-    &.active {
-      color: $color-accent;
+    @include r(992) {
+      margin-bottom: 20px;
     }
 
     &:not(:last-child) {
       margin-right: 30px;
 
-      @include r (1200) {
+      @include r(1200) {
         margin-bottom: 20px;
+        margin-right: 25px;
       }
+
+      @include r(992) {
+        margin-bottom: 15px;
+        margin-right: 20px;
+      }
+
+      @include r(480) {
+        margin-bottom: 10px;
+        margin-right: 12px;
+        font-size: 14px;
+      }
+    }
+
+    &.active {
+      color: $color-accent;
     }
 
     &:hover {
@@ -156,6 +147,42 @@ body {
 }
 
 .breadcrumbs {
+  // margin-bottom: 120px;
+  margin-bottom: 115px;
+  padding: 29px 0;
+  background-color: $color-search;
+
+  @include r(1200) {
+    margin-bottom: 80px;
+  }
+
+  @include r(992) {
+    margin-bottom: 60px;
+  }
+
+  @include r(768) {
+    margin-bottom: 30px;
+  }
+
+  @include r(440) {
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    @extend %rubik-300;
+    color: $color-date;
+    line-height: 1.1;
+    @extend %lineclump;
+    -webkit-line-clamp: 1;
+    margin-bottom: 0;
+
+    &--content {
+      margin-bottom: 30px;
+      text-align: start;
+      color: $color-title-header;
+    }
+  }
+
   &__list {
     display: flex;
     justify-content: center;
@@ -193,9 +220,78 @@ a {
 }
 
 :focus-visible {
-  outline: 4px dashed darkorange;
+  outline: 1px solid $color-button;
+}
 
-  @include r (1200) {
-    outline: 2px dashed darkorange;
+.filter-title {
+  position: relative;
+  margin-bottom: 27px;
+  text-transform: uppercase;
+  @extend %dmsans-700;
+  font-size: 18px;
+  line-height: 1.2;
+  color: $color-title-header;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 38px;
+    height: 2px;
+    top: 10px;
+    transform: translate(40%, 0);
+    background-repeat: no-repeat;
+    background-image: url('../images/icons/line-category.svg');
   }
+
+  &--recent {
+    padding-bottom: 8px;
+  }
+}
+
+.irs--flat .irs-min,
+.irs--flat .irs-max {
+  display: none;
+}
+
+.irs--flat .irs-from,
+.irs--flat .irs-to,
+.irs--flat .irs-single {
+  display: none;
+}
+
+.irs--flat .irs-line {
+  top: 13px;
+  height: 3px;
+  border-radius: 0px;
+  background-color: $color-button;
+}
+
+.irs--flat .irs-bar {
+  top: 12px;
+  height: 4px;
+  background-color: $color-button;
+}
+
+.irs--flat .irs-handle {
+  top: 7px;
+  width: 15px;
+  height: 15px;
+  background-color: $color-button;
+}
+
+.irs--flat .irs-handle>i:first-child {
+  display: none;
+}
+
+.rating .jq-ry-normal-group svg {
+  fill: silver;
+}
+
+.rating .jq-ry-rated-group svg {
+  fill: blue;
+}
+
+.jq-ry-container {
+  margin-left: -5px;
+  padding: 5px 0 5px 0;
 }

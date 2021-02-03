@@ -2,66 +2,39 @@
 
   &__wrapper {
     position: relative;
-    z-index: 10;
+    overflow: hidden;
     background-color: $color-banner;
+    z-index: 10;
 
     &::after {
       position: absolute;
       content: '';
       top: 12%;
-      left: 54%;
+      right: 10%;
       max-width: 634px;
       width: 100%;
       height: 634px;
       border-radius: 50%;
-      z-index: -1;
       background-image: linear-gradient(-90deg, $color-text-white 0%, $color-banner);
-      overflow: hidden;
-
-      @include r(1440) {
-        left: 59%;
-        top: 8%;
-        max-width: 480px;
-        width: 100%;
-        height: 480px;
-      }
+      z-index: -1;
 
       @include r(1200) {
-        display: none;
+        right: 15%;
+        top: 8%;
+        max-width: 480px;
+        // width: 100%;
+        height: 480px;
       }
     }
   }
+&__inner {
+  display: flex;
 
-  &__img {
-    position: absolute;
-    right: 0;
-    bottom: 412px;
-    transform: translateY(50%);
-    overflow: hidden;
-    max-width: 640px;
-    width: 100%;
-
-    @include r(1440) {
-      width: 70%;
-      bottom: 170px;
-    }
-
-    @include r(1200) {
-      width: 50%;
-    }
-
-    @include r(992) {
-      width: 40%;
-    }
-
-    @include r(768) {
-      bottom: 50px;
-      width: 40%;
-    }
-
-    @include r(480) {
-      width: 0;
-    }
+}
+  &__item {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__content {
@@ -70,30 +43,53 @@
     padding-left: 10px;
     padding-bottom: 300px;
 
-    @include r(1440) {
-      padding-top: 110px;
-      padding-left: 10px;
-      padding-bottom: 160px;
+    @include r(1200) {
+      // padding-top: 110px;
+      // padding-bottom: 160px;
     }
+
+    // @include r(992) {
+    //   padding-top: 70px;
+    //   padding-bottom: 80px;
+    // }
+
+    // @include r(768) {
+    //   padding-top: 30px;
+    //   padding-bottom: 40px;
+    // }
+  }
+
+  &__img {
 
     @include r(1200) {
-      padding-top: 70px;
-      padding-left: 10px;
-      padding-bottom: 80px;
+      margin-right: 60px;
     }
 
-    @include r(768) {
-      padding-top: 30px;
-      padding-left: 10px;
-      padding-bottom: 40px;
+    &--box {
+      // display: inline-block;
+      height: auto;
+      width: 100%;
+      max-width: 640px;
+      // transform: translate(-50%, 0)
+
+      // position: absolute;
+      // left: 0;
+      // top: 0;
+      // width: 100%;
+      // height: auto;
+      // right: 0;
+      // bottom: 412px;
+      // transform: translateY(50%);
+      // overflow: hidden;
+      // max-width: 640px;
+      // width: 100%;
+      // flex: 0 0 640px;
+      // max-width: 100%;
     }
   }
 
   &__title {
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    @extend %lineclump;
     margin-bottom: 25px;
     max-width: 500px;
     width: 100%;
@@ -120,15 +116,13 @@
       font-size: 26px;
     }
 
-    @include r(480) {
-      width: 100%;
-    }
+    // @include r(480) {
+    //   width: 100%;
+    // }
   }
 
   &__text {
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-box-orient: vertical;
+    @extend %lineclump;
     -webkit-line-clamp: 4;
     margin-bottom: 60px;
     max-width: 370px;
@@ -151,9 +145,9 @@
       margin-bottom: 20px;
     }
 
-    @include r(480) {
-      width: 100%;
-    }
+    // @include r(480) {
+    //   width: 100%;
+    // }
   }
 
   &__link {
@@ -169,7 +163,7 @@
       padding: 15px 70px 15px 15px;
     }
 
-    @include r(990) {
+    @include r(992) {
       padding: 10px 50px 10px 10px;
       font-size: 14px;
     }
@@ -199,13 +193,12 @@
     bottom: 30px;
     transform: translateY(-50%);
 
-    @include r(1440) {
-      bottom: 10px;
-    }
+    // @include r(1440) {
+    //   bottom: 10px;
+    // }
   }
 
   li {
-
     &:not(:last-child) {
       margin-right: 14px;
     }
@@ -221,14 +214,14 @@
       color: $color-title-header;
       background-color: $color-dots-def;
 
-      @include r(990) {
+      @include r(992) {
         min-width: 20px;
         min-height: 20px;
       }
 
-      @include r(768) {
-        display: none;
-      }
+      // @include r(768) {
+      //   display: none;
+      // }
     }
   }
 

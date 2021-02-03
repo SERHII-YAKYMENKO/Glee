@@ -1,0 +1,134 @@
+.modal {
+  margin: 0 auto 90px;
+  display: flex;
+
+  @include r(1200) {
+    margin: 0 auto 70px;
+  }
+
+  @include r(992) {
+    margin: 0 auto 50px;
+  }
+
+  @include r(768) {
+    margin: 0 auto 20px;
+  }
+
+  @include r(440) {
+    margin: 0 auto 10px;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 30px;
+    @extend %rubik-400;
+    font-size: 14px;
+
+    @include r(768) {
+      margin-bottom: 15px;
+    }
+
+    &--aid {
+      margin-bottom: 27px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid #f6f6f6;
+
+      @include r(768) {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+      }
+    }
+  }
+
+  &__input {
+    display: block;
+    margin-top: 6px;
+    padding: 0 15px;
+    min-width: 470px;
+    width: 100%;
+    min-height: 60px;
+    background-color: $color-background;
+    border: 2px solid #f6f6f6;
+
+    @include r(768) {
+      min-width: 400px;
+      min-height: 50px;
+    }
+
+    @include r(440) {
+      min-width: 290px;
+      min-height: 40px;
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin: 37px 0 33px;
+    padding: 21px 0;
+    width: 100%;
+    @extend %rubik-500;
+    font-size: 18px;
+    color: $color-text-white;
+    background-color: $color-button;
+
+    @include r(992) {
+      margin: 30px 0 30px;
+    }
+
+    @include r(768) {
+      margin: 20px 0 20px;
+      padding: 15px 0;
+      font-size: 16px;
+    }
+  }
+
+  &__checkbox {
+    margin-right: 10px;
+  }
+
+  &__recovery {
+    float: right;
+  }
+
+  &__questions {
+    text-align: center;
+
+    & p {
+      @extend %rubik-400;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+  }
+
+  &__create {
+    display: block;
+    margin: 20px 0 30px;
+    padding: 20px 0 18px;
+    width: 100%;
+    border: 2px solid $color-button;
+    @extend %rubik-500;
+    font-size: 18px;
+    color: $color-title-header;
+    background-color: $color-background;
+
+    @include r(992) {
+      margin: 20px 0 20px;
+    }
+
+    @include r(768) {
+      margin: 10px 0 10px;
+      padding: 15px 0;
+      font-size: 16px;
+    }
+  }
+}
+
+// chek
+// font-size: 10px;
+// font-family: "FontAwesome5Pro";
+// color: #666666;
+
+// border-radius: 2px;
+// background-color: #ebebeb;
+// width: 14px;
+// height: 14px;

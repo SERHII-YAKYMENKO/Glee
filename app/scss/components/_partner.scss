@@ -1,0 +1,65 @@
+.partner {
+  padding: 265px 0 85px;
+  background-color: $color-form-bg;
+  z-index: -1;
+
+  @include r(1200) {
+    padding: 200px 0 55px;
+  }
+
+  @include r(992) {
+    padding: 190px 0 45px;
+  }
+
+  @include r(768) {
+    padding: 190px 0 20px;
+  }
+
+  @include r(440) {
+    padding: 190px 0 10px;
+  }
+
+  &--login {
+    padding: 85px 0 80px;
+
+    @include r(1200) {
+      padding: 55px 0 55px;
+    }
+
+    @include r(992) {
+      padding: 45px 0 45px;
+    }
+
+    @include r(768) {
+      padding: 20px 0 20px;
+    }
+
+    @include r(440) {
+      padding: 10px 0 10px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    overflow: hidden;
+
+    @include r(992) {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      max-width: 200px;
+      width: 100%;
+      height: auto;
+    }
+
+    @include r(768) {
+      padding: 15px;
+    }
+  }
+}

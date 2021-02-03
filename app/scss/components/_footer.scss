@@ -8,6 +8,49 @@
     @extend %rubik-400;
     font-size: 14px;
     color: $color-text-footer;
+
+    @include r(992) {
+      padding: 50px 0 27px;
+      flex-wrap: wrap;
+    }
+
+    @include r(768) {
+      padding: 20px 0 15px;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__component {
+    max-width: 200px;
+    width: 100%;
+
+    &--connection {
+      max-width: 225px;
+      width: 100%;
+    }
+
+    &--signup {
+      max-width: 272px;
+      width: 100%;
+      @include form;
+
+      @include r(992) {
+        max-width: 100vw;
+      }
+    }
+
+    @include r(992) {
+      max-width: 160px;
+    }
+
+    @include r(768) {
+      max-width: 100vw;
+      margin-top: 15px;
+    }
+
+    @include r(440) {
+      margin-top: 7px;
+    }
   }
 
   &__logo {
@@ -15,59 +58,96 @@
     margin-bottom: 20px;
   }
 
+  &__address {
+    display: block;
+    margin-bottom: 17px;
+    @extend %lineclump;
+    -webkit-line-clamp: 3;
+
+    @include r(768) {
+      margin-bottom: 7px;
+    }
+  }
+
+  &__phone {
+    display: block;
+    margin-bottom: 17px;
+    @extend %lineclump;
+    -webkit-line-clamp: 1;
+    transition: color 0.5s ease-in-out;
+
+    @include r(768) {
+      margin-bottom: 7px;
+    }
+
+    @include rmin(768) {
+      &:hover {
+        color: $color-accent
+      }
+    }
+  }
+
+  &__email {
+    @extend %lineclump;
+    transition: color 0.5s ease-in-out;
+
+    @include r(768) {
+      margin-bottom: 7px;
+    }
+
+    @include rmin(768) {
+      &:hover {
+        color: $color-accent
+      }
+    }
+  }
+
   &__title {
-    padding-top: 10px;
     margin-bottom: 21px;
+    padding-top: 10px;
+    @extend %lineclump;
     @extend %dmsans-700;
     font-size: 16px;
     color: $color-title-footer;
     text-transform: uppercase;
+
+    @include r(768) {
+      margin-bottom: 10px;
+      padding-top: 0;
+    }
   }
 
   &__up-text {
     text-transform: uppercase;
   }
 
-  .contact {
-    max-width: 200px;
-    width: 100%;
-  }
+  &__link {
+    transition: color 0.3s ease-in-out;
 
-  @each $width-item in 'about''account' {
-    .footer__#{$width-item} {
-      max-width: 200px;
-      width: 100%;
-    }
-  }
-
-  &__signup {
-    max-width: 272px;
-    width: 100%;
-    @include form;
-  }
-
-  @each $addres-margin in 'address''phone' {
-    .footer__#{$addres-margin} {
-      display: block;
-      margin-bottom: 17px;
+    @include rmin(768) {
+      &:hover {
+        color: $color-accent
+      }
     }
   }
 
   &__item {
     margin-bottom: 14px;
+
+    @include r(768) {
+      margin-bottom: 7px;
+    }
   }
 
   &__text {
     margin-bottom: 40px;
-  }
 
-  @each $color-hover in 'link''phone''email' {
-    .footer__#{$color-hover} {
-      transition: color 0.5s ease-in-out;
+    @include r(768) {
+      margin-bottom: 15px;
+    }
 
-      &:hover {
-        color: $color-accent
-      }
+    @include r(440) {
+      margin-bottom: 10px;
     }
   }
 
@@ -79,6 +159,16 @@
     @extend %rubik-400;
     font-size: 14px;
     color: $color-text-footer;
+
+    @include r(768) {
+      flex-wrap: wrap;
+      padding: 20px 0 10px;
+    }
+
+    @include r(440) {
+      flex-wrap: wrap;
+      padding: 10px 0 10px;
+    }
   }
 
   &__nav {
@@ -87,16 +177,39 @@
     align-items: center;
   }
 
+  &__copyright {
+    @include r(768) {
+      order: 1;
+      padding-bottom: 10px;
+    }
+
+    @include r(440) {
+      padding-bottom: 0;
+      font-size: 12px;
+    }
+  }
+
   &__box {
+    @include r(768) {
+      padding-bottom: 10px;
+    }
 
     &:not(:last-child) {
       margin-right: 30px;
       position: relative;
 
+      @include r(768) {
+        margin-right: 14px;
+      }
+
       &::after {
         position: absolute;
         content: '|';
         right: -17px;
+
+        @include r(768) {
+          right: -7px;
+        }
       }
     }
   }

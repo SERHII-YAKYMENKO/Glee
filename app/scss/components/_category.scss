@@ -1,0 +1,42 @@
+.category {
+  &--box {
+    padding-bottom: 5px;
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__checkbox {
+    position: relative;
+    display: block;
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px;
+    border: none;
+    @extend %rubik-400;
+    line-height: 1.45;
+    color: $color-title-header;
+    transition: all 0.5s;
+    cursor: pointer;
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 10px;
+      right: 20px;
+      transform: translate(-50%, 50%);
+      width: 5px;
+      height: 10px;
+      background-image: url('../images/icons/arrow-category.svg');
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__input {
+    @extend %checkbox-hidden;
+
+    &:checked+.category__checkbox {
+      background-color: $color-search;
+    }
+  }
+}

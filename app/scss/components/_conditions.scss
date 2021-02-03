@@ -1,0 +1,121 @@
+.conditions {
+  margin-bottom: 100px;
+
+  @include r (1200) {
+    margin-bottom: 80px;
+  }
+
+  @include r (992) {
+    margin-bottom: 60px;
+  }
+
+  @include r (768) {
+    margin-bottom: 40px;
+  }
+
+  @include r (400) {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    text-align: start;
+    @extend %rubik-500;
+    font-size: 24px;
+    color: $color-title-header;
+
+    @include r (992) {
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
+    @include r (768) {
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+
+    @include r (480) {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 60px;
+    padding: 0 0 0 35px;
+
+    @include r (1200) {
+      margin-bottom: 40px;
+    }
+
+    @include r (992) {
+      margin-bottom: 30px;
+    }
+
+    @include r (768) {
+      margin-bottom: 20px;
+    }
+
+    @include r (480) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    padding-inline-start: 5px;
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 1.875;
+
+    @include r (992) {
+      line-height: 1.6;
+    }
+
+    @include r (768) {
+      margin-bottom: 15px;
+      font-size: 14px;
+      line-height: 1.3;
+    }
+
+    @include r (480) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__collect {
+    margin-bottom: 55px;
+
+    @include r (1200) {
+      margin-bottom: 40px;
+    }
+
+    @include r (992) {
+      margin-bottom: 30px;
+    }
+
+    @include r (768) {
+      margin-bottom: 20px;
+    }
+
+    @include r (480) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 1.875;
+    color: $color-title-header;
+
+    @include r (992) {
+      line-height: 1.6;
+    }
+
+    @include r (768) {
+      font-size: 14px;
+      line-height: 1.3;
+    }
+  }
+}

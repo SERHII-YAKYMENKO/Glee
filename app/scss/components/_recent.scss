@@ -1,0 +1,44 @@
+.recent {
+  &__item {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 23px;
+    }
+  }
+
+  &__link-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 67px;
+    width: 100%;
+    max-height: 67px;
+    padding: 2px;
+    margin-right: 25px;
+    border: 2px solid #f2f2f2;
+    overflow: hidden;
+  }
+
+  &__img {
+    height: 100%;
+    width: auto;
+  }
+
+  &__content {
+    color: #333;
+  }
+
+  &__text {
+    margin-left: -3px;
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 1.15;
+  }
+
+  &__price {
+    @extend %rubik-400;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+}

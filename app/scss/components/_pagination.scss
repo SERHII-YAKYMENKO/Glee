@@ -1,0 +1,33 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  @extend %rubik-400;
+  color: $color-title-header;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  &__link {
+    border: 1px solid $color-button;
+    padding: 14px 20px;
+
+    &--active {
+      background-color: $color-button;
+    }
+  }
+
+  &__next {
+    border: 1px solid $color-button;
+    padding: 14px 20px;
+  }
+}

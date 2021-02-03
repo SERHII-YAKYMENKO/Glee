@@ -1,0 +1,15 @@
+.price {
+  padding-bottom: 30px;
+
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    @extend %rubik-400;
+    font-size: 14px;
+  }
+
+  &__to {
+    margin-right: 0;
+    margin-left: auto;
+  }
+}

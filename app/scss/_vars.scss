@@ -35,6 +35,13 @@ $color-box-shadow: rgba(37, 37, 37, 0.05);
   background-color: $color-button;
 }
 
+%lineclump {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
 %statistic-icons {
   background-position: left center;
   background-repeat: no-repeat;
@@ -42,6 +49,14 @@ $color-box-shadow: rgba(37, 37, 37, 0.05);
   top: -49px;
   left: 25%;
   transform: translate(0, -50%);
+}
+
+%checkbox-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: (rect(0 0 0 0));
+  width: 1px;
+  height: 1px;
 }
 
 %dmsans-400 {
@@ -78,6 +93,7 @@ $color-box-shadow: rgba(37, 37, 37, 0.05);
   font-family: 'Rubik-Bold', sans-serif;
   font-weight: 700;
 }
+
 %poppins-600 {
   font-family: 'Poppins-SemiBold', sans-serif;
   font-weight: 600;

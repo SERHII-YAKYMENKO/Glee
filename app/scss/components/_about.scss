@@ -1,63 +1,96 @@
 .about {
-  margin-bottom: 115px;
 
-  &__wrapper {
-    margin: 0 auto 120px;
-    padding: 30px 0;
-    background-color: $color-search;
-  }
+  // &__wrapper {
+  //   margin: 0 auto 120px;
 
-  &__title {
-    @extend %rubik-300;
-    color: $color-date;
-    line-height: 1.1;
+  //   @include r(1200) {
+  //     margin: 0 auto 80px;
+  //     padding: 25px 0;
+  //   }
 
-    &--content {
-      margin-bottom: 30px;
-      text-align: start;
-      color: $color-title-header;
-    }
-  }
+  //   @include r(992) {
+  //     margin: 0 auto 60px;
+  //     padding: 20px 0;
+  //   }
+
+  //   @include r(768) {
+  //     margin: 0 auto 30px;
+  //   }
+
+  //   @include r(440) {
+  //     margin: 0 auto 15px;
+  //     padding: 10px 0 20px;
+  //   }
+  // }
 
   &__inner {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
     margin-bottom: 125px;
-    max-height: 62vh;
+
+    @include r(1200) {
+      margin-bottom: 80px;
+    }
+  }
+
+  &__img-box {
     overflow: hidden;
+    height: 670px;
+    max-width: 570px;
+    width: 100%;
+    margin-right: 45px;
+
+    @include r(1200) {
+      width: 70%;
+      margin-right: 25px;
+    }
   }
 
   &__img {
-    margin-right: 45px;
-    transform: translateY(-11%);
+    display: block;
+    max-width: 100%;
+    position: relative;
+    transform: translate(0, -11%);
   }
+
+  // &__img {
+  //   margin-right: 45px;
+  //   transform: translateY(-11%);
+
+  //   @include r(1200) {
+  //     margin-right: 45px;
+  //   }
+  // }
 
   &__content {
     padding-top: 60px;
+    max-width: 555px;
+    width: 100%;
   }
 
   &__firstletter {
-    padding-right: 21px;
-    padding-left: 4px;
+    padding: 0 21px 0 4px;
     @extend %rubik-700;
   }
 
   &__text {
     margin-bottom: 60px;
+    @extend %lineclump;
+    -webkit-line-clamp: 7;
     @extend %rubik-400;
     line-height: 1.9;
     color: $color-title-header;
   }
 
   &__working {
+    display: flex;
+    flex-direction: column;
     margin: 35px 0;
     @extend %rubik-400;
     line-height: 2;
     color: $color-title-header;
   }
 
-  &__statistics {
+  &__list {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -68,13 +101,22 @@
     color: $color-title-header;
 
     span {
+      @extend %lineclump;
+      -webkit-line-clamp: 1;
+      max-width: 120px;
+      width: 100%;
       font-size: 36px;
     }
   }
-}
 
-@each $icons-about in "projects""revenue""awards" {
-  .about__item--#{$icons-about} {
+  &__text-statist {
+    @extend %lineclump;
+    -webkit-line-clamp: 1;
+    max-width: 120px;
+    width: 100%;
+  }
+
+  &__item {
     position: relative;
 
     &::before {
@@ -83,12 +125,25 @@
       background-position: left center;
       background-repeat: no-repeat;
       background-size: auto, cover;
-      top: -20px;
+      top: 0;
       left: -30px;
-      width: 43px;
-      height: 40px;
-      transform: translate(-50%, 50%);
-      background-image: url('../images/icons/icons-about/#{$icons-about}.svg');
+      max-width: 45px;
+      width: 100%;
+      min-height: 45px;
+      transform: translate(-50%, 0);
+      background-image: url('../images/icons/icons-about/projects.svg');
+    }
+
+    &--revenue {
+      &::before {
+        background-image: url('../images/icons/icons-about/revenue.svg');
+      }
+    }
+
+    &--awards {
+      &::before {
+        background-image: url('../images/icons/icons-about/awards.svg');
+      }
     }
   }
 }

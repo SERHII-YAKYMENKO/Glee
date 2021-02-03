@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
   <title>Glee.</title>
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
   <link rel="stylesheet" href="css/style.min.css">
@@ -19,7 +19,11 @@
         </a>
         <ul class="menu__list">
           <li class="menu__item">
-            <a class="menu__link" href="#">Home +</a>
+            <button class="menu__link" href="#">Home +</button>
+            <div class="menu__dropdown">
+              <a href="#">About US</a>
+              <a href="#">About US</a>
+              <a href="#">About US</a>
           </li>
           <li class="menu__item">
             <a class="menu__link" href="#">About</a>
@@ -28,7 +32,11 @@
             <a class="menu__link" href="#">Services</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">Pages +</a>
+            <button class="menu__link" href="#">Pages +</button>
+            <div class="menu__dropdown">
+              <a href="#">Pages 1</a>
+              <a href="#">Pages 2</a>
+              <a href="#">Pages 3</a>
           </li>
           <li class="menu__item">
             <a class="menu__link" href="#">News</a>
@@ -58,18 +66,18 @@
   </header>
 
   <main class="main">
-
-    <div class="container container--external">
+    <div class="container">
       <h1 class="title title--top">
         Classic furniture from Europe
       </h1>
     </div>
 
-    <section class="top-slider">
+    <!-- <section class="top-slider">
       <div class="container container--external">
         <div class="top-slider__wrapper">
           <div class="container">
             <div class="top-slider__items">
+
               <div class="top-slider__item">
                 <div class="top-slider__content">
                   <p class="top-slider__title">
@@ -84,8 +92,11 @@
                     Shop Now
                   </a>
                 </div>
-                <img class="top-slider__img" src="images/slider/slider.png" alt="#">
+                <div class="top-slider__img">
+                  <img class="top-slider__img--box" src="images/slider/slider.png" alt="#">
+                </div>
               </div>
+              
               <div class="top-slider__item">
                 <div class="top-slider__content">
                   <p class="top-slider__title">
@@ -122,7 +133,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <div class="support">
       <div class="container container--external">
@@ -149,7 +160,6 @@
         </ul>
       </div>
     </div>
-
     <section class="production">
       <div class="container">
         <h2 class="title production__title">
@@ -164,7 +174,9 @@
         </ul>
         <div class="production__content">
           <article class="product mix furnitures" tabindex="0">
-            <img class="product__img" src="images/item-1.png" alt="#">
+            <div class="product__img-box">
+              <img class="product__img" src="images/item-1.png" alt="#">
+            </div>
             <div class="product__list">
               <a class="product__link product__link--search" href="#" tabindex="0">
                 <p class="interactions">
@@ -192,7 +204,9 @@
             </div>
           </article>
           <article class="product mix chairs" tabindex="0">
-            <img class="product__img" src="images/item-2.png" alt="#">
+            <div class="product__img-box">
+              <img class="product__img" src="images/item-2.png" alt="#">
+            </div>
             <div class="product__list">
               <a class="product__link product__link--search" href="#" tabindex="0">
                 <p class="interactions">
@@ -220,7 +234,9 @@
             </div>
           </article>
           <article class="product mix chairs" tabindex="0">
-            <img class="product__img" src="images/item-3.png" alt="#">
+            <div class="product__img-box">
+              <img class="product__img" src="images/item-3.png" alt="#">
+            </div>
             <div class="product__list">
               <a class="product__link product__link--search" href="#" tabindex="0">
                 <p class="interactions">
@@ -248,7 +264,9 @@
             </div>
           </article>
           <article class="product mix decor" tabindex="0">
-            <img class="product__img" src="images/item-4.png" alt="#">
+            <div class="product__img-box">
+              <img class="product__img" src="images/item-4.png" alt="#">
+            </div>
             <div class="product__list">
               <a class="product__link product__link--search" href="#" tabindex="0">
                 <p class="interactions">
@@ -276,7 +294,9 @@
             </div>
           </article>
           <article class="product mix furnitures" tabindex="0">
-            <img class="product__img" src="images/item-5.png" alt="#">
+            <div class="product__img-box">
+              <img class="product__img" src="images/item-5.png" alt="#">
+            </div>
             <div class="product__list">
               <a class="product__link product__link--search" href="#" tabindex="0">
                 <p class="interactions">
@@ -304,7 +324,9 @@
             </div>
           </article>
           <article class="product mix chairs" tabindex="0">
-            <img class="product__img" src="images/item-6.png" alt="#">
+            <div class="product__img-box">
+              <img class="product__img" src="images/item-6.png" alt="#">
+            </div>
             <div class="product__list">
               <a class="product__link product__link--search" href="#" tabindex="0">
                 <p class="interactions">
@@ -332,7 +354,9 @@
             </div>
           </article>
           <article class="product mix chairs" tabindex="0">
-            <img class="product__img" src="images/item-7.png" alt="#">
+            <div class="product__img-box">
+              <img class="product__img" src="images/item-7.png" alt="#">
+            </div>
             <div class="product__list">
               <a class="product__link product__link--search" href="#" tabindex="0">
                 <p class="interactions">
@@ -360,7 +384,9 @@
             </div>
           </article>
           <article class="product mix decor" tabindex="0">
-            <img class="product__img" src="images/item-8.png" alt="#">
+            <div class="product__img-box">
+              <img class="product__img" src="images/item-8.png" alt="#">
+            </div>
             <div class="product__list">
               <a class="product__link product__link--search" href="#" tabindex="0">
                 <p class="interactions">
@@ -392,13 +418,15 @@
       <div class="container container--external">
         <div class="product__light">
           <article class="lighting" tabindex="0">
-            <img class="lighting__img" src="images/led1.png" alt="#">
+            <div class="lighting__img-box">
+              <img class="lighting__img" src="images/led1.png" alt="#">
+            </div>
             <div class="lighting__box">
               <h3 class="lighting__name">
                 Mirum Notare Tellus
               </h3>
               <p class="lighting__text">
-                LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
+                LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27 LED CornLight
               </p>
               <a class="lighting__link" href="#">
                 View More
@@ -406,13 +434,15 @@
             </div>
           </article>
           <article class="lighting" tabindex="0">
-            <img class="lighting__img" src="images/led2.png" alt="#">
+            <div class="lighting__img-box">
+              <img class="lighting__img" src="images/led2.png" alt="#">
+            </div>
             <div class="lighting__box">
               <h3 class="lighting__name">
                 Malesuada Tempor Euismod
               </h3>
               <p class="lighting__text">
-                50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight
+                50W 8000lm Compact Size for HID Street Light Replac ement LEDCorn Light
               </p>
               <a class="lighting__link" href="#">
                 View More
@@ -420,9 +450,8 @@
             </div>
           </article>
         </div>
-      </div> 
+      </div>
     </section>
-
     <section class="design">
       <div class="container">
         <h2 class="title design__title">
@@ -437,7 +466,10 @@
         </ul>
         <div class="design__content">
           <article class="design__item mix furnitures" tabindex="0">
-            <img class="design__img" src="images/item-9.png" alt="#">
+            <div class="design__img-box">
+              <img class="design__img" src="https://picsum.photos/1000/1200" alt="#">
+              <!-- <img class="design__img" src="images/item-9.png" alt="#"> -->
+            </div>
             <div class="design__list">
               <a class="design__link" href="#">
                 <p class="interactions">
@@ -455,7 +487,9 @@
             </div>
           </article>
           <article class="design__item mix decor" tabindex="0">
-            <img class="design__img" src="images/item-10.png" alt="#">
+            <div class="design__img-box">
+              <img class="design__img" src="images/item-10.png" alt="#">
+            </div>
             <div class="design__list">
               <a class="design__link" href="#">
                 <p class="interactions">
@@ -473,7 +507,9 @@
             </div>
           </article>
           <article class="design__item mix furnitures" tabindex="0">
-            <img class="design__img" src="images/item-11.png" alt="#">
+            <div class="design__img-box">
+              <img class="design__img" src="images/item-11.png" alt="#">
+            </div>
             <div class="design__list">
               <a class="design__link" href="#">
                 <p class="interactions">
@@ -491,7 +527,9 @@
             </div>
           </article>
           <article class="design__item mix chairs" tabindex="0">
-            <img class="design__img" src="images/item-12.png" alt="#">
+            <div class="design__img-box">
+              <img class="design__img" src="images/item-12.png" alt="#">
+            </div>
             <div class="design__list">
               <a class="design__link" href="#">
                 <p class="interactions">
@@ -509,7 +547,9 @@
             </div>
           </article>
           <article class="design__item mix decor" tabindex="0">
-            <img class="design__img" src="images/item-13.png" alt="#">
+            <div class="design__img-box">
+              <img class="design__img" src="images/item-13.png" alt="#">
+            </div>
             <div class="design__list">
               <a class="design__link" href="#">
                 <p class="interactions">
@@ -527,7 +567,9 @@
             </div>
           </article>
           <article class="design__item mix decor" tabindex="0">
-            <img class="design__img" src="images/item-14.png" alt="#">
+            <div class="design__img-box">
+              <img class="design__img" src="images/item-14.png" alt="#">
+            </div>
             <div class="design__list">
               <a class="design__link" href="#">
                 <p class="interactions">
@@ -547,13 +589,11 @@
         </div>
       </div>
     </section>
-
     <div class="presentation" style="background-image: url(images/video-presentation.jpg);" tabindex="0">
       <a class="presentation__link" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
         <p class="interactions">video presentation this product</p>
       </a>
     </div>
-
     <section class="blog">
       <div class="container">
         <div class="blog__box-title">
@@ -566,10 +606,10 @@
         </div>
         <div class="blog__news">
           <article class="news">
-            <div class="news__img">
-              <img src="images/blog-item1.jpg" alt="#">
-              <p class="news__tag">news</p>
+            <div class="news__inner">
+              <img class="news__img" src="images/blog-item1.jpg" alt="#">
             </div>
+            <p class="news__tag">news</p>
             <div class="news__content">
               <a class="news__link" href="#">
                 <p>
@@ -578,15 +618,17 @@
               </a>
               <div class="news__signature">
                 <time class="news__time" datetime="2020-01-28">28 january, 2020</time>
-                <autor class="news__autor">by admin</autor>
+                <autor class="news__autor">
+                  <a href="#" class="news__autor-link">by admin</a>
+                </autor>
               </div>
             </div>
           </article>
           <article class="news">
-            <div class="news__img">
-              <img src="images/blog-item2.jpg" alt="#">
-              <p class="news__tag">news</p>
+            <div class="news__inner">
+              <img class="news__img" src="images/blog-item2.jpg" alt="#">
             </div>
+            <p class="news__tag">news</p>
             <div class="news__content">
               <a class="news__link" href="#">
                 <p>
@@ -595,15 +637,17 @@
               </a>
               <div class="news__signature">
                 <time class="news__time" datetime="2020-01-28">28 january, 2020</time>
-                <autor class="news__autor">by admin</autor>
+                <autor class="news__autor">
+                  <a href="#" class="news__autor-link">by admin</a>
+                </autor>
               </div>
             </div>
           </article>
           <article class="news">
-            <div class="news__img">
-              <img src="images/blog-item3.jpg" alt="#">
-              <p class="news__tag">news</p>
+            <div class="news__inner">
+              <img class="news__img" src="images/blog-item3.jpg" alt="#">
             </div>
+            <p class="news__tag">news</p>
             <div class="news__content">
               <a class="news__link" href="#">
                 <p>
@@ -612,13 +656,15 @@
               </a>
               <div class="news__signature">
                 <time class="news__time" datetime="2020-01-28">28 january, 2020</time>
-                <autor class="news__autor">by admin</autor>
+                <autor class="news__autor">
+                  <a href="#" class="news__autor-link">by admin</a>
+                </autor>
               </div>
             </div>
           </article>
         </div>
       </div>
-      <div class="partner">
+      <article class="partner">
         <div class="container">
           <ul class="partner__list">
             <li class="partner__item">
@@ -638,15 +684,14 @@
             </li>
           </ul>
         </div>
-      </div>
+      </article>
     </section>
-
   </main>
 
-  <!-- <footer class="footer">
+  <footer class="footer">
     <div class="container">
       <div class="footer__content">
-        <div class="footer__connection">
+        <div class="footer__component footer__component--connection">
           <a class="logo footer__logo" href="#">
             <img class="logo__img" src="images/logo.png" alt="logotype">
           </a>
@@ -671,7 +716,7 @@
             </a>
           </address>
         </div>
-        <div class="footer__about">
+        <div class="footer__component">
           <div class="footer__title">
             Services
           </div>
@@ -703,7 +748,7 @@
             </li>
           </ul>
         </div>
-        <div class="footer__account">
+        <div class="footer__component">
           <div class="footer__title">
             Account
           </div>
@@ -730,7 +775,7 @@
             </li>
           </ul>
         </div>
-        <div class="footer__signup">
+        <div class="footer__component footer__component--signup">
           <div class="footer__title">
             Newsletter
           </div>
@@ -747,6 +792,7 @@
           </form>
         </div>
       </div>
+
       <div class="footer__navigation">
         <p class="footer__copyright">
           ©2020 CopyRight Example. All rights reserved.
@@ -767,7 +813,7 @@
         </ul>
       </div>
     </div>
-  </footer> -->
+  </footer>
 
   <script src="js/main.min.js"></script>
 </body>
