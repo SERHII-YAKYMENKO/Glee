@@ -246,6 +246,10 @@ a {
   &--recent {
     padding-bottom: 8px;
   }
+
+  &--recent-post {
+    margin-bottom: 30px;
+  }
 }
 
 .irs--flat .irs-min,
@@ -295,3 +299,18 @@ a {
   margin-left: -5px;
   padding: 5px 0 5px 0;
 }
+
+// .box-img {
+//   position: relative;
+//   max-width: 370px;
+//   width: 100%;
+//   overflow: hidden;
+
+//   &__img {
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     width: 100%;
+//     height: auto;
+//   }
+// }

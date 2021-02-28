@@ -1,0 +1,74 @@
+.blog-page {
+  padding-bottom: 120px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    max-width: 830px;
+    width: 100%;
+    margin-right: 70px;
+  }
+
+  &__box-img {
+    margin-bottom: 40px;
+  }
+
+  &__img {
+    max-width: 830px;
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+  }
+
+  &__item {
+    position: relative;
+    float: left;
+    margin-bottom: 73px;
+  }
+
+  &__title {
+    margin-bottom: 35px;
+    @extend %rubik-400;
+    font-size: 36px;
+    line-height: 0.75;
+    color: #333;
+  }
+
+  &__text {
+    margin-bottom: 50px;
+    @extend %rubik-400;
+    line-height: 1.875;
+    color: $color-title-header;
+  }
+
+  &__link {
+    padding-right: 85px;
+    background-position: 85% 50%;
+    @extend %btn;
+    border: 1px solid $color-button;
+    color: $color-button;
+    background-image: url('../../images/icons/arrows-gray-right.svg');
+    background-color: $color-background;
+    background-repeat: no-repeat;
+  }
+
+  &__aside {
+    max-width: 270px;
+    width: 100%;
+  }
+
+  &__link {
+    transition: all 0.5s;
+
+    @include rmin(768) {
+      &:hover {
+        border-radius: 5px;
+        background-color: $color-button;
+        color: $color-text-white;
+      }
+    }
+  }
+}
