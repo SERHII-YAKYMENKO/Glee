@@ -1,0 +1,149 @@
+.comment {
+  margin-bottom: 90px;
+
+  &__title {
+    margin-bottom: 55px;
+    @extend %rubik-700;
+    font-size: 24px;
+    line-height: 1.5;
+
+    &--form {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__item {}
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__list-reply {
+    margin-left: 130px;
+    margin-bottom: 30px;
+    padding: 30px 0 0px;
+    border-top: 2px solid #e0e0e0;
+    border-bottom: 2px solid #e0e0e0;
+  }
+
+  &__img {
+    margin-right: 30px;
+    max-width: 100px;
+    width: 100%;
+    max-height: 100px;
+    object-fit: cover;
+  }
+
+  &__contnet {
+    max-width: 700px;
+    width: 100%;
+    @extend %rubik-400;
+    line-height: 1.2;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+    &--input {
+      position: relative;
+      margin-bottom: 22px;
+    }
+  }
+
+  &__name {
+    @extend %rubik-700;
+  }
+
+  &__date {
+    font-size: 14px;
+    color: $color-button;
+  }
+
+  &__text {
+    margin-bottom: 15px;
+    line-height: 1.875;
+    color: #565872;
+  }
+
+  &__reply {
+    padding-right: 35px;
+    background-position: 85% 50%;
+    background-repeat: no-repeat;
+    width: 13px;
+    height: 14px;
+    background-image: url('../../images/icons/arrow-right-reply.svg');
+  }
+
+  &__wrapper {
+    position: relative;
+    max-width: 398px;
+    width: 100%;
+
+    &::after {
+      position: absolute;
+      content: '';
+      transform: translate(50%, -50%);
+      right: 25px;
+      top: 24px;
+      width: 14px;
+      height: 13px;
+      background-repeat: no-repeat;
+      background-image: url('../../images/icons/icons-comments/user.svg')
+    }
+
+    &--email::after {
+      width: 18px;
+      height: 12px;
+      background-image: url('../../images/icons/icons-comments/email.svg')
+    }
+
+    &--comment {
+      max-width: 830px;
+
+      &::after {
+        width: 18px;
+        height: 16px;
+        background-image: url('../../images/icons/icons-comments/comment.svg')
+      }
+    }
+  }
+
+  &__input {
+    padding: 14px 45px 14px 18px;
+    max-width: 398px;
+    width: 100%;
+    border: 1px solid $color-button;
+
+    &::placeholder {
+      @extend %rubik-400;
+    }
+
+  }
+
+  &__textarea {
+    padding: 15px 45px 15px 18px;
+    margin-bottom: 40px;
+    width: 100%;
+    height: 120px;
+    border: 1px solid $color-button;
+    resize: none;
+
+    &::placeholder {
+      @extend %rubik-400;
+    }
+  }
+
+  &__btn {
+    padding: 15px 40px 15px 45px;
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: $color-text-white;
+    background-color: $color-button;
+  }
+}

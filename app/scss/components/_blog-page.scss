@@ -26,7 +26,8 @@
   &__item {
     position: relative;
     float: left;
-    margin-bottom: 73px;
+    // margin-bottom: 73px;
+    margin-bottom: 55px;
   }
 
   &__title {
@@ -35,6 +36,10 @@
     font-size: 36px;
     line-height: 0.75;
     color: #333;
+
+    &--details {
+      margin-bottom: 25px;
+    }
   }
 
   &__text {
@@ -47,12 +52,14 @@
   &__link {
     padding-right: 85px;
     background-position: 85% 50%;
-    @extend %btn;
+    background-repeat: no-repeat;
     border: 1px solid $color-button;
-    color: $color-button;
+    width: 22px;
+    height: 9px;
     background-image: url('../../images/icons/arrows-gray-right.svg');
     background-color: $color-background;
-    background-repeat: no-repeat;
+    @extend %btn;
+    color: $color-button;
   }
 
   &__aside {
@@ -69,6 +76,162 @@
         background-color: $color-button;
         color: $color-text-white;
       }
+    }
+  }
+
+  &__text-box {
+    line-height: 1.875;
+    color: $color-title-header;
+
+    span {
+      display: block;
+      padding-bottom: 13px;
+      @extend %rubik-500;
+
+      span {
+        font-size: 18px;
+        padding: 15px 0 0;
+      }
+    }
+
+    p {
+      padding-bottom: 42px;
+      @extend %rubik-400;
+    }
+
+    blockquote {
+      margin-bottom: 48px;
+      padding: 13px 85px 0 30px;
+      border-left: 7px solid $color-button;
+      @extend %rubik-400;
+      line-height: 1.875;
+      color: $color-title-header;
+      background-color: $color-search;
+
+      p {
+        position: relative;
+        display: block;
+        padding: 7px 0px 15px 47px;
+        color: $color-title-header;
+
+        &::before {
+          position: absolute;
+          content: '';
+          width: 20px;
+          height: 4px;
+          top: 21px;
+          left: 5px;
+          background-color: $color-button;
+        }
+      }
+    }
+  }
+
+  &__left-img {
+    float: left;
+    margin-right: 30px;
+    max-width: 322px;
+    width: 100%;
+    height: 208px;
+    object-fit: cover;
+  }
+
+  &__right-img {
+    float: right;
+    margin-left: 30px;
+    max-width: 322px;
+    width: 100%;
+    height: 208px;
+    object-fit: cover;
+  }
+
+  &__creator {
+    display: flex;
+    padding: 25px 0;
+    margin-top: 20px;
+    border-top: 2px solid $color-search;
+    border-bottom: 2px solid $color-search;
+  }
+
+  &__creator-link {
+    display: block;
+    padding: 3px 0 0;
+    @extend %rubik-500;
+    font-size: 18px;
+    color: $color-title-header;
+  }
+
+  &__creator-name {
+    display: block;
+
+    span {
+      padding-bottom: 0;
+      @extend %rubik-400;
+      font-size: 16px;
+      line-height: 1.8;
+      color: $color-primary;
+    }
+  }
+
+  &__creator-img {
+    margin-right: 28px;
+    max-width: 76px;
+    width: 100%;
+    max-height: 76px;
+    object-fit: cover;
+  }
+
+  &__creator-box {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+
+  &__tags {
+    display: flex;
+
+    span {
+      padding-right: 25px;
+    }
+  }
+
+  &__tags-link {
+    padding-left: 5px;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      padding-bottom: 0;
+    }
+  }
+
+  &__icon {
+    width: 8px;
+    height: 15px;
+    background-image: url('../../images/icons/facebook.svg');
+    background-repeat: no-repeat;
+    object-fit: cover;
+    margin-left: 22px;
+
+    &--twitter {
+      width: 15px;
+      height: 13px;
+      background-image: url('../../images/icons/twitter.svg');
+    }
+
+    &--instagram {
+      width: 15px;
+      height: 14px;
+      background-image: url('../../images/icons/instagram.svg');
+    }
+
+    &--google {
+      width: 19px;
+      height: 12px;
+      background-image: url('../../images/icons/google+.svg');
     }
   }
 }

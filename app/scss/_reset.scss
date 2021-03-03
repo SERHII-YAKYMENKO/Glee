@@ -87,7 +87,13 @@ input:-webkit-autofill:active {
 button::-moz-focus-inner {
   border: 0;
 }
-
+blockquote {
+      display: block;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      margin-inline-start: 0;
+      margin-inline-end: 0;
+}
 textarea {
   overflow: auto;
   vertical-align: top;
