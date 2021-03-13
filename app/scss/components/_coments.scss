@@ -12,12 +12,14 @@
     }
   }
 
-  &__item {}
-
   &__inner {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
+
+    &--details {
+      justify-content: start;
+    }
   }
 
   &__list-reply {
@@ -78,6 +80,13 @@
     background-image: url('../../images/icons/arrow-right-reply.svg');
   }
 
+  &__form {
+    &--massege {
+      max-width: 620px;
+      width: 100%;
+    }
+  }
+
   &__wrapper {
     position: relative;
     max-width: 398px;
@@ -110,6 +119,10 @@
         background-image: url('../../images/icons/icons-comments/comment.svg')
       }
     }
+
+    &--massege {
+      max-width: 300px;
+    }
   }
 
   &__input {
@@ -117,6 +130,11 @@
     max-width: 398px;
     width: 100%;
     border: 1px solid $color-button;
+
+    &--contact {
+      background-color: #fafafa;
+      border: none;
+    }
 
     &::placeholder {
       @extend %rubik-400;
@@ -132,6 +150,11 @@
     border: 1px solid $color-button;
     resize: none;
 
+    &--contact {
+      background-color: #fafafa;
+      border: none;
+    }
+
     &::placeholder {
       @extend %rubik-400;
     }
@@ -145,5 +168,9 @@
     text-transform: uppercase;
     color: $color-text-white;
     background-color: $color-button;
+
+    &--contact {
+      border-radius: 5px;
+    }
   }
 }

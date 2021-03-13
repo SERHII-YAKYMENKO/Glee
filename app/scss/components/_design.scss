@@ -5,14 +5,6 @@
     margin-bottom: 50px;
   }
 
-  &__title {
-    margin-bottom: 22px;
-
-    @include r(992) {
-      margin-bottom: 10px;
-    }
-  }
-
   &__content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -35,39 +27,19 @@
 
   &__item {
     position: relative;
-    // display: block;
-    // text-align: left;
-    // max-width: 300px;
-    // width: 100%;
-    // padding: 10px;
-    padding: 20px 120px 220px 120px;
+    padding: 25px 10px 20px 80px;
     border-radius: 5px;
     background-color: $color-design;
     overflow: hidden;
-    // box-shadow: none;
 
     @include r(768) {
-      // padding: 20px 95px 220px 95px;
+      padding: 20px 10px 20px 80px;
     }
 
     @include r(480) {
-      // padding: 20px 120px 320px 120px;
+      padding: 20px 10px 20px 80px;
     }
   }
-
-  // &__link {
-  //   position: absolute;
-  //   left: 0;
-  //   right: 0;
-  //   top: 0;
-  //   bottom: 0;
-  //   transition: all 0.5s;
-  //   z-index: 100;
-
-  //   &:hover {
-  //     box-shadow: inset 0 0 0 1px $color-button;
-  //   }
-  // }
 
   &__name {
     margin-bottom: 10px;
@@ -76,7 +48,7 @@
     @extend %dmsans-700;
     color: $color-title-design;
 
-    @include r(768) {
+    @include r(992) {
       margin-bottom: 5px;
       font-size: 18px;
     }
@@ -95,59 +67,40 @@
   }
 
   &__img-box {
-    position: absolute;
-
-    // top: 50px;
-    bottom: 30px;
-    left: 160px;
-    // right: 50px;
-    // transform: translate(0%, 50%);
-    // transform: translateX(50%);
-    //  position: relative;
-    //  padding: 5px;
-    //  margin-top: 50px;
-    //  margin-left: 85px;
     max-width: 280px;
     width: 100%;
-    min-height: 240px;
-    overflow: hidden;
+    min-height: 200px;
   }
 
   &__img {
-    //  position: absolute;
-    //  transform: translate(-50%, 30%);
-    //  bottom: 70px;
-    //  left: 270px;
+    position: absolute;
+    transform: translate(6%, 50%);
+    max-width: 335px;
+    width: 100%;
+    max-height: 170px;
+    object-fit: contain;
+    bottom: 90px;
+
+    @include r(992) {
+      transform: translate(-5%, 50%);
+    }
   }
-
-
-  // &__img-box {
-  // position: absolute;
-  // bottom: 30px;
-  // left: 260px;
-  // transform: translateX(-50%);
-  // max-width: 200px;
-  // width: 100%;
-  // height: auto;
-  // }
-
-
-  // &__img {
-  // position: absolute;
-  // bottom: 30px;
-  // left: 260px;
-  // transform: translateX(-50%);
-
-  // @include r(480) {
-  //   max-height: 180px;
-  // }
-  // }
 
   &__about {
     position: absolute;
-    top: 30px;
+    top: 35px;
     left: 35px;
     max-width: 200px;
     width: 100%;
+
+    @include r(1200) {
+      top: 30px;
+      left: 30px;
+    }
+
+    @include r(992) {
+      top: 20px;
+      left: 20px;
+    }
   }
 }

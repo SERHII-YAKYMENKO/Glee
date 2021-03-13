@@ -1,44 +1,38 @@
-.product__light {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 30px;
-
-  @include r(768) {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 15px;
-  }
-}
-
 .lighting {
   position: relative;
   display: flex;
+  justify-content: space-around;
+  max-width: 870px;
+  width: 100%;
   background-color: $color-cards-product;
 
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
   &__img-box {
-    margin: -100px 0 0 auto;
-    height: auto;
-    width: 100%;
-    max-width: 350px;
     padding: 0 0 10px 70px;
+    margin: -100px 0 0 auto;
+    max-width: 350px;
+    width: 100%;
+    position: relative;
+    height: auto;
 
     @include r(1200) {
+      padding-left: 10px;
       margin-top: 30px;
       width: 70%;
-      padding-left: 10px;
     }
 
     @include r(992) {
+      padding: 10px 0 0 10px;
       margin-top: 0;
-      padding-top: 10px;
       width: 35%;
-      padding-left: 10px;
     }
 
     @include r(768) {
       margin-top: 0;
       margin-left: 0;
-      padding-top: 10px;
-      padding-left: 10px;
       width: 20%;
     }
 
@@ -48,10 +42,10 @@
   }
 
   &__box {
+    padding: 60px 10px 120px 10px;
     margin: auto auto 0 auto;
     max-width: 340px;
     width: 100%;
-    padding: 60px 10px 120px 10px;
 
     @include r(1200) {
       padding: 50px 10px 90px 10px;
@@ -59,14 +53,14 @@
 
     @include r(992) {
       padding: 40px 10px 40px 10px;
-      width: 60%;
       margin: auto 0 0 0;
+      width: 60%;
     }
 
     @include r(768) {
       padding: 30px 10px 30px 20px;
-      width: 80%;
       margin-bottom: auto;
+      width: 80%;
     }
 
     @include r(440) {
@@ -76,19 +70,18 @@
   }
 
   &__name {
-    @extend %lineclump;
-    margin-bottom: 15px;
+    margin: auto 0 15px;
     @extend %dmsans-700;
     font-size: 26px;
-    margin-top: auto;
+    @extend %lineclump;
 
     @include r(1200) {
       font-size: 20px;
     }
 
     @include r(768) {
-      font-size: 18px;
       margin-bottom: 10px;
+      font-size: 18px;
     }
 
     @include r(440) {
@@ -98,11 +91,11 @@
 
   &__text {
     position: relative;
-    @extend %lineclump;
-    -webkit-line-clamp: 4;
     margin-bottom: 50px;
     @extend %rubik-400;
     line-height: 1.8;
+    @extend %lineclump;
+    -webkit-line-clamp: 4;
 
     @include r(992) {
       margin-bottom: 30px;
@@ -120,10 +113,10 @@
   }
 
   &__link {
+    align-items: center;
+    padding: 20px 88px 20px 18px;
     margin-bottom: auto;
     @extend %btn;
-    padding: 20px 88px 20px 18px;
-    align-items: center;
     border-radius: 5px;
     border: 1px solid $color-primary;
     background-position: 85% 50%;
@@ -143,9 +136,9 @@
     }
 
     @include r(768) {
-      background-image: none;
       padding: 10px 15px 10px 10px;
-      
+      background-image: none;
+
     }
 
     &:hover {

@@ -68,7 +68,7 @@
   <main class="main">
     <article class="breadcrumbs">
       <h2 class="title breadcrumbs__title">
-        Terms & Conditions
+        Contact
       </h2>
       <ul class="breadcrumbs__list">
         <li class="breadcrumbs__item">
@@ -78,62 +78,95 @@
         </li>
         <li class="breadcrumbs__item">
           <a class="breadcrumbs__link" href="#">
-            Terms & Conditions
+            Contact
           </a>
         </li>
       </ul>
     </article>
-        <section class="conditions">
+    <section class="contact">
       <div class="container">
-        <h3 class="conditions__title">
-          Types of Personal Information We Collect
-        </h3>
-        <ol class="conditions__list" style="list-style-type:decimal-leading-zero">
-          <li class="conditions__item">
-            Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum dolore
-          </li>
-          <li class="conditions__item">
-            Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-          </li>
-          <li class="conditions__item">
-            Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </li>
-          <li class="conditions__item">
-            Dagna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat.
-          </li>
-          <li class="conditions__item">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          </li>
-        </ol>
-        <div class="conditions__collect">
-          <h3 class="conditions__title">
-            How marketpmss.com Collects Personal Infonnation
+        <div class="contact__top">
+          <span class="contact__help">
+            Write Here
+          </span>
+          <h3 class="contact__title">
+            Get In Touch
           </h3>
-          <p class="conditions__text">
-            consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in
-            reprehenderit in voluptate velit esse cillum dolore
-          </p>
         </div>
-        <div class="conditions__use">
-          <h3 class="conditions__title">
-            How marketpross.com Uses Personal Information
-          </h3>
-          <p class="conditions__text">
-            consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum dolore
-          </p>
+        <ul class="contact__list">
+          <li class="contact__item">
+            <div class="contact__box">
+              <span class="contact__name">
+                Address
+              </span>
+              <address class="contact__address">
+                2416 Mapleview Drive
+                Tampa, FL 33634
+              </address>
+            </div>
+          </li>
+          <li class="contact__item">
+            <div class="contact__box">
+              <span class="contact__name">
+                Our Email
+              </span>
+              <div class="contact__email">
+                <span>
+                  Main Email :
+                  <a href="mailto: contact@website.com">
+                    contact@website.com
+                  </a>
+                </span>
+                <span>
+                  Inquiries :
+                  <a href="mailto: contact@website.com">
+                    Info@mail.com
+                  </a>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="contact__item contact__item--phone">
+            <div class="contact__box">
+              <span class="contact__name">
+                Our Phone
+              </span>
+              <div class="contact__phone">
+                <span>
+                  Office Telephone :
+                  <a href="tel:0029129102320">0029129102320</a>
+                </span>
+                <span>
+                  Mobile :
+                  <a href="tel:000232439493">000 2324 39493</a>
+                </span>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="contact__masseges">
+          <form class="comment__form comment__form--massege">
+            <div class="comment__box comment__box--input">
+              <div class="comment__wrapper comment__wrapper--massege">
+                <input class="comment__input comment__input--contact" type="text" placeholder="NAME">
+              </div>
+              <div class="comment__wrapper comment__wrapper--email comment__wrapper--massege">
+                <input class="comment__input comment__input--contact" type="email" placeholder="EMAIL">
+              </div>
+            </div>
+            <div class="comment__wrapper comment__wrapper--comment">
+              <textarea class="comment__textarea comment__textarea--contact" name="" id=""
+                placeholder="COMMENT"></textarea>
+            </div>
+            <button class="comment__btn comment__btn--contact" type="submit">
+              Send massage
+            </button>
+          </form>
+          <div id="map"></div>
         </div>
       </div>
     </section>
+
     <section class="blog">
       <div class="container">
         <div class="blog__box-title">
@@ -362,6 +395,149 @@
     </div>
   </footer>
 
+  <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" async>
+  </script>
+  <script>
+    let map;
+
+    function initMap() {
+      map = new google.maps.Map(document.getElementById("map"), {
+        center: {
+          lat: 29.774352783017207,
+          lng: -95.39125097822931
+        },
+        zoom: 9,
+        styles: [{
+            "featureType": "all",
+            "elementType": "geometry",
+            "stylers": [{
+                "hue": "#ff4400"
+              },
+              {
+                "saturation": -68
+              },
+              {
+                "lightness": -4
+              },
+              {
+                "gamma": 0.72
+              }
+            ]
+          },
+          {
+            "featureType": "landscape.man_made",
+            "elementType": "geometry",
+            "stylers": [{
+                "hue": "#0077ff"
+              },
+              {
+                "gamma": 3.1
+              }
+            ]
+          },
+          {
+            "featureType": "poi.park",
+            "elementType": "all",
+            "stylers": [{
+                "hue": "#44ff00"
+              },
+              {
+                "saturation": -23
+              }
+            ]
+          },
+          {
+            "featureType": "transit",
+            "elementType": "labels.text.stroke",
+            "stylers": [{
+                "saturation": -64
+              },
+              {
+                "hue": "#ff9100"
+              },
+              {
+                "lightness": 16
+              },
+              {
+                "gamma": 0.47
+              },
+              {
+                "weight": 2.7
+              }
+            ]
+          },
+          {
+            "featureType": "transit.line",
+            "elementType": "geometry",
+            "stylers": [{
+                "lightness": -48
+              },
+              {
+                "hue": "#ff5e00"
+              },
+              {
+                "gamma": 1.2
+              },
+              {
+                "saturation": -23
+              }
+            ]
+          },
+          {
+            "featureType": "water",
+            "elementType": "all",
+            "stylers": [{
+                "hue": "#00ccff"
+              },
+              {
+                "gamma": 0.44
+              },
+              {
+                "saturation": -33
+              }
+            ]
+          },
+          {
+            "featureType": "water",
+            "elementType": "labels.text.fill",
+            "stylers": [{
+                "hue": "#007fff"
+              },
+              {
+                "gamma": 0.77
+              },
+              {
+                "saturation": 65
+              },
+              {
+                "lightness": 99
+              }
+            ]
+          },
+          {
+            "featureType": "water",
+            "elementType": "labels.text.stroke",
+            "stylers": [{
+                "gamma": 0.11
+              },
+              {
+                "weight": 5.6
+              },
+              {
+                "saturation": 99
+              },
+              {
+                "hue": "#0091ff"
+              },
+              {
+                "lightness": -86
+              }
+            ]
+          }
+        ]
+      });
+    }
+  </script>
   <script src="js/main.min.js"></script>
 </body>
 

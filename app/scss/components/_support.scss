@@ -45,8 +45,8 @@
     }
 
     @include r(768) {
-      max-width: 350px;
       margin: 0 auto;
+      max-width: 350px;
  
       &:not(:last-child) {
         margin-bottom: 25px;
