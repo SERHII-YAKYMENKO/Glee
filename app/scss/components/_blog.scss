@@ -25,8 +25,8 @@
   &__view-link {
     position: relative;
     padding-right: 24px;
-    background-repeat: no-repeat;
     background-position: 100% 50%;
+    background-repeat: no-repeat;
     @extend %dmsans-700;
     color: $color-view;
     background-image: url('../../images/icons/arrows-blog-right.svg');
@@ -36,9 +36,9 @@
     }
 
     @include r(768) {
-      font-size: 14px;
       padding-right: 15px;
       background-position: 95% 50%;
+      font-size: 14px;
     }
   }
 
@@ -108,13 +108,13 @@
 
   &__img-box {
     position: relative;
-    // padding-top: 56.25%;
     max-width: 370px;
     width: 100%;
-    height: 250px;
+    min-height: 250px;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     overflow: hidden;
+    margin-bottom: 30px;
 
     &--blog-page {
       display: block;
@@ -124,22 +124,26 @@
       padding: 0;
     }
 
-    @include r(1200) {
-      height: auto;
-    }
-
     @include r(768) {
       margin-bottom: 15px;
-      min-height: 150px;
+      min-height: 200px;
+    }
+
+    @include r(480) {
+      margin-bottom: 10px;
     }
   }
 
   &__img {
     position: absolute;
-    left: 0;
-    top: 0;
+    max-width: 370px;
     width: 100%;
-    height: auto;
+    min-height: 250px;
+    object-fit: cover;
+
+    @include r(768) {
+      min-height: 200px;
+    }
   }
 
   &__content {
@@ -167,10 +171,12 @@
   }
 
   &__tag {
+    position: absolute;
+    bottom: 157px;
+    left: 27px;
+    border-radius: 15px;
     max-width: 103px;
     width: 100%;
-    transform: translate(25%, -55%);
-    border-radius: 15px;
     text-align: center;
     @extend %poppins-700;
     font-size: 14px;
@@ -178,15 +184,19 @@
     text-transform: uppercase;
     color: $color-text-white;
     background-color: $color-button;
-
-    @include r(1200) {
-      transform: translate(25%, -55%);
-    }
+    transition: color 0.3s;
+    z-index: 999;
 
     @include r(768) {
-      transform: translate(25%, -120%);
+      bottom: 145px;
       max-width: 70px;
       line-height: 1.6;
+    }
+
+    &:hover {
+      @include rmin(768) {
+        color: $color-primary
+      }
     }
   }
 

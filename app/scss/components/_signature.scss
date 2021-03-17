@@ -1,7 +1,5 @@
 .signature {
-  @extend %lineclump;
-  -webkit-line-clamp: 1;
-  padding: 15px 3px 18px;
+  padding: 17px 3px 18px;
   border-top: 1px solid $color-signature-border;
   @extend %rubik-400;
   font-size: 12px;
@@ -12,6 +10,10 @@
   &--resent-post {
     border: none;
     padding: 10px 3px 10px;
+
+    @include r(1200) {
+      padding: 5px 3px;
+    }
   }
 
   @include r(992) {
@@ -30,6 +32,15 @@
     padding: 22px 32px 22px 20px;
     color: $color-text-white;
     background-color: $color-button;
+
+    @include r(992) {
+      padding: 15px 25px 12px 15px;
+      transform: translateY(-138%);
+    }
+    @include r(768) {
+      padding: 10px 20px 8px 10px;
+      transform: translateY(-146%);
+    }
   }
 
   &__time {

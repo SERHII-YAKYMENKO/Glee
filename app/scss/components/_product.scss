@@ -58,7 +58,7 @@
 
   &__img-box {
     position: relative;
-    margin-bottom: 15px;
+    margin: 15px auto 0;
     max-width: 250px;
     width: 100%;
     min-height: 250px;
@@ -108,9 +108,11 @@
     opacity: 0;
 
     @include r(768) {
-      position: relative;
-      margin: 0 auto;
-      transform: translateY(165px);
+      opacity: 1;
+      top: 68%;
+      // position: relative;
+      // margin: 0 auto;
+      // transform: translateY(165px);
     }
 
     &--line {
@@ -190,7 +192,6 @@
 
       @include rmin(768) {
         background-color: $color-button;
-        // box-shadow: 0 0 10px 10px $color-button;
 
         &.product__link--search {
           background-image: url('../images/icons/icons-white/search.svg');
@@ -220,7 +221,6 @@
 
   &__name {
     margin-bottom: 5px;
-    @extend %lineclump;
     @extend %dmsans-500;
     line-height: 2;
     color: $color-title-header;
@@ -235,8 +235,6 @@
   }
 
   &__price {
-    @extend %lineclump;
-    -webkit-line-clamp: 1;
     @extend %dmsans-700;
     color: $color-button;
 

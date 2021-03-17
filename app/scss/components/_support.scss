@@ -31,9 +31,9 @@
   &__item {
     position: relative;
     padding-left: 65px;
-    background-repeat: no-repeat;
     max-width: 280px;
     width: 100%;
+    background-repeat: no-repeat;
     @extend %dmsans-700;
     font-size: 18px;
     line-height: 1.8;

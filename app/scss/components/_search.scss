@@ -1,6 +1,10 @@
   .search {
     margin-bottom: 55px;
 
+    @include r(1200) {
+      margin-bottom: 35px;
+    }
+
     &__form {
       display: flex;
       justify-content: space-between;
@@ -11,7 +15,6 @@
       width: 230px;
       height: 42px;
       border-radius: 5px;
-      // border: 1px solid orange;
       border: 1px solid $color-search;
 
       &:focus-visible {

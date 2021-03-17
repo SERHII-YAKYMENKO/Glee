@@ -15,7 +15,7 @@
     padding: 190px 0 20px;
   }
 
-  @include r(440) {
+  @include r(480) {
     padding: 190px 0 10px;
   }
 
@@ -34,29 +34,10 @@
        padding: 20px 0 20px;
      }
 
-     @include r(440) {
+     @include r(480) {
        padding: 10px 0 10px;
      }
    }
-  // &--login {
-  //   padding: 85px 0 80px;
-
-  //   @include r(1200) {
-  //     padding: 55px 0 55px;
-  //   }
-
-  //   @include r(992) {
-  //     padding: 45px 0 45px;
-  //   }
-
-  //   @include r(768) {
-  //     padding: 20px 0 20px;
-  //   }
-
-  //   @include r(440) {
-  //     padding: 10px 0 10px;
-  //   }
-  // }
 
   &__list {
     display: flex;

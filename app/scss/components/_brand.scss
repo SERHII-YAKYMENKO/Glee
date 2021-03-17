@@ -1,11 +1,10 @@
 .brand {
-  padding-bottom: 0;
+  padding-bottom: 15px;
 
   &__checkbox {
     position: relative;
     display: flex;
     justify-content: space-between;
-    // justify-content: space-around;
     padding: 10px 15px 10px 15px;
     border-radius: 5px;
     border: none;
@@ -18,11 +17,7 @@
   }
 
   &__availab {
-    // float: right;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // text-align: center;
+    padding-right: 10px;
   }
 
   &__input {

@@ -9,17 +9,29 @@
     justify-content: center;
     align-items: center;
     margin-right: 15px;
+
+    @include r(768) {
+      margin-right: 10px;
+    }
   }
 
   &__item {
     &:not(:last-child) {
       margin-right: 15px;
+
+      @include r(768) {
+        margin-right: 10px;
+      }
     }
   }
 
   &__link {
-    border: 1px solid $color-button;
     padding: 14px 20px;
+    border: 1px solid $color-button;
+
+    @include r(768) {
+      padding: 10px 16px;
+    }
 
     &--active {
       background-color: $color-button;
@@ -27,11 +39,20 @@
   }
 
   &__next {
-    border: 1px solid $color-button;
     padding: 14px 20px;
+    border: 1px solid $color-button;
+
+    @include r(768) {
+      padding: 10px 16px;
+    }
   }
+
   &--blog-page {
     float: left;
     padding-top: 25px;
+
+    @include r(768) {
+      padding-top: 10px;
+    }
   }
 }

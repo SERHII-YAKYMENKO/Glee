@@ -90,11 +90,14 @@
       display: block;
     }
   }
+  &__tabs {
+    margin-bottom: 120px;
+  }
 }
 
-.details-slide {
+.details-slider {
 
-  .slick-vertical .slick-slide {
+  .slick-vertical .slick-slider {
     margin-bottom: 45px;
     height: 140px;
     border: none;
@@ -218,4 +221,12 @@
 
 .star-details {
   margin-bottom: 25px;
+}
+
+.slider-product {
+  margin-bottom: 100px;
+}
+
+.product__item--slider {
+  max-width: 92%;
 }

@@ -1,31 +1,36 @@
 .statistic {
 
   &__wrapper {
-    background-color: $color-banner;
     padding: 80px 0 75px;
+    background-color: $color-banner;
 
     @include r(992) {
       padding: 50px 0;
     }
 
     @include r(768) {
-      padding: 10px 0;
+      padding: 20px 0 0;
+    }
+
+    @include r(480) {
+      padding: 10px 0 0;
     }
   }
 
   &__list {
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    text-align: center;
     @extend %dmsans-700;
     font-size: 18px;
-    line-height: 32px;
+    line-height: 2;
     color: $color-title-header;
 
     @include r(992) {
       font-size: 16px;
+    }
+
+    @include r(768) {
+      flex-wrap: wrap;
     }
 
     span {
@@ -48,20 +53,23 @@
 
   &__item {
     position: relative;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 85px 10px 0;
+    text-align: center;
+    padding: 85px 0 0;
+
+    @include r(768) {
+      padding: 85px 15px 15px;
+    }
 
     &::before {
       position: absolute;
       content: '';
-      background-repeat: no-repeat;
-      background-size: auto, cover;
+      top: 40px;
+      transform: translate(0, -50%);
       max-width: 80px;
       width: 100%;
       min-height: 65px;
-      transform: translate(10px, -80px);
+      background-size: auto, cover;
+      background-repeat: no-repeat;
       background-image: url('../images/icons/icons-statistic/rate.svg');
     }
 

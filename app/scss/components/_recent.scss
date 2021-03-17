@@ -4,6 +4,10 @@
 
     &:not(:last-child) {
       margin-bottom: 23px;
+
+      @include r(992) {
+        margin-bottom: 15px;
+      }
     }
   }
 
@@ -15,7 +19,7 @@
     width: 100%;
     max-height: 67px;
     padding: 2px;
-    margin-right: 25px;
+    margin-right: 22px;
     border: 2px solid #f2f2f2;
     overflow: hidden;
 
@@ -25,6 +29,10 @@
       max-width: 70px;
       max-height: 70px;
       border: none;
+
+      @include r(1200) {
+        margin-right: 10px;
+      }
     }
   }
 

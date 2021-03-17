@@ -22,8 +22,15 @@
             <button class="menu__link" href="#">Home +</button>
             <div class="menu__dropdown">
               <a href="#">About US</a>
-              <a href="#">About US</a>
-              <a href="#">About US</a>
+              <a href="#">Blog</a>
+              <a href="#">Blog Details</a>
+              <a href="#">Product list 1</a>
+              <a href="#">Product list 2</a>
+              <a href="#">Product details</a>
+              <a href="#">Terms & Conditions</a>
+              <a href="#">Login</a>
+              <a href="#">Contact</a>
+            </div>
           </li>
           <li class="menu__item">
             <a class="menu__link" href="#">About</a>
@@ -37,6 +44,7 @@
               <a href="#">Pages 1</a>
               <a href="#">Pages 2</a>
               <a href="#">Pages 3</a>
+            </div>
           </li>
           <li class="menu__item">
             <a class="menu__link" href="#">News</a>
@@ -66,7 +74,6 @@
   </header>
 
   <main class="main">
-
     <article class="breadcrumbs">
       <h2 class="title breadcrumbs__title">
         About Us
@@ -84,7 +91,6 @@
         </li>
       </ul>
     </article>
-    
     <section class="about">
       <div class="container">
         <div class="about__inner">
@@ -92,13 +98,15 @@
             <img class="about__img" src="images/about.jpg" alt="#">
           </div>
           <div class="about__content">
-            <span class="firstletter about__firstletter">12</span>
-            <div class="about__working">
-              <span>Years</span>
-              <span>Experience</span>
-              <span>Working</span>
+            <div class="about__working-box">
+              <span class="firstletter about__firstletter">12</span>
+              <div class="about__working">
+                <span>Years</span>
+                <span>Experience</span>
+                <span>Working</span>
+              </div>
             </div>
-            <h3 class="title about__title--content">
+            <h3 class="title about__title">
               Mission of our creative house
             </h3>
             <p class="about__text">
@@ -154,7 +162,6 @@
         </div>
       </article>
     </section>
-
     <section class="team">
       <div class="container">
         <div class="team__wrapper">
@@ -181,18 +188,14 @@
                   Eliza Elliot
                 </p>
                 <span class="team__post">Commodo tempor</span>
-                <ul class="team__list">
-                  <li class="team__icon">
-                    <a class="team__link" href="#">
-                      <p class="interactions">go to profile on instagram</p>
-                    </a>
-                  </li>
-                  <li class="team__icon ">
-                    <a class="team__link team__link--google" href="#">
-                      <p class="interactions">go to google</p>
-                    </a>
-                  </li>
-                </ul>
+                <div class="team__connection">
+                  <a class="team__link team__link--instagram" href="#">
+                    <p class="interactions">go to profile on instagram</p>
+                  </a>
+                  <a class="team__link team__link--google" href="#">
+                    <p class="interactions">go to google</p>
+                  </a>
+                </div>
               </div>
             </div>
             <div class="team__item">
@@ -202,18 +205,14 @@
                   Roscoe A.
                 </p>
                 <span class="team__post">Commodo tempor</span>
-                <ul class="team__list">
-                  <li class="team__icon">
-                    <a class="team__link" href="#">
-                      <p class="interactions">go to profile on instagram</p>
-                    </a>
-                  </li>
-                  <li class="team__icon">
-                    <a class="team__link team__link--google" href="#">
-                      <p class="interactions">go to google</p>
-                    </a>
-                  </li>
-                </ul>
+                <div class="team__connection">
+                  <a class="team__link team__link--instagram" href="#">
+                    <p class="interactions">go to profile on instagram</p>
+                  </a>
+                  <a class="team__link team__link--google" href="#">
+                    <p class="interactions">go to google</p>
+                  </a>
+                </div>
               </div>
             </div>
             <div class="team__item">
@@ -223,18 +222,14 @@
                   Ruby M.
                 </p>
                 <span class="team__post">Commodo tempor</span>
-                <ul class="team__list">
-                  <li class="team__icon">
-                    <a class="team__link" href="#">
-                      <p class="interactions">go to profile on instagram</p>
-                    </a>
-                  </li>
-                  <li class="team__icon">
-                    <a class="team__link team__link--google" href="#">
-                      <p class="interactions">go to google</p>
-                    </a>
-                  </li>
-                </ul>
+                <div class="team__connection">
+                  <a class="team__link team__link--instagram" href="#">
+                    <p class="interactions">go to profile on instagram</p>
+                  </a>
+                  <a class="team__link team__link--google" href="#">
+                    <p class="interactions">go to google</p>
+                  </a>
+                </div>
               </div>
             </div>
             <div class="team__item">
@@ -244,25 +239,20 @@
                   Marie F. Bloss
                 </p>
                 <span class="team__post">Commodo tempor</span>
-                <ul class="team__list">
-                  <li class="team__icon">
-                    <a class="team__link" href="#">
-                      <p class="interactions">go to profile on instagram</p>
-                    </a>
-                  </li>
-                  <li class="team__icon">
-                    <a class="team__link team__link--google" href="#">
-                      <p class="interactions">go to google</p>
-                    </a>
-                  </li>
-                </ul>
+                <div class="team__connection">
+                  <a class="team__link team__link--instagram" href="#">
+                    <p class="interactions">go to profile on instagram</p>
+                  </a>
+                  <a class="team__link team__link--google" href="#">
+                    <p class="interactions">go to google</p>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
     <section class="blog">
       <div class="container">
         <div class="blog__box-title">
@@ -270,70 +260,76 @@
             Our Insights & Articles
           </h2>
           <a class="blog__view-link" href="#">
-            <p>View All</p>
+            <span>View All</span>
           </a>
         </div>
-        <div class="blog__news">
-          <article class="news">
-            <div class="news__inner">
-              <img class="news__img" src="images/blog-item1.jpg" alt="#">
+        <div class="blog__list">
+          <article class="blog__item">
+            <div class="blog__img-box">
+              <img class="blog__img" src="images/blog-item1.jpg" alt="#">
             </div>
-            <p class="news__tag">news</p>
-            <div class="news__content">
-              <a class="news__link" href="#">
+            <a class="blog__tag" href="#">news</a>
+            <div class="blog__content">
+              <a class="blog__link" href="#">
                 <p>
                   Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
                 </p>
               </a>
-              <div class="news__signature">
-                <time class="news__time" datetime="2020-01-28">28 january, 2020</time>
-                <autor class="news__autor">
-                  <a href="#" class="news__autor-link">by admin</a>
+              <article class="signature">
+                <time class="signature__time" datetime="2020-01-28">
+                  28 january, 2020
+                </time>
+                <autor class="signature__autor">
+                  <a class="signature__autor-link" href="#">by admin</a>
                 </autor>
-              </div>
+              </article>
             </div>
           </article>
-          <article class="news">
-            <div class="news__inner">
-              <img class="news__img" src="images/blog-item2.jpg" alt="#">
+          <article class="blog__item">
+            <div class="blog__img-box">
+              <img class="blog__img" src="images/blog-item2.jpg" alt="#">
             </div>
-            <p class="news__tag">news</p>
-            <div class="news__content">
-              <a class="news__link" href="#">
+            <a class="blog__tag" href="#">news</a>
+            <div class="blog__content">
+              <a class="blog__link" href="#">
                 <p>
                   Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
                 </p>
               </a>
-              <div class="news__signature">
-                <time class="news__time" datetime="2020-01-28">28 january, 2020</time>
-                <autor class="news__autor">
-                  <a href="#" class="news__autor-link">by admin</a>
+              <article class="signature">
+                <time class="signature__time" datetime="2020-01-28">
+                  28 january, 2020
+                </time>
+                <autor class="signature__autor">
+                  <a class="signature__autor-link" href="#">by admin</a>
                 </autor>
-              </div>
+              </article>
             </div>
           </article>
-          <article class="news">
-            <div class="news__inner">
-              <img class="news__img" src="images/blog-item3.jpg" alt="#">
+          <article class="blog__item">
+            <div class="blog__img-box">
+              <img class="blog__img" src="images/blog-item3.jpg" alt="#">
             </div>
-            <p class="news__tag">news</p>
-            <div class="news__content">
-              <a class="news__link" href="#">
+            <a class="blog__tag" href="#">news</a>
+            <div class="blog__content">
+              <a class="blog__link" href="#">
                 <p>
                   Rncididunt ut labore et dolore magna aliqua. Ut enim
                 </p>
               </a>
-              <div class="news__signature">
-                <time class="news__time" datetime="2020-01-28">28 january, 2020</time>
-                <autor class="news__autor">
-                  <a href="#" class="news__autor-link">by admin</a>
+              <article class="signature">
+                <time class="signature__time" datetime="2020-01-28">
+                  28 january, 2020
+                </time>
+                <autor class="signature__autor">
+                  <a class="signature__autor-link" href="#">by admin</a>
                 </autor>
-              </div>
+              </article>
             </div>
           </article>
         </div>
       </div>
-      <div class="partner">
+      <article class="partner">
         <div class="container">
           <ul class="partner__list">
             <li class="partner__item">
@@ -353,9 +349,8 @@
             </li>
           </ul>
         </div>
-      </div>
+      </article>
     </section>
-
   </main>
 
   <footer class="footer">

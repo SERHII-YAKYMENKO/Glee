@@ -19,6 +19,7 @@ body {
 
 .container {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 15px;
 
@@ -34,7 +35,6 @@ body {
   font-size: 36px;
   line-height: 1.2;
   color: $color-accent;
-  @extend %lineclump;
 
   @include r (1200) {
     font-size: 32px;
@@ -80,7 +80,7 @@ body {
 
 .filter-title {
   position: relative;
-  margin-bottom: 27px;
+  margin-bottom: 22px;
   text-transform: uppercase;
   @extend %dmsans-700;
   font-size: 18px;
@@ -92,14 +92,14 @@ body {
     content: '';
     width: 38px;
     height: 2px;
-    top: 10px;
+    top: 7px;
     transform: translate(40%, 0);
     background-repeat: no-repeat;
     background-image: url('../images/icons/line-category.svg');
   }
 
   &--recent {
-    padding-bottom: 8px;
+    padding-bottom: 11px;
   }
 
   &--recent-post {
@@ -113,6 +113,10 @@ body {
   font-size: 140px;
   line-height: 1;
   color: $color-button;
+
+  @include r(768) {
+    font-size: 110px;
+  }
 }
 
 .filter {
@@ -126,6 +130,10 @@ body {
     @extend %dmsans-700;
     color: $color-title-menu;
     transition: all 0.5s ease-in-out;
+
+    &:hover {
+      color: $color-accent;
+    }
 
     @include r(1200) {
       margin-bottom: 40px;
@@ -158,10 +166,6 @@ body {
     &.active {
       color: $color-accent;
     }
-
-    &:hover {
-      color: $color-accent;
-    }
   }
 }
 
@@ -171,8 +175,8 @@ body {
 }
 
 .breadcrumbs {
-  // margin-bottom: 120px;
-  margin-bottom: 115px;
+  // margin-bottom: 115px;
+  margin-bottom: 120px;
   padding: 29px 0;
   background-color: $color-search;
 
@@ -196,8 +200,8 @@ body {
     @extend %rubik-300;
     color: $color-date;
     line-height: 1.1;
-    @extend %lineclump;
-    -webkit-line-clamp: 1;
+    // @extend %lineclump;
+    // -webkit-line-clamp: 1;
     margin-bottom: 0;
 
     &--content {
@@ -228,7 +232,6 @@ body {
     }
 
     &:last-child {
-      // color: $color-title-menu;
       padding-right: 0;
 
       &::after {
@@ -291,14 +294,18 @@ a {
 }
 
 .jq-ry-container {
-  // margin-left: -5px;
-  padding: 5px 0 5px 0;
+  padding: 0;
+  margin: 8px 0px 4px -2px;
 }
 
 #map {
   max-width: 500px;
   width: 100%;
   height: 335px;
+
+  @include r(992) {
+    margin: 0 auto;
+  }
 }
 
 .with-hover {

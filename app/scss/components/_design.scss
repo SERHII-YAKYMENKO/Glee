@@ -47,6 +47,13 @@
     font-size: 20px;
     @extend %dmsans-700;
     color: $color-title-design;
+    transition: color 0.3s;
+
+    &:hover {
+      @include rmin(768) {
+        color: $color-button;
+      }
+    }
 
     @include r(992) {
       margin-bottom: 5px;
@@ -57,7 +64,6 @@
   &__price {
     @extend %lineclump;
     -webkit-line-clamp: 1;
-    font-size: 16px;
     @extend %dmsans-700;
     color: $color-button;
 
@@ -74,12 +80,12 @@
 
   &__img {
     position: absolute;
+    bottom: 90px;
     transform: translate(6%, 50%);
     max-width: 335px;
     width: 100%;
     max-height: 170px;
     object-fit: contain;
-    bottom: 90px;
 
     @include r(992) {
       transform: translate(-5%, 50%);

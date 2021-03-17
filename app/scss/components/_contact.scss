@@ -1,7 +1,19 @@
 .contact {
   &__top {
-    margin-bottom: 65px;
+    margin-bottom: 60px;
     text-align: center;
+
+    @include r(1200) {
+      margin-bottom: 40px;
+    }
+
+    @include r(992) {
+      margin-bottom: 20px;
+    }
+
+    @include r(480) {
+      margin-bottom: 10px;
+    }
   }
 
   &__help {
@@ -13,6 +25,14 @@
     @extend %dmsans-700;
     font-size: 35px;
     line-height: 1.6;
+
+    @include r(992) {
+      font-size: 30px;
+    }
+
+    @include r(768) {
+      font-size: 25px;
+    }
   }
 
   &__list {
@@ -20,42 +40,131 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 120px;
+
+    @include r(1200) {
+      margin-bottom: 100px;
+    }
+
+    @include r(992) {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 80px;
+    }
+
+    @include r(768) {
+      margin-bottom: 20px;
+    }
+
+    @include r(480) {
+      margin-bottom: 10px;
+    }
   }
 
   &__item {
     position: relative;
     max-width: 370px;
     width: 100%;
-    height: 383px;
+    padding-bottom: 50px;
+    border: 2px solid transparent;
     background-color: #fbfbfb;
+    transition: all 0.3s;
+
+    @include r(992) {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      max-width: 320px;
+    }
 
     &::before {
       position: absolute;
       content: '';
-      transform: translate(175%, 90%);
-      width: 80px;
-      height: 80px;
+      padding: 40px;
+      top: 28%;
+      left: 39%;
       border-radius: 20px;
-      background-color: $color-background;
+      transform: translateY(-50%);
       box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+      background-color: $color-background;
+      transition: all 0.3s;
+    }
+
+    &:not(:last-child) {
+      margin-right: 20px;
+
+      @include r(768) {
+        margin-right: 0;
+      }
+    }
+
+    @include rmin(768) {
+      &:hover {
+        border-color: $color-button;
+
+        &::before {
+          background-color: $color-button;
+        }
+
+        &.contact__item::after {
+          background-image: url('../../images/icons/icons-white/icon-map.svg');
+        }
+
+        &.contact__item--email::after {
+          background-image: url('../../images/icons/icons-white/icon-email.svg');
+        }
+
+        &.contact__item--phone::after {
+          background-image: url('../../images/icons/icons-white/icon-number.svg');
+        }
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 29%;
+      left: 40%;
+      transform: translate(50%, -50%);
+      background-size: auto, cover;
       background-repeat: no-repeat;
+      max-width: 37px;
+      width: 100%;
+      height: 44px;
       background-image: url('../../images/icons/icon-map.svg');
-      background-position: center center;
+    }
+
+    &--email::after {
+      background-image: url('../../images/icons/icon-email.svg');
+    }
+
+    &--phone::after {
+      background-image: url('../../images/icons/icon-number.svg');
     }
   }
 
   &__box {
-    padding: 210px 10px 10px;
+    padding: 200px 10px 20px;
     @extend %rubik-400;
     line-height: 1.875;
     color: #565872;
     text-align: center;
+
+    @include r(992) {
+      padding: 130px 10px 10px;
+    }
+
+    @include r(768) {
+      padding: 110px 10px 5px;
+    }
   }
 
   &__name {
     @extend %poppins-700;
     font-size: 20px;
     color: #222;
+
+    @include r(768) {
+      font-size: 18px;
+    }
   }
 
   &__address {
@@ -65,7 +174,7 @@
   }
 
   &__email {
-    margin: 12px auto 0;
+    margin: 8px auto 0;
     max-width: 280px;
     width: 100%;
   }
@@ -79,6 +188,23 @@
   &__masseges {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 140px;
+    margin-bottom: 130px;
+
+    @include r(1200) {
+      margin-bottom: 100px;
+    }
+
+    @include r(992) {
+      margin-bottom: 80px;
+      flex-wrap: wrap;
+    }
+
+    @include r(768) {
+      margin-bottom: 40px;
+    }
+
+    @include r(480) {
+      margin-bottom: 20px;
+    }
   }
 }

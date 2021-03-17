@@ -63,7 +63,7 @@
       width: 80%;
     }
 
-    @include r(440) {
+    @include r(480) {
       padding: 10px 10px 30px 15px;
       width: 70%;
     }
@@ -84,7 +84,7 @@
       font-size: 18px;
     }
 
-    @include r(440) {
+    @include r(480) {
       font-size: 16px;
     }
   }
@@ -107,7 +107,7 @@
       -webkit-line-clamp: 5;
     }
 
-    @include r(440) {
+    @include r(480) {
       font-size: 14px;
     }
   }
@@ -138,7 +138,6 @@
     @include r(768) {
       padding: 10px 15px 10px 10px;
       background-image: none;
-
     }
 
     &:hover {

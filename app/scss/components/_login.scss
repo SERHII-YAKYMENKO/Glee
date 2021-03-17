@@ -14,8 +14,14 @@
     margin: 0 auto 20px;
   }
 
-  @include r(440) {
+  @include r(480) {
     margin: 0 auto 10px;
+  }
+
+  &__box {
+    max-width: 470px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   &__label {
@@ -41,24 +47,13 @@
   }
 
   &__input {
-    display: block;
     margin-top: 6px;
     padding: 0 15px;
-    min-width: 470px;
+    max-width: 470px;
     width: 100%;
     min-height: 60px;
     background-color: $color-background;
     border: 2px solid #f6f6f6;
-
-    @include r(768) {
-      min-width: 400px;
-      min-height: 50px;
-    }
-
-    @include r(440) {
-      min-width: 290px;
-      min-height: 40px;
-    }
   }
 
   &__btn {
@@ -122,13 +117,3 @@
     }
   }
 }
-
-// chek
-// font-size: 10px;
-// font-family: "FontAwesome5Pro";
-// color: #666666;
-
-// border-radius: 2px;
-// background-color: #ebebeb;
-// width: 14px;
-// height: 14px;

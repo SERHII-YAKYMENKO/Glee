@@ -1,14 +1,46 @@
 .comment {
   margin-bottom: 90px;
 
+  @include r(1200) {
+    margin-bottom: 60px;
+  }
+
+  @include r(992) {
+    margin-bottom: 40px;
+  }
+
+  @include r(768) {
+    margin-bottom: 20px;
+  }
+
   &__title {
     margin-bottom: 55px;
     @extend %rubik-700;
     font-size: 24px;
     line-height: 1.5;
 
+    @include r(1200) {
+      margin-bottom: 40px;
+    }
+
+    @include r(992) {
+      margin-bottom: 25px;
+    }
+
+    @include r(768) {
+      margin-bottom: 10px;
+    }
+
     &--form {
       margin-bottom: 40px;
+
+      @include r(992) {
+        margin-bottom: 25px;
+      }
+
+      @include r(768) {
+        margin-bottom: 10px;
+      }
     }
   }
 
@@ -17,17 +49,41 @@
     justify-content: space-between;
     margin-bottom: 30px;
 
+    @include r(1200) {
+      margin-bottom: 20px;
+    }
+
+    @include r(992) {
+      margin-bottom: 10px;
+    }
+
     &--details {
       justify-content: start;
     }
   }
 
   &__list-reply {
+    padding: 30px 0 0;
     margin-left: 130px;
     margin-bottom: 30px;
-    padding: 30px 0 0px;
     border-top: 2px solid #e0e0e0;
     border-bottom: 2px solid #e0e0e0;
+
+    @include r(1200) {
+      padding: 20px 0 0;
+      margin-left: 110px;
+      margin-bottom: 20px;
+    }
+
+    @include r(992) {
+      padding: 15px 0 0;
+      margin-left: 95px;
+      margin-bottom: 15px;
+    }
+
+    @include r(768) img {
+      display: none;
+    }
   }
 
   &__img {
@@ -36,6 +92,18 @@
     width: 100%;
     max-height: 100px;
     object-fit: cover;
+
+    @include r(1200) {
+      margin-right: 20px;
+      max-width: 90px;
+      max-height: 90px;
+    }
+
+    @include r(992) {
+      margin-right: 15px;
+      max-width: 80px;
+      max-height: 80px;
+    }
   }
 
   &__contnet {
@@ -52,7 +120,11 @@
 
     &--input {
       position: relative;
-      margin-bottom: 22px;
+      margin-bottom: 25px;
+
+      @include r(992) {
+        margin-bottom: 10px;
+      }
     }
   }
 
@@ -69,6 +141,11 @@
     margin-bottom: 15px;
     line-height: 1.875;
     color: #565872;
+
+    @include r(992) {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
   }
 
   &__reply {
@@ -81,9 +158,16 @@
   }
 
   &__form {
+    @extend %rubik-400;
+
     &--massege {
+      margin-right: 20px;
       max-width: 620px;
       width: 100%;
+
+      @include r(992) {
+        margin: 0 auto 25px;
+      }
     }
   }
 
@@ -95,18 +179,22 @@
     &::after {
       position: absolute;
       content: '';
-      transform: translate(50%, -50%);
+      top: 28px;
       right: 25px;
-      top: 24px;
-      width: 14px;
-      height: 13px;
+      max-width: 18px;
+      width: 100%;
+      height: 16px;
+      transform: translateY(-50%);
       background-repeat: no-repeat;
-      background-image: url('../../images/icons/icons-comments/user.svg')
+      background-size: auto, cover;
+      background-image: url('../../images/icons/icons-comments/user.svg');
+
+      @include r(768) {
+        right: 10px;
+      }
     }
 
     &--email::after {
-      width: 18px;
-      height: 12px;
       background-image: url('../../images/icons/icons-comments/email.svg')
     }
 
@@ -114,10 +202,12 @@
       max-width: 830px;
 
       &::after {
-        width: 18px;
-        height: 16px;
         background-image: url('../../images/icons/icons-comments/comment.svg')
       }
+    }
+
+    &--email {
+      margin-left: 10px;
     }
 
     &--massege {
@@ -132,45 +222,83 @@
     border: 1px solid $color-button;
 
     &--contact {
+      padding: 15px 50px 15px 20px;
       background-color: #fafafa;
       border: none;
+
+      @include r(768) {
+        padding: 15px 35px 15px 10px;
+      }
     }
 
     &::placeholder {
+      text-transform: uppercase;
       @extend %rubik-400;
-    }
 
+      @include r(768) {
+        font-size: 14px;
+      }
+    }
   }
 
   &__textarea {
-    padding: 15px 45px 15px 18px;
-    margin-bottom: 40px;
+    padding: 15px 50px 15px 18px;
+    margin-bottom: 25px;
     width: 100%;
-    height: 120px;
+    min-height: 180px;
     border: 1px solid $color-button;
     resize: none;
+
+    @include r(1200) {
+      margin-bottom: 30px;
+    }
+
+    @include r(768) {
+      margin-bottom: 15px;
+    }
 
     &--contact {
       background-color: #fafafa;
       border: none;
+
+      @include r(768) {
+        padding: 15px 35px 15px 10px;
+      }
     }
 
     &::placeholder {
+      text-transform: uppercase;
       @extend %rubik-400;
+
+      @include r(768) {
+        font-size: 14px;
+      }
     }
   }
 
   &__btn {
-    padding: 15px 40px 15px 45px;
+    padding: 15px 50px 15px 45px;
     @extend %rubik-400;
     font-size: 14px;
     line-height: 1.5;
     text-transform: uppercase;
     color: $color-text-white;
     background-color: $color-button;
+    transition: all 0.3s;
+
+    @include r(768) {
+      padding: 10px 20px;
+    }
 
     &--contact {
       border-radius: 5px;
+    }
+
+    &:hover {
+      @include rmin(768) {
+        box-shadow: 0 0 10px 4px $color-button;
+        color: $color-accent;
+      }
     }
   }
 }

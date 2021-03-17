@@ -9,6 +9,10 @@
     margin-bottom: 20px;
   }
 
+  @include r(480) {
+    margin-bottom: 10px;
+  }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -57,7 +61,7 @@
     }
 
     @include r(992) {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
   }
 
@@ -123,9 +127,9 @@
   }
 
   &__img {
-    object-fit: cover;
     width: 100%;
     height: 320px;
+    object-fit: cover;
   }
 
   &__box {
@@ -133,8 +137,8 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-top: -45px;
     padding-left: 25px;
+    margin-top: -50px;
     max-width: 325px;
     width: 100%;
     height: 110px;
@@ -169,49 +173,52 @@
     color: #565872;
   }
 
-  &__list {
+  &__connection {
     display: flex;
     margin-top: 35px;
     margin-left: -50px;
   }
 
-  &__icon {
-    display: flex;
+  &__link {
+    position: relative;
     max-width: 41px;
     width: 100%;
     height: 41px;
     border-radius: 21px;
     background-color: #f6f6f6;
-    transition: all 0.3s;
+    z-index: 100;
+    
+    @include rmin(768) {
+      &:hover {
+        box-shadow: 0 0 10px 4px $color-button;
+      }
+    }
 
     &:not(:last-child) {
       margin-right: 10px;
     }
 
-    &:hover {
-      @include rmin(768) {
-        box-shadow: 0 0 10px 4px $color-button;
-        color: $color-accent;
-      }
+    &::after {
+      position: absolute;
+      content: '';
+      top: 5px;
+      left: 12px;
+      width: 100%;
+      transform: translate(0, 50%);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
     }
-  }
 
-  &__link {
-    position: relative;
-    width: 17px;
-    height: 17px;
-    top: 21px;
-    left: 20px;
-    transform: translate(-50%, -50%);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-image: url('../images/icons/icons-team/instagram-gray.svg');
+    &--instagram::after {
+      max-width: 17px;
+      min-height: 17px;
+      background-image: url('../images/icons/icons-team/instagram-gray.svg');
+    }
 
-    &--google {
-      width: 23px;
-      height: 15px;
-      left: 18px;
+    &--google::after {
+      max-width: 23px;
+      min-height: 15px;
       background-image: url('../images/icons/icons-team/google-gray.svg');
     }
   }
