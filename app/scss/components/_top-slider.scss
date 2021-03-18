@@ -20,89 +20,93 @@
       @include r(1200) {
         right: 15%;
         top: 8%;
-        max-width: 480px;
-        height: 480px;
+        max-width: 400px;
+        height: 400px;
+      }
+
+      @include r(992) {
+        display: none;
       }
     }
   }
 
-  &__items {
-    max-width: 800px;
-    // width: auto;
-    // width: 100%;
-    // width: 1200px;
-    // max-width: 100%;
+  &__box {
+    max-width: 84vw !important;
+    // max-width: 70vw !important;
+    margin: 0 auto;
+    width: 100%;
+
+    @include r(1200) {
+      max-height: 76vh;
+      // max-width: 84vw !important;
+      // max-width: 100%;
+    }
   }
 
   &__item {
     display: flex !important;
     justify-content: space-between;
     align-items: center;
+    // max-height: 76vh;
+
+    @include r(1200) {
+      max-height: 76vh;
+    }
   }
 
   &__content {
-    // display: inline-block;
     float: left;
-    padding-top: 215px;
-    padding-left: 10px;
-    padding-bottom: 300px;
+    margin: 20px 0;
+    padding: 215px 0 300px;
 
     @include r(1200) {
-      // padding-top: 110px;
-      // padding-bottom: 160px;
+      padding: 110px 0 160px;
     }
 
-    // @include r(992) {
-    //   padding-top: 70px;
-    //   padding-bottom: 80px;
-    // }
+    @include r(992) {
+      padding: 70px 0 80px;
+    }
 
-    // @include r(768) {
-    //   padding-top: 30px;
-    //   padding-bottom: 40px;
-    // }
-  }
-
-  &__box {
-    max-width: 100%;
+    @include r(768) {
+      padding: 30px 0 60px;
+    }
   }
 
   &__img-box {
-    // float: right;
     max-width: 640px;
     width: 100%;
-    height: auto;
+    max-height: 400px;
     overflow: hidden;
+    padding: 0 10px;
 
     @include r(1200) {
-      // margin-right: 60px;
+      padding: 25px 10px 50px;
+      margin-bottom: 60px;
+    }
+
+    @include r(768) {
+      max-width: 280px;
+      max-height: 200px;
     }
   }
 
   &__img {
-    // display: inline-block;
     max-width: 640px;
     width: 100%;
-    height: auto;
-    // transform: translate(-50%, 0);
+    max-height: 400px;
+    object-fit: cover;
 
-    // position: absolute;
-    // left: 0;
-    // top: 0;
-    // width: 100%;
-    // height: auto;
-    // right: 0;
-    // bottom: 412px;
-    // transform: translateY(50%);
-    // overflow: hidden;
-    // max-width: 640px;
-    // width: 100%;
-    // flex: 0 0 640px;
-    // max-width: 100%;
+    @include r(992) {
+      max-height: 290px;
+    }
+
+    @include r(768) {
+      max-width: 280px;
+      max-height: 200px;
+    }
   }
 
   &__title {
-    @extend %lineclump;
     margin-bottom: 25px;
     max-width: 500px;
     width: 100%;
@@ -115,18 +119,25 @@
     @include r(1200) {
       margin-bottom: 20px;
       width: 80%;
-      font-size: 50px;
+      font-size: 45px;
     }
 
     @include r(992) {
       margin-bottom: 15px;
       width: 70%;
-      font-size: 40px;
+      font-size: 34px;
     }
 
     @include r(768) {
       margin-bottom: 10px;
-      font-size: 26px;
+      font-size: 22px;
+    }
+
+    @include r(440) {
+      margin-bottom: 50px;
+      max-width: 300px;
+      width: 100%;
+      font-size: 18px;
     }
   }
 
@@ -147,17 +158,21 @@
 
     @include r(992) {
       margin-bottom: 30px;
-      width: 80%;
     }
 
     @include r(768) {
       margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    @include r(480) {
+      display: none;
     }
   }
 
   &__link {
     @extend %btn;
-    padding: 20px 110px 20px 20px;
+    padding: 20px 100px 20px 30px;
     background-position: 85% 50%;
     background-repeat: no-repeat;
     background-image: url('../images/icons/arrows-right-btn.svg');
@@ -178,13 +193,16 @@
       background-image: none;
     }
 
-    &:hover {
-      box-shadow: 0 0 10px 4px $color-button;
-      background-image: url('../images/icons/arrows-accent-right.svg');
-      color: $color-accent;
+    @include r(440) {
+      padding: 8px 10px;
+      border-radius: 5px;
+    }
 
-      @include r(768) {
-        background-image: none;
+    &:hover {
+      @include rmin(768) {
+        box-shadow: 0 0 10px 4px $color-button;
+        background-image: url('../images/icons/arrows-accent-right.svg');
+        color: $color-accent;
       }
     }
   }
@@ -197,6 +215,18 @@
     right: 0;
     bottom: 30px;
     transform: translateY(-50%);
+
+    @include r(992) {
+      bottom: 15px;
+    }
+
+    @include r(768) {
+      bottom: 10px;
+    }
+
+    @include r(768) {
+      bottom: 0;
+    }
   }
 
   li {

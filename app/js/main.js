@@ -1,5 +1,40 @@
 $(function () {
 
+  //slick-slider
+  $('.top-slider__items').slick({
+    arrows: false,
+    dots: true,
+    fade: true,
+    // autoplay: true,
+    // autoplaySpeed: 3000,
+    lazyLoad: 'progressive',
+  });
+
+  $('.details-slider__samll').slick({
+    asNavFor: '.details-slider__normal',
+    focusOnSelect: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    vertical: true,
+    draggable: false,
+    arrows: false,
+    adaptiveHeight: true,
+  });
+
+  $('.details-slider__normal').slick({
+    asNavFor: '.details-slider__samll',
+    focusOnSelect: true,
+    draggable: false,
+    arrows: false,
+    fade: true,
+    adaptiveHeight: true,
+  });
+
+  $('.slider-product__items').slick({
+    slidesToShow: 4,
+    slidesToScroll: 2,
+  });
+
   $('.details__item').on('click', function (e) {
     e.preventDefault();
     $('.details__item').removeClass('details__item--active');
@@ -9,9 +44,8 @@ $(function () {
     $($(this).attr('href')).addClass('details__content-tab--active');
 
   });
-  
-  //??????
-  // $('input, select').styler();
+
+  $('.details__number').styler();
 
   //ionRangeSlider
   $('.price__input').ionRangeSlider({
@@ -109,41 +143,6 @@ $(function () {
   $('.hover').on('touchstart touchend', function (e) {
     e.preventDefault();
     $(this).toggleClass('hover_effect');
-  });
-
-  //slider
-  $('.top-slider__items').slick({
-    arrows: false,
-    dots: true,
-    fade: true,
-
-    // adaptiveHeight: true,
-    // autoplay: true,
-    // autoplaySpeed: 3000,
-  });
-
-  $('.details-slider__samll').slick({
-    asNavFor: '.details-slider__normal',
-    focusOnSelect: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    vertical: true,
-    draggable: false,
-  });
-
-  $('.details-slider__normal').slick({
-    asNavFor: '.details-slider__samll',
-    // slidesToShow: 1,
-    // slidesToScroll: 1,
-    focusOnSelect: true,
-    draggable: false,
-    arrows: false,
-    fade: true,
-  });
-
-  $('.slider-product__items').slick({
-    slidesToShow: 4,
-    slidesToScroll: 2,
   });
 
 });
