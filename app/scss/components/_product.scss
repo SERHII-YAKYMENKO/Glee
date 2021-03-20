@@ -95,6 +95,10 @@
       min-height: 405px;
       object-fit: contain;
     }
+
+    &--slider {
+      transform: translate(0, 50%);
+    }
   }
 
   &__list {

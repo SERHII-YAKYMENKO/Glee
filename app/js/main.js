@@ -5,8 +5,8 @@ $(function () {
     arrows: false,
     dots: true,
     fade: true,
-    // autoplay: true,
-    // autoplaySpeed: 3000,
+    autoplay: true,
+    autoplaySpeed: 3000,
     lazyLoad: 'progressive',
   });
 
@@ -18,7 +18,7 @@ $(function () {
     vertical: true,
     draggable: false,
     arrows: false,
-    adaptiveHeight: true,
+    centerMode: true,
   });
 
   $('.details-slider__normal').slick({
@@ -27,12 +27,41 @@ $(function () {
     draggable: false,
     arrows: false,
     fade: true,
-    adaptiveHeight: true,
   });
 
   $('.slider-product__items').slick({
     slidesToShow: 4,
     slidesToScroll: 2,
+    infinite: true,
+    prevArrow: '<button type="button" class="slick-prev"><img src="images/icons/arrows-slide-left.svg" alt="prev"></button>',
+    nextArrow: '<button type="button" class="slick-next"><img src="images/icons/arrows-slide-right.svg" alt="next"></button>',
+    responsive: [{
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          arrows: false,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+    ]
+  });
+
+  $('.slick-arrow').on('click', function () {
+    $('.slick-arrow').removeClass('slick-arrow--active');
+    $(this).addClass('slick-arrow--active');
+
   });
 
   $('.details__item').on('click', function (e) {
@@ -42,7 +71,6 @@ $(function () {
 
     $('.details__content-tab').removeClass('details__content-tab--active');
     $($(this).attr('href')).addClass('details__content-tab--active');
-
   });
 
   $('.details__number').styler();
@@ -60,7 +88,6 @@ $(function () {
       $('.price__to').text(data.to);
     },
   });
-
 
   //rateYo rating
   $(".star").rateYo({
@@ -87,7 +114,7 @@ $(function () {
     normalFill: "#d6d6d6",
     ratedFill: "#ffcc00",
     readOnly: true,
-    "starSvg": '<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg - inline--fa fa - star fa - w - 18 " role="img" xmlns="http: //www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>'
+    "starSvg": '<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg - inline--fa fa - star fa - w - 18 " role="img" xmlns="http: //www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>',
   });
 
   //anchor
