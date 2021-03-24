@@ -14,22 +14,22 @@
     <div class="container container--external">
       <div class="anchor"></div>
       <nav class="menu">
-        <a class="logo header__logo" href="#">
+        <a class="logo header__logo" href="index.html">
           <img class="logo__img" src="images/logo.png" alt="logotype">
         </a>
         <ul class="menu__list">
           <li class="menu__item">
             <button class="menu__link" href="#">Home +</button>
             <div class="menu__dropdown">
-              <a href="#">About US</a>
-              <a href="#">Blog</a>
-              <a href="#">Blog Details</a>
-              <a href="#">Product list 1</a>
-              <a href="#">Product list 2</a>
-              <a href="#">Product details</a>
-              <a href="#">Terms & Conditions</a>
-              <a href="#">Login</a>
-              <a href="#">Contact</a>
+              <a href="about page.html">About US</a>
+              <a href="blog-page.html">Blog</a>
+              <a href="blog-details.html">Blog Details</a>
+              <a href="product list1.html">Product list 1</a>
+              <a href="product list2.html">Product list 2</a>
+              <a href="product details.html">Product details</a>
+              <a href="Terms & Conditions.html">Terms & Conditions</a>
+              <a href="login.html">Login</a>
+              <a href="contact.html">Contact</a>
             </div>
           </li>
           <li class="menu__item">
@@ -50,7 +50,7 @@
             <a class="menu__link" href="#">News</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">Contact</a>
+            <a class="menu__link" href="contact.html">Contact</a>
           </li>
         </ul>
         <div class="toolbar">
@@ -175,15 +175,15 @@
         <h2 class="title">
           Products of the week
         </h2>
-        <ul class="filter">
-          <li class="filter__btn" data-filter="all" tabindex="0">All</li>
-          <li class="filter__btn" data-filter=".furnitures" tabindex="0">Furnitures</li>
-          <li class="filter__btn" data-filter=".chairs" tabindex="0">Chairs</li>
-          <li class="filter__btn" data-filter=".lighting" tabindex="0">Lighting</li>
-          <li class="filter__btn" data-filter=".decor" tabindex="0">Decor</li>
-        </ul>
+        <div class="filter filters-button-group">
+          <button class="filter__btn" data-filter="*" tabindex="0">All</button>
+          <button class="filter__btn" data-filter=".furnitures" tabindex="0">Furnitures</button>
+          <button class="filter__btn" data-filter=".chairs" tabindex="0">Chairs</button>
+          <button class="filter__btn" data-filter=".lighting" tabindex="0">Lighting</button>
+          <button class="filter__btn" data-filter=".decor" tabindex="0">Decor</button>
+        </div>
         <div class="product__content">
-          <article class="product__item with-hover mix furnitures" tabindex="0">
+          <article class="product__item product__content--item with-hover furnitures" tabindex="0">
             <div class="product__img-box">
               <img class="product__img" src="images/item-1.png" alt="#">
             </div>
@@ -213,7 +213,7 @@
               </span>
             </div>
           </article>
-          <article class="product__item with-hover mix chairs" tabindex="0">
+          <article class="product__item product__content--item  with-hover chairs" tabindex="0">
             <div class="product__img-box">
               <img class="product__img" src="images/item-2.png" alt="#">
             </div>
@@ -243,7 +243,7 @@
               </span>
             </div>
           </article>
-          <article class="product__item with-hover mix chairs" tabindex="0">
+          <article class="product__item product__content--item  with-hover chairs" tabindex="0">
             <div class="product__img-box">
               <img class="product__img" src="images/item-3.png" alt="#">
             </div>
@@ -273,7 +273,7 @@
               </span>
             </div>
           </article>
-          <article class="product__item with-hover mix decor" tabindex="0">
+          <article class="product__item product__content--item  with-hover decor" tabindex="0">
             <div class="product__img-box">
               <img class="product__img" src="images/item-4.png" alt="#">
             </div>
@@ -303,7 +303,7 @@
               </span>
             </div>
           </article>
-          <article class="product__item with-hover mix furnitures" tabindex="0">
+          <article class="product__item product__content--item  with-hover furnitures" tabindex="0">
             <div class="product__img-box">
               <img class="product__img" src="images/item-5.png" alt="#">
             </div>
@@ -333,7 +333,7 @@
               </span>
             </div>
           </article>
-          <article class="product__item with-hover mix chairs" tabindex="0">
+          <article class="product__item product__content--item with-hover chairs" tabindex="0">
             <div class="product__img-box">
               <img class="product__img" src="images/item-6.png" alt="#">
             </div>
@@ -363,7 +363,7 @@
               </span>
             </div>
           </article>
-          <article class="product__item with-hover mix chairs" tabindex="0">
+          <article class="product__item product__content--item  with-hover chairs" tabindex="0">
             <div class="product__img-box">
               <img class="product__img" src="images/item-7.png" alt="#">
             </div>
@@ -393,7 +393,7 @@
               </span>
             </div>
           </article>
-          <article class="product__item with-hover mix decor" tabindex="0">
+          <article class="product__item product__content--item  with-hover decor" tabindex="0">
             <div class="product__img-box">
               <img class="product__img" src="images/item-8.png" alt="#">
             </div>
@@ -467,15 +467,15 @@
         <h2 class="title">
           New Design
         </h2>
-        <ul class="filter">
-          <li class="filter__btn" data-filter="all" tabindex="0">All</li>
-          <li class="filter__btn" data-filter=".furnitures" tabindex="0">Furnitures</li>
-          <li class="filter__btn" data-filter=".chairs" tabindex="0">Chairs</li>
-          <li class="filter__btn" data-filter=".lighting" tabindex="0">Lighting</li>
-          <li class="filter__btn" data-filter=".decor" tabindex="0">Decor</li>
-        </ul>
+        <div class="filter filters-button-group2">
+          <button class="filter__btn" data-filter="*">All</button>
+          <button class="filter__btn" data-filter=".furnitures">Furnitures</button>
+          <button class="filter__btn" data-filter=".chairs">Chairs</button>
+          <button class="filter__btn" data-filter=".lighting">Lighting</button>
+          <button class="filter__btn" data-filter=".decor">Decor</button>
+        </div>
         <div class="design__content">
-          <div class="design__item mix furnitures" tabindex="0">
+          <div class="design__item furnitures" tabindex="0">
             <div class="design__img-box">
               <img class="design__img" src="images/item-9.png" alt="#">
             </div>
@@ -495,7 +495,7 @@
               </span>
             </a>
           </div>
-          <div class="design__item mix decor" tabindex="0">
+          <div class="design__item decor" tabindex="0">
             <div class="design__img-box">
               <img class="design__img" src="images/item-10.png" alt="#">
             </div>
@@ -515,7 +515,7 @@
               </span>
             </a>
           </div>
-          <div class="design__item mix furnitures" tabindex="0">
+          <div class="design__item furnitures" tabindex="0">
             <div class="design__img-box">
               <img class="design__img" src="images/item-11.png" alt="#">
             </div>
@@ -535,7 +535,7 @@
               </span>
             </a>
           </div>
-          <div class="design__item mix chairs" tabindex="0">
+          <div class="design__item chairs" tabindex="0">
             <div class="design__img-box">
               <img class="design__img" src="images/item-12.png" alt="#">
             </div>
@@ -555,7 +555,7 @@
               </span>
             </a>
           </div>
-          <div class="design__item mix decor" tabindex="0">
+          <div class="design__item decor" tabindex="0">
             <div class="design__img-box">
               <img class="design__img" src="images/item-13.png" alt="#">
             </div>
@@ -575,7 +575,7 @@
               </span>
             </a>
           </div>
-          <div class="design__item mix decor" tabindex="0">
+          <div class="design__item decor" tabindex="0">
             <div class="design__img-box">
               <img class="design__img" src="images/item-14.png" alt="#">
             </div>
@@ -737,7 +737,7 @@
           </div>
           <ul class="footer__list">
             <li class="footer__item">
-              <a class="footer__link" href="#">
+              <a class="footer__link" href="about page.html">
                 About us
               </a>
             </li>
@@ -747,17 +747,17 @@
               </a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">
+              <a class="footer__link" href="blog-page.html">
                 Our Blog
               </a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">
+              <a class="footer__link" href="contact.html">
                 Contact Us
               </a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">
+              <a class="footer__link" href="Terms & Conditions.html">
                 Terms & Condition
               </a>
             </li>
@@ -779,7 +779,7 @@
               </a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">
+              <a class="footer__link" href="login.html">
                 Login
               </a>
             </li>
@@ -807,7 +807,6 @@
           </form>
         </div>
       </div>
-
       <div class="footer__navigation">
         <p class="footer__copyright">
           ©2020 CopyRight Example. All rights reserved.
@@ -817,13 +816,13 @@
             <a class="footer__link" href="#">Home</a>
           </li>
           <li class="footer__box">
-            <a class="footer__link" href="#">About</a>
+            <a class="footer__link" href="about page.html">About</a>
           </li>
           <li class="footer__box">
-            <a class="footer__link" href="#">Blog</a>
+            <a class="footer__link" href="blog-page.html">Blog</a>
           </li>
           <li class="footer__box">
-            <a class="footer__link" href="#">Contact</a>
+            <a class="footer__link" href="contact.html">Contact</a>
           </li>
         </ul>
       </div>

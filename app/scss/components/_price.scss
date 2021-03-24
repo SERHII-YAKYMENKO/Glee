@@ -1,6 +1,10 @@
 .price {
   padding-bottom: 52px;
 
+  @include r(768) {
+    padding-bottom: 10px;
+  }
+
   &__label {
     display: flex;
     justify-content: space-between;

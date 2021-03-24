@@ -23,12 +23,12 @@
   }
 
   &__content {
+    margin-right: 70px;
     max-width: 830px;
     width: 100%;
-    margin-right: 70px;
 
     @include r(992) {
-      margin-right: 20px;
+      margin-right: 10px;
     }
 
     @include r(762) {
@@ -83,7 +83,7 @@
 
     @include r(768) {
       margin-bottom: 10px;
-      font-size: 28px;
+      font-size: 24px;
       line-height: 1;
     }
 
@@ -140,6 +140,36 @@
     }
   }
 
+  &__aside-btn {
+    display: none;
+
+    @include r(768) {
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 200px;
+      max-width: 30px;
+      width: 100%;
+      min-height: 80px;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      background-repeat: no-repeat;
+      background-size: auto cover;
+      background-position: center center;
+      background-image: url('../images/icons/arrows-blog-right.svg');
+      background-color: $color-button;
+      z-index: 99;
+
+      &.fixedAside {
+        position: fixed;
+        top: 75px;
+        right: 0;
+        left: 0;
+        z-index: 99;
+      }
+    }
+  }
+
   &__aside {
     max-width: 270px;
     width: 100%;
@@ -150,6 +180,32 @@
 
     @include r(768) {
       display: none;
+
+      &.aside--active {
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: $color-search;
+        padding: 10px;
+        z-index: 999;
+
+        @include r(768) {
+          top: 49px;
+        }
+
+        &.fixedAside {
+          position: fixed;
+          top: 60px;
+          right: 0;
+          left: 0;
+          z-index: 99;
+
+          @include r(768) {
+            top: 49px;
+          }
+        }
+      }
     }
   }
 

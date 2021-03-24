@@ -2,8 +2,20 @@
   &--box {
     padding-bottom: 22px;
 
+    @include r(768) {
+      padding-bottom: 0;
+    }
+
     &:not(:last-child) {
       margin-bottom: 35px;
+
+      @include r(768) {
+        margin-bottom: 10px;
+      }
+
+      @include r(480) {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -19,6 +31,10 @@
     transition: all 0.5s;
     cursor: pointer;
 
+    @include r(768) {
+      padding: 7px 10px 7px 10px;
+    }
+
     &::after {
       position: absolute;
       content: '';
@@ -27,7 +43,7 @@
       transform: translate(-50%, 50%);
       width: 5px;
       height: 10px;
-      background-image: url('../../images/icons/arrow-category.svg');
+      background-image: url('../images/icons/arrow-category.svg');
       background-repeat: no-repeat;
     }
   }
@@ -37,6 +53,10 @@
 
     &:checked+.category__checkbox {
       background-color: $color-search;
+
+      @include r(768) {
+        background-color: $color-button;
+      }
     }
   }
 }

@@ -22,6 +22,7 @@
   }
 
   &__product {
+    display: block;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px 30px;
@@ -29,22 +30,22 @@
 
     @include r(1200) {
       margin-bottom: 80px;
+      gap: 20px;
     }
 
     @include r(992) {
       grid-template-columns: repeat(2, 1fr);
-      gap: 20px 20px;
+      gap: 15px;
       margin-bottom: 60px;
     }
 
     @include r(768) {
       grid-template-columns: repeat(1, 1fr);
-      gap: 20px 20px;
       margin-bottom: 40px;
     }
 
     @include r(480) {
-      gap: 10px 20px;
+      gap: 10px;
       margin-bottom: 15px;
     }
 
@@ -69,6 +70,24 @@
 
     @include r(768) {
       display: none;
+
+      &.aside--active {
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: $color-search;
+        padding: 10px;
+        z-index: 999;
+
+        &.fixedAside {
+          position: fixed;
+          top: 50px;
+          right: 0;
+          left: 0;
+          z-index: 99;
+        }
+      }
     }
   }
 }

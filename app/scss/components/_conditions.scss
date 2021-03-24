@@ -36,7 +36,7 @@
 
     @include r(480) {
       margin-bottom: 10px;
-      font-size: 18px;
+      font-size: 16px;
     }
   }
 
@@ -79,6 +79,7 @@
     }
 
     @include r(480) {
+      padding-inline-start: 0;
       margin-bottom: 10px;
     }
   }

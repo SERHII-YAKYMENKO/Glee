@@ -1,6 +1,10 @@
 .brand {
   padding-bottom: 15px;
 
+  @include r(768) {
+    padding-bottom: 10px;
+  }
+
   &__checkbox {
     position: relative;
     display: flex;
@@ -14,6 +18,10 @@
     color: $color-title-header;
     transition: all 0.5s;
     cursor: pointer;
+
+    @include r(768) {
+      padding: 7px 10px 7px 10px;
+    }
   }
 
   &__availab {
@@ -25,6 +33,10 @@
 
     &:checked+.brand__checkbox {
       background-color: $color-search;
+
+      @include r(768) {
+        background-color: $color-button;
+      }
     }
   }
 }

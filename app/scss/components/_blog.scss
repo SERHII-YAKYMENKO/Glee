@@ -1,6 +1,10 @@
 .blog {
   &__title {
     margin-bottom: 0;
+
+    @include r(480) {
+      font-size: 18px;
+    }
   }
 
   &__box-title {
@@ -56,7 +60,6 @@
 
     @include r(768) {
       flex-direction: column;
-      margin-bottom: -192px;
     }
   }
 

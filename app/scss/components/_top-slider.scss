@@ -32,14 +32,11 @@
 
   &__box {
     max-width: 84vw !important;
-    // max-width: 70vw !important;
     margin: 0 auto;
     width: 100%;
 
     @include r(1200) {
       max-height: 76vh;
-      // max-width: 84vw !important;
-      // max-width: 100%;
     }
   }
 
@@ -47,7 +44,6 @@
     display: flex !important;
     justify-content: space-between;
     align-items: center;
-    // max-height: 76vh;
 
     @include r(1200) {
       max-height: 76vh;
@@ -57,7 +53,7 @@
   &__content {
     float: left;
     margin: 20px 0;
-    padding: 215px 0 300px;
+    padding: 200px 0 275px;
 
     @include r(1200) {
       padding: 110px 0 160px;

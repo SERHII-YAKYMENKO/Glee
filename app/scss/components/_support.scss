@@ -1,5 +1,5 @@
 .support {
-  margin-bottom: 61px;
+  margin-bottom: 68px;
 
   @include r(1200) {
     margin-bottom: 25px;
@@ -7,6 +7,10 @@
 
   @include r(992) {
     margin-bottom: 15px;
+  }
+
+  @include r(480) {
+    margin-bottom: 10px;
   }
 
   &__list {
@@ -25,6 +29,10 @@
 
     @include r(768) {
       flex-direction: column;
+    }
+
+    @include r(480) {
+      padding: 10px 0;
     }
   }
 
@@ -45,11 +53,18 @@
     }
 
     @include r(768) {
-      margin: 0 auto;
+      padding-right: 10px;
+      margin-left: 5px;
       max-width: 350px;
- 
+
       &:not(:last-child) {
         margin-bottom: 25px;
+      }
+    }
+
+    @include r(480) {
+      &:not(:last-child) {
+        margin-bottom: 10px;
       }
     }
 

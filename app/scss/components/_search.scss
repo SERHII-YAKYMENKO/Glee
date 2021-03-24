@@ -5,6 +5,10 @@
       margin-bottom: 35px;
     }
 
+    @include r(768) {
+      margin-bottom: 10px;
+    }
+
     &__form {
       display: flex;
       justify-content: space-between;
@@ -12,10 +16,17 @@
 
     &__input {
       padding: 3px 15px 3px 10px;
-      width: 230px;
+      max-width: 230px;
+      width: 100%;
       height: 42px;
       border-radius: 5px;
       border: 1px solid $color-search;
+      @extend %rubik-400;
+
+      @include r(768) {
+        width: 190px;
+        border-color: $color-button;
+      }
 
       &:focus-visible {
         outline: none;
@@ -35,8 +46,12 @@
         border-radius: 5px;
         background-position: center center;
         background-repeat: no-repeat;
-        background-image: url('../../images/icons/search-icon.svg');
+        background-image: url('../images/icons/search-icon.svg');
         background-color: $color-search;
+
+        @include r(768) {
+          background-color: $color-button;
+        }
       }
     }
   }

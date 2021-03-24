@@ -1,4 +1,8 @@
 .recent {
+  @include r(768) {
+    display: none;
+  }
+
   &__item {
     display: flex;
 
@@ -23,6 +27,11 @@
     border: 2px solid #f2f2f2;
     overflow: hidden;
 
+    @include r(768) {
+      margin-right: 15px;
+      border-color: $color-button;
+    }
+
     &--resent-post {
       padding: 0;
       margin-right: 18px;
@@ -32,6 +41,11 @@
 
       @include r(1200) {
         margin-right: 10px;
+      }
+
+      @include r(768) {
+        max-width: 50px;
+        max-height: 50px;
       }
     }
   }

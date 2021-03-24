@@ -45,7 +45,7 @@
       position: absolute;
       display: block;
       right: 0;
-      z-index: 10;
+      z-index: 100;
       top: -500%;
 
       &.menu__btn--active {
@@ -61,7 +61,7 @@
 
         @include r(480) {
           top: 45px;
-          padding: 40px 50px 15px 50px;
+          padding: 15px 50px;
         }
 
         &.fixed {
@@ -95,9 +95,8 @@
       }
 
       @include r(768) {
-        margin-right: 0;
-        margin-bottom: 15px;
         padding-right: 50px;
+        margin: 0 0 15px 0;
       }
     }
   }
@@ -109,6 +108,10 @@
     min-width: 150px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 999;
+
+    @include r(768) {
+      right: 0;
+    }
 
     & a {
       display: block;

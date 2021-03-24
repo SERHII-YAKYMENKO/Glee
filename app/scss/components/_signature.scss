@@ -64,14 +64,15 @@
       left: -17px;
       background-size: cover;
       background-repeat: no-repeat;
-      background-image: url('../../images/icons/calendar.svg');
+      background-image: url('../images/icons/calendar.svg');
     }
 
     &--blog-time::before {
-      background-image: url('../../images/icons/icons-white/calendar-white.svg');
+      background-image: url('../images/icons/icons-white/calendar-white.svg');
     }
 
     &--recent-post {
+      margin: 0 0 0 15px;
       color: $color-button;
     }
   }
@@ -88,11 +89,11 @@
       left: -17px;
       background-size: cover;
       background-repeat: no-repeat;
-      background-image: url('../../images/icons/user.svg');
+      background-image: url('../images/icons/user.svg');
     }
 
     &--blog-autor::before {
-      background-image: url('../../images/icons/icons-white/user-white.svg');
+      background-image: url('../images/icons/icons-white/user-white.svg');
     }
   }
 

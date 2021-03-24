@@ -46,7 +46,7 @@
     }
 
     @include r(768) {
-      font-size: 30px;
+      font-size: 24px;
       margin-bottom: 10px;
     }
   }
@@ -62,7 +62,6 @@
 
     @include r(768) {
       margin: 0 0 10px;
-      font-size: 14px;
       line-height: 1.6;
     }
   }
@@ -89,9 +88,7 @@
 
     @include r(768) {
       padding: 6px;
-      margin-left: 0;
-      margin-top: 10px;
-      margin-left: 0px;
+      margin: 10px 0 0 55px;
     }
   }
 
@@ -112,14 +109,6 @@
     }
 
     @include r(768) {
-      position: absolute;
-      left: 220px;
-      bottom: 0;
-      max-width: 170px;
-      line-height: 1.6;
-    }
-
-    @include r(480) {
       display: none;
     }
 
@@ -428,7 +417,6 @@
 
   @include r(768) {
     margin-left: 40px;
-    display: block;
   }
 
   &__field {
@@ -518,7 +506,7 @@
     right: -49px;
 
     @include r(768) {
-      left: 49px;
+      left: 46px;
     }
   }
 

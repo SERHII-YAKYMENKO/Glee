@@ -19,17 +19,17 @@
         </a>
         <ul class="menu__list">
           <li class="menu__item">
-            <button class="menu__link" href="#">Home +</button>
+            <button class="menu__link" href="index.html">Home +</button>
             <div class="menu__dropdown">
-              <a href="#">About US</a>
-              <a href="#">Blog</a>
-              <a href="#">Blog Details</a>
-              <a href="#">Product list 1</a>
-              <a href="#">Product list 2</a>
-              <a href="#">Product details</a>
-              <a href="#">Terms & Conditions</a>
-              <a href="#">Login</a>
-              <a href="#">Contact</a>
+              <a href="about page.html">About US</a>
+              <a href="blog-page.html">Blog</a>
+              <a href="blog-details.html">Blog Details</a>
+              <a href="product list1.html">Product list 1</a>
+              <a href="product list2.html">Product list 2</a>
+              <a href="product details.html">Product details</a>
+              <a href="Terms & Conditions.html">Terms & Conditions</a>
+              <a href="login.html">Login</a>
+              <a href="contact.html">Contact</a>
             </div>
           </li>
           <li class="menu__item">
@@ -50,7 +50,7 @@
             <a class="menu__link" href="#">News</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">Contact</a>
+            <a class="menu__link" href="contact.html">Contact</a>
           </li>
         </ul>
         <div class="toolbar">
@@ -80,24 +80,26 @@
       </h2>
       <ul class="breadcrumbs__list">
         <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="#">
+          <a class="breadcrumbs__link" href="index.html">
             Home
           </a>
         </li>
         <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="#">
+          <a class="breadcrumbs__link" href="blog-page.htm">
             Blog
           </a>
         </li>
         <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="#">
+          <a class="breadcrumbs__link" href="blog-details.html">
             Blog Details
           </a>
         </li>
       </ul>
     </article>
-    <section class="blog-page blog-page--details">
+    <section class="blog-page blog-page--details" id="fixedAside">
       <div class="container">
+        <div class="anchor"></div>
+        <button class="blog-page__aside-btn"></button>
         <div class="blog-page__inner">
           <div class="blog-page__content">
             <div class="blog-page__item">
@@ -286,126 +288,123 @@
               </form>
             </div>
           </div>
-          <div class="blog-page__aside">
-            <!-- <input type="checkbox" id="nav-toggle" hidden> -->
-            <!-- <div class="blog-page__aside-box"> -->
-              <article class="search">
-                <form class="search__form" action="#">
-                  <input class="search__input" type="text">
-                  <button class="search__btn" type="submit"></button>
-                </form>
-              </article>
-              <div class="category category--box">
-                <p class="filter-title">
-                  Category
-                </p>
-                <form class="category__form" action="#">
-                  <label class="category__label">
-                    <input class="category__input" type="checkbox" checked>
-                    <div class="category__checkbox">
-                      <span>Chair</span>
-                    </div>
-                  </label>
-                  <label class="category__label">
-                    <input class="category__input" type="checkbox">
-                    <div class="category__checkbox">
-                      <span>Table</span>
-                    </div>
-                  </label>
-                  <label class="category__label">
-                    <input class="category__input" type="checkbox">
-                    <div class="category__checkbox">
-                      <span>Lamp</span>
-                    </div>
-                  </label>
-                  <label class="category__label">
-                    <input class="category__input" type="checkbox">
-                    <div class="category__checkbox">
-                      <span>Watch</span>
-                    </div>
-                  </label>
-                  <label class="category__label">
-                    <input class="category__input" type="checkbox">
-                    <div class="category__checkbox">
-                      <span>Clock</span>
-                    </div>
-                  </label>
-                </form>
-              </div>
-              <div class="recent recent--recent-post">
-                <p class="filter-title filter-title--resent-post">
-                  Recent Posts
-                </p>
-                <div class="recent__item">
-                  <a class="recent__link-box recent__link-box--resent-post" href="#">
-                    <img class="recent__img" src="images/blog/blog-page3.jpg" alt="#">
-                  </a>
-                  <div class="recent__content">
-                    <a class="recent__link-content" href="#">
-                      <sapn class="recent__text recent__text--recent-post">
-                        Corem ipsum dolor tetur adipisicing elit
-                      </sapn>
-                    </a>
-                    <article class="signature signature--resent-post">
-                      <time class="signature__time signature__time--recent-post" datetime="2020-01-28">
-                        28 january, 2020
-                      </time>
-                    </article>
+          <div class="blog-page__aside blog__aside">
+            <article class="search">
+              <form class="search__form" action="#">
+                <input class="search__input" type="text">
+                <button class="search__btn" type="submit"></button>
+              </form>
+            </article>
+            <div class="category category--box">
+              <p class="filter-title">
+                Category
+              </p>
+              <form class="category__form" action="#">
+                <label class="category__label">
+                  <input class="category__input" type="checkbox" checked>
+                  <div class="category__checkbox">
+                    <span>Chair</span>
                   </div>
-                </div>
-                <div class="recent__item">
-                  <a class="recent__link-box recent__link-box--resent-post" href="#">
-                    <img class="recent__img" src="images/blog/blog-page2.jpg" alt="#">
-                  </a>
-                  <div class="recent__content">
-                    <a class="recent__link-content" href="#">
-                      <sapn class="recent__text recent__text--recent-post">
-                        Fdipisicing elit, sed do eiusmod tempor
-                      </sapn>
-                    </a>
-                    <article class="signature signature--resent-post">
-                      <time class="signature__time signature__time--recent-post" datetime="2020-01-28">
-                        28 january, 2020
-                      </time>
-                    </article>
+                </label>
+                <label class="category__label">
+                  <input class="category__input" type="checkbox">
+                  <div class="category__checkbox">
+                    <span>Table</span>
                   </div>
-                </div>
-                <div class="recent__item">
-                  <a class="recent__link-box recent__link-box--resent-post" href="#">
-                    <img class="recent__img" src="images/blog/blog-page1.jpg" alt="#">
-                  </a>
-                  <div class="recent__content">
-                    <a class="recent__link-content" href="#">
-                      <sapn class="recent__text">
-                        Eonsectetur adipisicing elit, sed do eiusmod it
-                      </sapn>
-                    </a>
-                    <article class="signature signature--resent-post">
-                      <time class="signature__time signature__time--recent-post" datetime="2020-01-28">
-                        28 january, 2020
-                      </time>
-                    </article>
+                </label>
+                <label class="category__label">
+                  <input class="category__input" type="checkbox">
+                  <div class="category__checkbox">
+                    <span>Lamp</span>
                   </div>
-                </div>
-                <div class="recent__item">
-                  <a class="recent__link-box recent__link-box--resent-post" href="#">
-                    <img class="recent__img" src="images/blog-item2.jpg" alt="#">
-                  </a>
-                  <div class="recent__content">
-                    <a class="recent__link-content" href="#">
-                      <sapn class="recent__text">
-                        gnim ad minim veniam, quis nostrud
-                      </sapn>
-                    </a>
-                    <article class="signature signature--resent-post">
-                      <time class="signature__time signature__time--recent-post" datetime="2020-01-28">
-                        28 january, 2020
-                      </time>
-                    </article>
+                </label>
+                <label class="category__label">
+                  <input class="category__input" type="checkbox">
+                  <div class="category__checkbox">
+                    <span>Watch</span>
                   </div>
+                </label>
+                <label class="category__label">
+                  <input class="category__input" type="checkbox">
+                  <div class="category__checkbox">
+                    <span>Clock</span>
+                  </div>
+                </label>
+              </form>
+            </div>
+            <div class="recent recent--recent-post">
+              <p class="filter-title filter-title--resent-post">
+                Recent Posts
+              </p>
+              <div class="recent__item">
+                <a class="recent__link-box recent__link-box--resent-post" href="#">
+                  <img class="recent__img" src="images/blog/blog-page3.jpg" alt="#">
+                </a>
+                <div class="recent__content">
+                  <a class="recent__link-content" href="#">
+                    <sapn class="recent__text recent__text--recent-post">
+                      Corem ipsum dolor tetur adipisicing elit
+                    </sapn>
+                  </a>
+                  <article class="signature signature--resent-post">
+                    <time class="signature__time signature__time--recent-post" datetime="2020-01-28">
+                      28 january, 2020
+                    </time>
+                  </article>
                 </div>
               </div>
-            <!-- </div> -->
+              <div class="recent__item">
+                <a class="recent__link-box recent__link-box--resent-post" href="#">
+                  <img class="recent__img" src="images/blog/blog-page2.jpg" alt="#">
+                </a>
+                <div class="recent__content">
+                  <a class="recent__link-content" href="#">
+                    <sapn class="recent__text recent__text--recent-post">
+                      Fdipisicing elit, sed do eiusmod tempor
+                    </sapn>
+                  </a>
+                  <article class="signature signature--resent-post">
+                    <time class="signature__time signature__time--recent-post" datetime="2020-01-28">
+                      28 january, 2020
+                    </time>
+                  </article>
+                </div>
+              </div>
+              <div class="recent__item">
+                <a class="recent__link-box recent__link-box--resent-post" href="#">
+                  <img class="recent__img" src="images/blog/blog-page1.jpg" alt="#">
+                </a>
+                <div class="recent__content">
+                  <a class="recent__link-content" href="#">
+                    <sapn class="recent__text">
+                      Eonsectetur adipisicing elit, sed do eiusmod it
+                    </sapn>
+                  </a>
+                  <article class="signature signature--resent-post">
+                    <time class="signature__time signature__time--recent-post" datetime="2020-01-28">
+                      28 january, 2020
+                    </time>
+                  </article>
+                </div>
+              </div>
+              <div class="recent__item">
+                <a class="recent__link-box recent__link-box--resent-post" href="#">
+                  <img class="recent__img" src="images/blog-item2.jpg" alt="#">
+                </a>
+                <div class="recent__content">
+                  <a class="recent__link-content" href="#">
+                    <sapn class="recent__text">
+                      gnim ad minim veniam, quis nostrud
+                    </sapn>
+                  </a>
+                  <article class="signature signature--resent-post">
+                    <time class="signature__time signature__time--recent-post" datetime="2020-01-28">
+                      28 january, 2020
+                    </time>
+                  </article>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -467,7 +466,7 @@
           </div>
           <ul class="footer__list">
             <li class="footer__item">
-              <a class="footer__link" href="#">
+              <a class="footer__link" href="about page.html">
                 About us
               </a>
             </li>
@@ -477,17 +476,17 @@
               </a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">
+              <a class="footer__link" href="blog-page.html">
                 Our Blog
               </a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">
+              <a class="footer__link" href="contact.html">
                 Contact Us
               </a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">
+              <a class="footer__link" href="Terms & Conditions.html">
                 Terms & Condition
               </a>
             </li>
@@ -509,7 +508,7 @@
               </a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">
+              <a class="footer__link" href="login.html">
                 Login
               </a>
             </li>
@@ -537,23 +536,22 @@
           </form>
         </div>
       </div>
-
       <div class="footer__navigation">
         <p class="footer__copyright">
           ©2020 CopyRight Example. All rights reserved.
         </p>
         <ul class="footer__nav">
           <li class="footer__box">
-            <a class="footer__link" href="#">Home</a>
+            <a class="footer__link" href="index.html">Home</a>
           </li>
           <li class="footer__box">
-            <a class="footer__link" href="#">About</a>
+            <a class="footer__link" href="about page.html">About</a>
           </li>
           <li class="footer__box">
-            <a class="footer__link" href="#">Blog</a>
+            <a class="footer__link" href="blog-page.html">Blog</a>
           </li>
           <li class="footer__box">
-            <a class="footer__link" href="#">Contact</a>
+            <a class="footer__link" href="contact.html">Contact</a>
           </li>
         </ul>
       </div>
