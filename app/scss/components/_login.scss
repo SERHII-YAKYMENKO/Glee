@@ -99,6 +99,12 @@
 
   &__recovery {
     float: right;
+
+    @include r(480) {
+      float: none;
+      display: block;
+      margin-top: 15px;
+    }
   }
 
   &__form-create {

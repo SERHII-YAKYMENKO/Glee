@@ -51,6 +51,14 @@
 
     &--line {
       display: block;
+
+      .product__about--line {
+        margin-top: 90px;
+
+        @include r(992) {
+          margin-top: 0;
+        }
+      }
     }
   }
 
@@ -82,7 +90,7 @@
 
         &.fixedAside {
           position: fixed;
-          top: 50px;
+          top: 60px;
           right: 0;
           left: 0;
           z-index: 99;

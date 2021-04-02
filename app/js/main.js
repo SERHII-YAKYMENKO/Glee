@@ -5,8 +5,8 @@ $(function () {
     var doc = $(document),
       fixed = false,
       anchor = node.find('.anchor'),
-      content = node.find('.menu, .menu__list, .toolbar__link'),
-      contentAside = node.find('.blog-page__aside-btn, .blog-page__aside, .shop__filters, .blog__aside .aside--active');
+      content = node.find('.menu, .menu__list, .toolbar__link');
+    contentAside = node.find('.blog-page__aside-btn, .blog-page__aside, .shop__filters, .blog__aside .aside--active');
 
     var onScroll = function (e) {
       var docTop = doc.scrollTop(),
@@ -39,42 +39,6 @@ $(function () {
   $('.filter__btn').on('click', function () {
     $('.filter__btn.active').removeClass('active');
     $(this).addClass('active');
-  });
-
-  // init Isotope***//
-  var $grid = $('.product__content').isotope({
-    itemSelector: '.product__item',
-    layoutMode: 'fitRows',
-  });
-
-  // bind filter button click
-  $('.filters-button-group').on('click', 'button', function () {
-    var filterValue = $(this).attr('data-filter');
-    $grid.isotope({
-      filter: filterValue,
-    });
-  });
-
-  var $grid2 = $('.design__content').isotope({
-    itemSelector: '.design__item',
-    layoutMode: 'fitRows',
-  });
-
-  // bind filter button click
-  $('.filters-button-group2').on('click', 'button', function () {
-    var filterValue2 = $(this).attr('data-filter');
-    $grid2.isotope({
-      filter: filterValue2,
-    });
-  });
-
-  // change is-checked class on buttons
-  $('.filter').each(function (i, buttonGroup) {
-    var $buttonGroup = $(buttonGroup);
-    $buttonGroup.on('click', 'button', function () {
-      $buttonGroup.find('.is-checked').removeClass('is-checked');
-      $(this).addClass('is-checked');
-    });
   });
 
   //styler number
@@ -210,11 +174,6 @@ $(function () {
   });
 
 
-  var $grid = $('.product__content').isotope({
-    itemSelector: '.product__item',
-    layoutMode: 'fitRows'
-  });
-
   document.onkeydown = function (e) {
     if (e.keyCode === 13) {
       document.activeElement.click();
@@ -261,3 +220,15 @@ $(function () {
   });
 
 });
+
+// Filterizr
+// const filterizr = new Filterizr('.filter-container', {
+//   controlsSelector: '.fltr-controls',
+//   gridItemsSelector: '.filtr-item',
+//   spinner: {
+//     enabled: true,
+//   },
+// });
+
+var mixer = mixitup('.product__content');
+var mixer = mixitup('.design__content');

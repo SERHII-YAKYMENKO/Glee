@@ -24,6 +24,20 @@
     max-width: 200px;
     width: 100%;
 
+    @include r(992) {
+      max-width: 160px;
+    }
+
+    @include r(768) {
+      margin-top: 15px;
+      display: block;
+      max-width: 100%;
+    }
+
+    @include r(440) {
+      margin-top: 7px;
+    }
+
     &--connection {
       max-width: 225px;
       width: 100%;
@@ -35,21 +49,10 @@
       @include form;
 
       @include r(992) {
+        display: block;
+        max-width: 100%;
         max-width: 100vw;
       }
-    }
-
-    @include r(992) {
-      max-width: 160px;
-    }
-
-    @include r(768) {
-      max-width: 100vw;
-      margin-top: 15px;
-    }
-
-    @include r(440) {
-      margin-top: 7px;
     }
   }
 
@@ -105,7 +108,6 @@
   &__title {
     margin-bottom: 21px;
     padding-top: 10px;
-    @extend %lineclump;
     @extend %dmsans-700;
     font-size: 16px;
     color: $color-title-footer;
@@ -166,7 +168,6 @@
     }
 
     @include r(480) {
-      flex-wrap: wrap;
       padding: 10px 0 10px;
     }
   }

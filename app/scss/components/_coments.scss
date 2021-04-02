@@ -29,7 +29,6 @@
 
     @include r(768) {
       margin-bottom: 10px;
-      font-size: 20px;
     }
 
     &--form {
@@ -82,8 +81,12 @@
       margin-bottom: 15px;
     }
 
-    @include r(768) img {
-      display: none;
+    @include r(768) {
+      margin-left: 0;
+
+      img {
+        display: none;
+      }
     }
   }
 
@@ -105,6 +108,10 @@
       max-width: 80px;
       max-height: 80px;
     }
+
+    @include r(480) {
+      display: none;
+    }
   }
 
   &__contnet {
@@ -119,11 +126,16 @@
     justify-content: space-between;
     margin-bottom: 15px;
 
+    @include r(1200) {
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
     &--input {
       position: relative;
       margin-bottom: 25px;
 
-      @include r(992) {
+      @include r(1200) {
         margin-bottom: 10px;
       }
     }
@@ -177,6 +189,11 @@
     max-width: 398px;
     width: 100%;
 
+    @include r(1200) {
+      display: block;
+      max-width: 100%;
+    }
+
     &::after {
       position: absolute;
       content: '';
@@ -195,10 +212,6 @@
       }
     }
 
-    &--email::after {
-      background-image: url('../../images/icons/icons-comments/email.svg')
-    }
-
     &--comment {
       max-width: 830px;
 
@@ -208,11 +221,19 @@
     }
 
     &--email {
-      margin-left: 10px;
+      &::after {
+        background-image: url('../../images/icons/icons-comments/email.svg')
+      }
     }
 
     &--massege {
       max-width: 300px;
+
+      @include r(1200) {
+        margin-top: 15px;
+        display: block;
+        max-width: 100%;
+      }
     }
   }
 
@@ -222,10 +243,22 @@
     width: 100%;
     border: 1px solid $color-button;
 
+    @include r(1200) {
+      display: block;
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
+
     &--contact {
       padding: 15px 50px 15px 20px;
       background-color: #fafafa;
       border: none;
+
+      @include r(1200) {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+      }
 
       @include r(768) {
         padding: 15px 35px 15px 10px;

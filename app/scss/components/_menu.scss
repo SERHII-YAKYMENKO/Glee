@@ -34,24 +34,21 @@
     }
   }
 
-  @include r(992) {
-    font-size: 14px;
-  }
-
   &__list {
     display: flex;
 
-    @include r(768) {
+    @include r(992) {
       position: absolute;
       display: block;
-      right: 0;
-      z-index: 100;
-      top: -500%;
+      z-index: 999;
+      top: -1000%;
 
       &.menu__btn--active {
         padding: 15px 50px 15px 50px;
         top: 55px;
-        right: -15px;
+        right: 15px;
+        left: 0;
+        width: 100%;
         background-color: $color-search;
 
         @include r(768) {
@@ -61,12 +58,11 @@
 
         @include r(480) {
           top: 45px;
-          padding: 15px 50px;
+          padding: 15px;
         }
 
         &.fixed {
           top: 60px;
-          right: 0;
 
           @include r(480) {
             top: 50px;
@@ -91,26 +87,30 @@
       }
 
       @include r(992) {
-        margin-right: 12px;
-      }
-
-      @include r(768) {
-        padding-right: 50px;
         margin: 0 0 15px 0;
       }
+    }
+
+    @include r(992) {
+      padding: 10px;
     }
   }
 
   &__dropdown {
     position: absolute;
     display: none;
-    background-color: $color-background;
-    min-width: 150px;
+    padding: 15px;
+    min-width: 300px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    background-color: $color-background;
     z-index: 999;
 
-    @include r(768) {
-      right: 0;
+    @include r(992) {
+      left: 10%;
+    }
+
+    @include r(480) {
+      min-width: 220px;
     }
 
     & a {

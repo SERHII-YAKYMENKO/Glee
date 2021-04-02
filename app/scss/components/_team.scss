@@ -50,8 +50,6 @@
 
   &__text {
     margin-bottom: 45px;
-    @extend %lineclump;
-    -webkit-line-clamp: 20;
     line-height: 1.9;
     color: $color-title-header;
     @extend %rubik-400;
@@ -77,12 +75,6 @@
     line-height: 2;
     color: $color-text-white;
     transition: all 0.5s ease-in-out;
-
-    @include r(768) {
-      padding: 10px 40px 10px 10px;
-      background-position: 90% 50%;
-      font-size: 14px;
-    }
 
     &:hover {
       @include rmin(768) {
@@ -124,6 +116,11 @@
     @include r(768) {
       margin-bottom: 10px;
     }
+
+    @include r(480) {
+      margin-bottom: 90px;
+      overflow: visible;
+    }
   }
 
   &__img {
@@ -150,6 +147,15 @@
     @include r(768) {
       margin-bottom: 10px;
     }
+
+    @include r(480) {
+      display: block;
+      padding-left: 10px;
+      padding-bottom: 10px;
+      max-width: 100%;
+      min-height: 130px;
+      margin-top: 0;
+    }
   }
 
   &__name {
@@ -157,14 +163,14 @@
     padding-top: 25px;
     max-width: 180px;
     width: 100%;
-    @extend %lineclump;
-    -webkit-line-clamp: 1;
     @extend %dmsans-700;
     font-size: 22px;
     line-height: 1;
 
-    @include r(768) {
-      font-size: 18px;
+    @include r(480) {
+      display: block;
+      padding-top: 10px;
+      max-width: 100%;
     }
   }
 
@@ -175,12 +181,22 @@
     @extend %rubik-400;
     line-height: 1.5;
     color: #565872;
+
+    @include r(480) {
+      display: block;
+      max-width: 100%;
+    }
   }
 
   &__connection {
     display: flex;
     margin-top: 35px;
     margin-left: -50px;
+
+    @include r(480) {
+      margin-left: 0;
+      margin-top: 10px;
+    }
   }
 
   &__link {

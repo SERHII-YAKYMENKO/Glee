@@ -24,6 +24,7 @@
       @extend %rubik-400;
 
       @include r(768) {
+        padding: 3px 23px 3px 10px;
         width: 190px;
         border-color: $color-button;
       }

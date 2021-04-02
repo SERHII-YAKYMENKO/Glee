@@ -37,9 +37,13 @@
       padding: 15px 25px 12px 15px;
       transform: translateY(-138%);
     }
+
     @include r(768) {
-      padding: 10px 20px 8px 10px;
-      transform: translateY(-146%);
+      transform: translateY(-138%);
+    }
+
+    @include r(480) {
+      transform: translateY(-126%);
     }
   }
 
@@ -55,6 +59,11 @@
       margin: 0 40px 0 15px;
     }
 
+    @include r(480) {
+      display: block;
+      margin: 0 0 0 15px;
+    }
+
     &::before {
       position: absolute;
       content: '';
@@ -65,6 +74,10 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-image: url('../images/icons/calendar.svg');
+
+      @include r(480) {
+        top: 4px;
+      }
     }
 
     &--blog-time::before {
@@ -80,6 +93,11 @@
   &__autor {
     position: relative;
 
+    @include r(480) {
+      display: block;
+      margin: 0 0 0 15px;
+    }
+
     &::before {
       position: absolute;
       content: '';
@@ -90,6 +108,10 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-image: url('../images/icons/user.svg');
+
+      @include r(480) {
+        top: 4px;
+      }
     }
 
     &--blog-autor::before {

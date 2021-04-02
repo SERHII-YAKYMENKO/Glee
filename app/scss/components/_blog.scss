@@ -194,6 +194,10 @@
       bottom: 145px;
       max-width: 70px;
       line-height: 1.6;
+
+      @include r(480) {
+        bottom: 140px;
+      }
     }
 
     &:hover {

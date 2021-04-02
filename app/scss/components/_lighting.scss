@@ -31,14 +31,12 @@
     }
 
     @include r(768) {
-      margin-top: 0;
-      margin-left: 0;
+      margin: 0 0 10px 0;
       width: 20%;
     }
 
-    @include r(440) {
-      padding-bottom: 10px;
-      width: 30%;
+    @include r(480) {
+      display: none;
     }
   }
 
@@ -66,7 +64,8 @@
 
     @include r(480) {
       padding: 10px 10px 30px 15px;
-      width: 70%;
+      width: 100%;
+      min-height: 190px;
     }
   }
 
@@ -84,10 +83,6 @@
       margin-bottom: 10px;
       font-size: 18px;
     }
-
-    @include r(480) {
-      font-size: 16px;
-    }
   }
 
   &__text {
@@ -95,21 +90,13 @@
     margin-bottom: 50px;
     @extend %rubik-400;
     line-height: 1.8;
-    @extend %lineclump;
-    -webkit-line-clamp: 4;
 
     @include r(992) {
       margin-bottom: 30px;
-      -webkit-line-clamp: 4;
     }
 
     @include r(768) {
       margin-bottom: 20px;
-      -webkit-line-clamp: 5;
-    }
-
-    @include r(480) {
-      font-size: 14px;
     }
   }
 
@@ -133,12 +120,6 @@
 
     @include r(990) {
       padding: 10px 50px 10px 10px;
-      font-size: 14px;
-    }
-
-    @include r(768) {
-      padding: 10px 15px 10px 10px;
-      background-image: none;
     }
 
     &:hover {
