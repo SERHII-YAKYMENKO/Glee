@@ -110,7 +110,7 @@
     width: 100%;
     @extend %rubik-400;
     line-height: 2;
-    color: $color-title-header;
+    color: $title-header;
   }
 
   &__firstletter {
@@ -122,7 +122,7 @@
     margin-bottom: 60px;
     @extend %rubik-400;
     line-height: 1.9;
-    color: $color-title-header;
+    color: $title-header;
 
     @include r(992) {
       margin-bottom: 40px;
@@ -141,7 +141,7 @@
     border-top: 2px solid #e6eaf0;
     @extend %dmsans-700;
     line-height: 1;
-    color: $color-title-header;
+    color: $title-header;
 
     @include r(992) {
       justify-content: center;

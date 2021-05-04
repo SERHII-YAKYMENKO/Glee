@@ -147,7 +147,7 @@
 
   &__date {
     font-size: 14px;
-    color: $color-button;
+    color: $button;
   }
 
   &__text {
@@ -241,7 +241,7 @@
     padding: 14px 45px 14px 18px;
     max-width: 398px;
     width: 100%;
-    border: 1px solid $color-button;
+    border: 1px solid $button;
 
     @include r(1200) {
       display: block;
@@ -280,7 +280,7 @@
     margin-bottom: 25px;
     width: 100%;
     min-height: 180px;
-    border: 1px solid $color-button;
+    border: 1px solid $button;
     resize: none;
 
     @include r(1200) {
@@ -316,8 +316,8 @@
     font-size: 14px;
     line-height: 1.5;
     text-transform: uppercase;
-    color: $color-text-white;
-    background-color: $color-button;
+    color: $text-white;
+    background-color: $button;
     transition: all 0.3s;
 
     @include r(768) {
@@ -330,8 +330,8 @@
 
     &:hover {
       @include rmin(768) {
-        box-shadow: 0 0 10px 4px $color-button;
-        color: $color-accent;
+        box-shadow: 0 0 10px 4px $button;
+        color: $accent;
       }
     }
   }

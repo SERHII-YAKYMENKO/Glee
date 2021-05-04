@@ -17,7 +17,7 @@
     display: flex;
     justify-content: space-around;
     padding: 41px 0;
-    background-color: $color-form-bg;
+    background-color: $form-bg;
 
     @include r(1200) {
       padding: 25px 0;
@@ -45,7 +45,7 @@
     @extend %dmsans-700;
     font-size: 18px;
     line-height: 1.8;
-    color: $color-title-cards;
+    color: $title-cards;
 
     @include r(992) {
       padding-left: 60px;
@@ -85,7 +85,7 @@
       content: '';
       min-height: 170px;
       transform: translate(19vw, -25%);
-      border-left: 1px solid $color-line-cards;
+      border-left: 1px solid $line-cards;
 
       @include r(1200) {
         display: none;
@@ -94,15 +94,12 @@
   }
 
   &__text {
-    @extend %lineclump;
-    -webkit-line-clamp: 4;
     @extend %dmsans-400;
     font-size: 16px;
-    color: $color-text-cards;
+    color: $text-cards;
 
     @include r(992) {
       font-size: 14px;
-      -webkit-line-clamp: 5;
     }
   }
 

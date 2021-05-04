@@ -54,7 +54,7 @@
     max-width: 470px;
     width: 100%;
     min-height: 60px;
-    background-color: $color-background;
+    background-color: $background;
     border: 2px solid #f6f6f6;
 
     @include r(480) {
@@ -69,8 +69,8 @@
     width: 100%;
     @extend %rubik-500;
     font-size: 18px;
-    color: $color-text-white;
-    background-color: $color-button;
+    color: $text-white;
+    background-color: $button;
 
     @include r(992) {
       margin: 30px 0 30px;
@@ -131,11 +131,11 @@
     margin: 20px 0 30px;
     padding: 20px 0 18px;
     width: 100%;
-    border: 2px solid $color-button;
+    border: 2px solid $button;
     @extend %rubik-500;
     font-size: 18px;
-    color: $color-title-header;
-    background-color: $color-background;
+    color: $title-header;
+    background-color: $background;
 
     @include r(992) {
       margin: 20px 0 20px;

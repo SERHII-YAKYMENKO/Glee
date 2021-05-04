@@ -22,7 +22,7 @@
     text-align: start;
     @extend %rubik-500;
     font-size: 24px;
-    color: $color-title-header;
+    color: $title-header;
 
     @include r(992) {
       margin-bottom: 15px;
@@ -108,7 +108,7 @@
     @extend %rubik-400;
     font-size: 16px;
     line-height: 1.875;
-    color: $color-title-header;
+    color: $title-header;
 
     @include r(992) {
       line-height: 1.6;

@@ -27,7 +27,7 @@
     border: none;
     @extend %rubik-400;
     line-height: 1.45;
-    color: $color-title-header;
+    color: $title-header;
     transition: all 0.5s;
     cursor: pointer;
 
@@ -52,10 +52,10 @@
     @extend %checkbox-hidden;
 
     &:checked+.category__checkbox {
-      background-color: $color-search;
+      background-color: $search;
 
       @include r(768) {
-        background-color: $color-button;
+        background-color: $button;
       }
     }
   }

@@ -32,7 +32,7 @@
     background-position: 100% 50%;
     background-repeat: no-repeat;
     @extend %dmsans-700;
-    color: $color-view;
+    color: $view;
     background-image: url('../../images/icons/arrows-blog-right.svg');
 
     @include r(992) {
@@ -69,8 +69,8 @@
     width: 100%;
     height: auto;
     border-radius: 5px;
-    box-shadow: 0px 6px 25px $color-box-shadow;
-    background-color: $color-background;
+    box-shadow: 0px 6px 25px $box-shadow;
+    background-color: $background;
 
     &--blog-page {
       max-width: 270px;
@@ -104,7 +104,7 @@
 
     @include rmin(768) {
       &:hover {
-        box-shadow: inset 0 0 0 1px $color-button;
+        box-shadow: inset 0 0 0 1px $button;
       }
     }
   }
@@ -160,9 +160,7 @@
     width: 100%;
     min-height: 140px;
     font-size: 18px;
-    color: $color-view;
-    @extend %lineclump;
-    -webkit-line-clamp: 5;
+    color: $view;
 
     @include r(992) {
       font-size: 16px;
@@ -185,8 +183,8 @@
     font-size: 14px;
     line-height: 2;
     text-transform: uppercase;
-    color: $color-text-white;
-    background-color: $color-button;
+    color: $text-white;
+    background-color: $button;
     transition: color 0.3s;
     z-index: 999;
 
@@ -202,7 +200,7 @@
 
     &:hover {
       @include rmin(768) {
-        color: $color-primary
+        color: $primary
       }
     }
   }
@@ -213,7 +211,7 @@
 
     @include rmin(768) {
       &:hover {
-        color: $color-primary;
+        color: $primary;
       }
     }
   }

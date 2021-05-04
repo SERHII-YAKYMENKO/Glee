@@ -44,7 +44,6 @@ $(function () {
   //styler number
   $('.details__number').styler();
 
-
   $(".star-details").rateYo({
     starWidth: "18px",
     spacing: "13px",

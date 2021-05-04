@@ -1,11 +1,11 @@
 .signature {
   padding: 17px 3px 18px;
-  border-top: 1px solid $color-signature-border;
+  border-top: 1px solid $signature-border;
   @extend %rubik-400;
   font-size: 12px;
   line-height: 2;
   text-transform: uppercase;
-  color: $color-date;
+  color: $date;
 
   &--resent-post {
     border: none;
@@ -30,8 +30,8 @@
     left: 0;
     transform: translateY(-157%);
     padding: 22px 32px 22px 20px;
-    color: $color-text-white;
-    background-color: $color-button;
+    color: $text-white;
+    background-color: $button;
 
     @include r(992) {
       padding: 15px 25px 12px 15px;
@@ -86,7 +86,7 @@
 
     &--recent-post {
       margin: 0 0 0 15px;
-      color: $color-button;
+      color: $button;
     }
   }
 
@@ -124,7 +124,7 @@
 
     @include rmin(768) {
       &:hover {
-        color: $color-primary;
+        color: $primary;
       }
     }
   }

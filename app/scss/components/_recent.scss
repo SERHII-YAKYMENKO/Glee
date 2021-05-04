@@ -29,7 +29,7 @@
 
     @include r(768) {
       margin-right: 15px;
-      border-color: $color-button;
+      border-color: $button;
     }
 
     &--resent-post {
@@ -67,7 +67,7 @@
 
     @include rmin(768) {
       &:hover {
-        color: $color-button;
+        color: $button;
       }
     }
   }

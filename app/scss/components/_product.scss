@@ -10,41 +10,52 @@
   }
 
   &__content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-row-gap: 40px;
-    grid-column-gap: 30px;
-    margin-bottom: 180px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -15px 180px;
 
     @include r(1200) {
-      margin-bottom: 100px;
-      grid-row-gap: 30px;
-      grid-column-gap: 20px;
+      margin: 0 -15px 100px;
     }
 
     @include r(992) {
-      grid-template-columns: repeat(3, 1fr);
-      margin-bottom: 80px;
+      margin: 0 -15px 60px;
+      justify-content: flex-start;
     }
 
     @include r(768) {
-      grid-template-columns: repeat(1, 1fr);
-      grid-row-gap: 20px;
-      margin-bottom: 20px;
+      margin: 0 0 40px;
+    }
+
+    @include r(480) {
+      margin: 0 0 20px;
     }
 
     &--item {
       position: relative;
       padding: 20px 10px 35px;
-      max-width: 260px;
+      margin: 0 15px 40px;
+      max-width: calc(25% - 30px);
       width: 100%;
       min-height: 375px;
       border-radius: 10px;
       text-align: center;
-      box-shadow: 0px 6px 25px $color-box-shadow;
-      background-color: $color-background;
+      box-shadow: 0px 6px 25px $box-shadow;
+      background-color: $background;
+
+      @include r(1200) {
+        margin: 0 10px 30px;
+        max-width: calc(25% - 30px);
+      }
+
+      @include r(992) {
+        margin: 0 10px 30px;
+        max-width: calc(33.3333% - 20px);
+      }
 
       @include r(768) {
+        margin: 0 10px 20px;
         max-width: 100%;
       }
     }
@@ -55,8 +66,8 @@
     padding: 20px 10px 35px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0px 6px 25px $color-box-shadow;
-    background-color: $color-background;
+    box-shadow: 0px 6px 25px $box-shadow;
+    background-color: $background;
 
     &--line {
       float: none;
@@ -64,10 +75,14 @@
       padding: 0;
       border-radius: 0px;
       box-shadow: none;
-    
+
       .jq-ry-container {
         padding: 0;
         margin: 30px 0px 30px -7px;
+      }
+
+      @include r(480) {
+        display: block;
       }
 
       &:not(:last-child) {
@@ -80,12 +95,7 @@
         @include r(992) {
           margin-bottom: 20px;
         }
-
-        @include r(768) {
-          margin-bottom: 10px;
-        }
       }
-
     }
   }
 
@@ -120,6 +130,13 @@
         margin-right: 15px;
         max-width: 250px;
         min-height: 300px;
+      }
+
+      @include r(480) {
+        padding: 10px;
+        margin-bottom: 10px;
+        max-width: 140px;
+        min-height: 100px;
       }
     }
   }
@@ -158,6 +175,12 @@
         max-width: 250px;
         min-height: 300px;
       }
+
+      @include r(480) {
+        padding: 5px;
+        max-width: 130px;
+        min-height: 100px;
+      }
     }
 
     &--slider {
@@ -191,6 +214,12 @@
         right: 15%;
         top: 90%
       }
+
+      @include r(480) {
+        padding-left: 0;
+        right: 0;
+        top: 10%
+      }
     }
   }
 
@@ -204,14 +233,14 @@
     @extend %rubik-400;
     font-size: 15px;
     line-height: 2;
-    color: $color-text-white;
-    background-color: $color-button;
+    color: $text-white;
+    background-color: $button;
     z-index: 999;
 
     @include r(480) {
       padding: 5px;
       margin-left: -45px;
-      min-width: 180px;
+      min-width: 130px;
     }
   }
 
@@ -223,8 +252,8 @@
     width: 45px;
     height: 45px;
     border-radius: 23px;
-    background-color: $color-background;
-    box-shadow: 0 0 10px 4px $color-button;
+    background-color: $background;
+    box-shadow: 0 0 10px 4px $button;
     z-index: 50;
 
     &--line {
@@ -233,7 +262,7 @@
       box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
 
       &.product__link--cart {
-        background-color: $color-button;
+        background-color: $button;
         background-image: url('../images/icons/icons-white/cart.svg');
 
         &:hover~.product__link--likes {
@@ -268,7 +297,7 @@
       opacity: 1;
 
       @include rmin(768) {
-        background-color: $color-button;
+        background-color: $button;
 
         &.product__link--search {
           background-image: url('../images/icons/icons-white/search.svg');
@@ -305,6 +334,10 @@
       .product__text {
         margin-top: 15px;
         max-width: 532px;
+
+        @include r(480) {
+          margin-top: 0;
+        }
       }
 
       @include r(992) {
@@ -321,7 +354,7 @@
     margin-bottom: 5px;
     @extend %dmsans-500;
     line-height: 2;
-    color: $color-title-header;
+    color: $title-header;
 
     &--line {
       margin-bottom: 15px;
@@ -338,12 +371,16 @@
       @include r(992) {
         font-size: 26px;
       }
+
+      @include r(480) {
+        margin-bottom: 10px;
+      }
     }
   }
 
   &__price {
     @extend %dmsans-700;
-    color: $color-button;
+    color: $button;
 
     &--line {
       @extend %rubik-400;

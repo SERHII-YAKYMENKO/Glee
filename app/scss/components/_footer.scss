@@ -4,10 +4,10 @@
     display: flex;
     justify-content: space-between;
     padding: 90px 0 57px;
-    border-bottom: 1px solid $color-footer-line;
+    border-bottom: 1px solid $footer-line;
     @extend %rubik-400;
     font-size: 14px;
-    color: $color-text-footer;
+    color: $text-footer;
 
     @include r(992) {
       padding: 50px 0 27px;
@@ -64,8 +64,6 @@
   &__address {
     display: block;
     margin-bottom: 17px;
-    @extend %lineclump;
-    -webkit-line-clamp: 3;
 
     @include r(768) {
       margin-bottom: 7px;
@@ -75,8 +73,6 @@
   &__phone {
     display: block;
     margin-bottom: 17px;
-    @extend %lineclump;
-    -webkit-line-clamp: 1;
     transition: color 0.5s ease-in-out;
 
     @include r(768) {
@@ -85,13 +81,12 @@
 
     @include rmin(768) {
       &:hover {
-        color: $color-accent
+        color: $accent
       }
     }
   }
 
   &__email {
-    @extend %lineclump;
     transition: color 0.5s ease-in-out;
 
     @include r(768) {
@@ -100,17 +95,17 @@
 
     @include rmin(768) {
       &:hover {
-        color: $color-accent
+        color: $accent
       }
     }
   }
 
   &__title {
-    margin-bottom: 21px;
     padding-top: 10px;
+    margin-bottom: 21px;
     @extend %dmsans-700;
     font-size: 16px;
-    color: $color-title-footer;
+    color: $title-footer;
     text-transform: uppercase;
 
     @include r(768) {
@@ -128,7 +123,7 @@
 
     @include rmin(768) {
       &:hover {
-        color: $color-accent
+        color: $accent
       }
     }
   }
@@ -160,7 +155,7 @@
     padding: 35px 0;
     @extend %rubik-400;
     font-size: 14px;
-    color: $color-text-footer;
+    color: $text-footer;
 
     @include r(768) {
       flex-wrap: wrap;

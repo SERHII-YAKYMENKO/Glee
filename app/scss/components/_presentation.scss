@@ -23,7 +23,6 @@
     z-index: 100;
     background-image: url('../images/icons/play.svg');
     animation: radial-pulse 1s infinite;
-    z-index: 0;
 
     @include r(992) {
       width: 68px;

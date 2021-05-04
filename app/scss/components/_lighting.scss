@@ -4,7 +4,7 @@
   justify-content: space-around;
   max-width: 870px;
   width: 100%;
-  background-color: $color-cards-product;
+  background-color: $cards-product;
 
   &:not(:last-child) {
     margin-right: 30px;
@@ -73,7 +73,6 @@
     margin: auto 0 15px;
     @extend %dmsans-700;
     font-size: 26px;
-    @extend %lineclump;
 
     @include r(1200) {
       font-size: 20px;
@@ -106,12 +105,12 @@
     margin-bottom: auto;
     @extend %btn;
     border-radius: 5px;
-    border: 1px solid $color-primary;
+    border: 1px solid $primary;
     background-position: 85% 50%;
     background-repeat: no-repeat;
     background-image: url('../images/icons/arrows-gray-right.svg');
     background-color: rgba(36, 63, 77, 0);
-    color: $color-primary;
+    color: $primary;
     transition: all 0.3s ease-in-out;
 
     @include r(1200) {
@@ -123,16 +122,16 @@
     }
 
     &:hover {
-      box-shadow: 0 0 5px 2px $color-button;
-      background-color: $color-button;
-      border-color: $color-button;
-      color: $color-accent;
+      box-shadow: 0 0 5px 2px $button;
+      background-color: $button;
+      border-color: $button;
+      color: $accent;
 
       @include r(768) {
         box-shadow: none;
         background-color: transparent;
-        border-color: $color-primary;
-        color: $color-primary;
+        border-color: $primary;
+        color: $primary;
       }
     }
   }

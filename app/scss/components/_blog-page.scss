@@ -104,7 +104,7 @@
     margin-bottom: 50px;
     @extend %rubik-400;
     line-height: 1.875;
-    color: $color-title-header;
+    color: $title-header;
 
     @include r(1200) {
       margin-bottom: 40px;
@@ -121,15 +121,15 @@
 
   &__link {
     padding-right: 85px;
-    background-position: 85% 50%;
-    background-repeat: no-repeat;
-    border: 1px solid $color-button;
+    border: 1px solid $button;
     width: 22px;
     height: 9px;
-    background-image: url('../../images/icons/arrows-gray-right.svg');
-    background-color: $color-background;
     @extend %btn;
-    color: $color-button;
+    color: $button;
+    background-position: 85% 50%;
+    background-repeat: no-repeat;
+    background-image: url('../../images/icons/arrows-gray-right.svg');
+    background-color: $background;
 
     @include r(1200) {
       padding: 15px 60px 15px 15px;
@@ -157,7 +157,7 @@
       background-size: auto cover;
       background-position: center center;
       background-image: url('../images/icons/arrows-blog-right.svg');
-      background-color: $color-button;
+      background-color: $button;
       z-index: 99;
 
       &.fixedAside {
@@ -186,7 +186,7 @@
         position: absolute;
         top: 60px;
         left: 0;
-        background-color: $color-search;
+        background-color: $search;
         padding: 10px;
         z-index: 999;
 
@@ -215,15 +215,15 @@
     @include rmin(768) {
       &:hover {
         border-radius: 5px;
-        background-color: $color-button;
-        color: $color-text-white;
+        background-color: $button;
+        color: $text-white;
       }
     }
   }
 
   &__text-box {
     line-height: 1.875;
-    color: $color-title-header;
+    color: $title-header;
 
     @include r(440) {
       line-height: 1.6;
@@ -265,11 +265,11 @@
     blockquote {
       margin-bottom: 48px;
       padding: 13px 85px 0 30px;
-      border-left: 7px solid $color-button;
+      border-left: 7px solid $button;
       @extend %rubik-400;
       line-height: 1.875;
-      color: $color-title-header;
-      background-color: $color-search;
+      color: $title-header;
+      background-color: $search;
 
       @include r(992) {
         margin-bottom: 30px;
@@ -279,7 +279,7 @@
       @include r(768) {
         margin-bottom: 20px;
         padding: 10px 30px 0;
-        border-left: 4px solid $color-button;
+        border-left: 4px solid $button;
       }
 
       @include r(480) {
@@ -290,7 +290,7 @@
         position: relative;
         display: block;
         padding: 7px 0px 15px 47px;
-        color: $color-title-header;
+        color: $title-header;
 
         &::before {
           position: absolute;
@@ -299,7 +299,7 @@
           height: 4px;
           top: 21px;
           left: 5px;
-          background-color: $color-button;
+          background-color: $button;
         }
       }
     }
@@ -351,8 +351,8 @@
     display: flex;
     padding: 25px 0;
     margin-top: 20px;
-    border-top: 2px solid $color-search;
-    border-bottom: 2px solid $color-search;
+    border-top: 2px solid $search;
+    border-bottom: 2px solid $search;
 
     @include r(992) {
       padding: 15px 0;
@@ -370,7 +370,7 @@
     padding: 3px 0 0;
     @extend %rubik-500;
     font-size: 18px;
-    color: $color-title-header;
+    color: $title-header;
 
     @include r(992) {
       padding: 0;
@@ -386,7 +386,7 @@
       @extend %rubik-400;
       font-size: 16px;
       line-height: 1.8;
-      color: $color-primary;
+      color: $primary;
 
       @include r(992) {
         font-size: 14px;

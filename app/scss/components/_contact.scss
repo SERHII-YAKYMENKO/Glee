@@ -18,7 +18,7 @@
 
   &__help {
     @extend %poppins-700;
-    color: $color-button;
+    color: $button;
 
     @include r(480) {
       font-size: 14px;
@@ -97,7 +97,7 @@
       border-radius: 20px;
       transform: translateY(-50%);
       box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
-      background-color: $color-background;
+      background-color: $background;
       transition: all 0.3s;
 
       @include r(480) {
@@ -115,10 +115,10 @@
 
     @include rmin(768) {
       &:hover {
-        border-color: $color-button;
+        border-color: $button;
 
         &::before {
-          background-color: $color-button;
+          background-color: $button;
         }
 
         &.contact__item::after {

@@ -1,45 +1,38 @@
-$color-background: #fff;
-$color-accent: #191919;
-$color-primary: #436372;
+$background: #fff;
+$accent: #191919;
+$primary: #436372;
 
-$color-title-header: #243f4d;
-$color-title-menu: #8b8b8b;
-$color-title-cards: #414141;
-$color-title-design: #1a1a1a;
-$color-title-footer: #1f2044;
+$title-header: #243f4d;
+$title-menu: #8b8b8b;
+$title-cards: #414141;
+$title-design: #1a1a1a;
+$title-footer: #1f2044;
 
-$color-text-cards: #585858;
-$color-text-footer: #7b7b7b;
-$color-text-white: #fff;
+$text-cards: #585858;
+$text-footer: #7b7b7b;
+$text-white: #fff;
 
-$color-button: #a3bbc8;
-$color-banner: #fcd7b6;
-$color-dots-def: #fde3cc;
-$color-line-cards: #e8e4df;
-$color-search: #edf1f4;
-$color-form-bg: #fef7f0;
-$color-cards-product: #feefe2;
-$color-design: #f8f8f8;
-$color-view: #262626;
-$color-date: #222933;
-$color-footer-line: #dae4e9;
-$color-placeholder: #234969;
-$color-signature-border: #e0e0e0;
-$color-box-shadow: rgba(37, 37, 37, 0.05);
+$button: #a3bbc8;
+$banner: #fcd7b6;
+$dots-def: #fde3cc;
+$line-cards: #e8e4df;
+$search: #edf1f4;
+$form-bg: #fef7f0;
+$cards-product: #feefe2;
+$design: #f8f8f8;
+$view: #262626;
+$date: #222933;
+$footer-line: #dae4e9;
+$placeholder: #234969;
+$signature-border: #e0e0e0;
+$box-shadow: rgba(37, 37, 37, 0.05);
 
 %btn {
   padding: 20px 50px 20px 20px;
   @extend %rubik-500;
   font-size: 15px;
-  color: $color-text-white;
-  background-color: $color-button;
-}
-
-%lineclump {
-  display: -webkit-box;
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  color: $text-white;
+  background-color: $button;
 }
 
 %statistic-icons {

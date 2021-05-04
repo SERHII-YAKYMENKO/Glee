@@ -2,7 +2,7 @@
 
   &__wrapper {
     position: relative;
-    background-color: $color-banner;
+    background-color: $banner;
     z-index: 10;
 
     &::after {
@@ -14,7 +14,7 @@
       width: 100%;
       height: 634px;
       border-radius: 50%;
-      background-image: linear-gradient(-90deg, $color-text-white 0%, $color-banner);
+      background-image: linear-gradient(-90deg, $text-white 0%, $banner);
       z-index: -1;
 
       @include r(1200) {
@@ -110,7 +110,7 @@
     font-size: 72px;
     line-height: 1;
     text-transform: uppercase;
-    color: $color-title-header;
+    color: $title-header;
 
     @include r(1200) {
       margin-bottom: 20px;
@@ -181,9 +181,9 @@
 
     &:hover {
       @include rmin(768) {
-        box-shadow: 0 0 10px 4px $color-button;
+        box-shadow: 0 0 10px 4px $button;
         background-image: url('../images/icons/arrows-accent-right.svg');
-        color: $color-accent;
+        color: $accent;
       }
     }
   }
@@ -223,8 +223,8 @@
       @extend %rubik-500;
       font-size: 11px;
       line-height: 1;
-      color: $color-title-header;
-      background-color: $color-dots-def;
+      color: $title-header;
+      background-color: $dots-def;
 
       @include r(992) {
         min-width: 20px;
@@ -235,7 +235,7 @@
 
   .slick-active {
     button {
-      background-color: $color-background;
+      background-color: $background;
     }
   }
 }
