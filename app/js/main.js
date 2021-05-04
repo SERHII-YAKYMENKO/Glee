@@ -172,7 +172,6 @@ $(function () {
     }
   });
 
-
   document.onkeydown = function (e) {
     if (e.keyCode === 13) {
       document.activeElement.click();
@@ -217,17 +216,17 @@ $(function () {
     e.preventDefault();
     $(this).toggleClass('hover_effect');
   });
-
 });
 
-// Filterizr
-// const filterizr = new Filterizr('.filter-container', {
-//   controlsSelector: '.fltr-controls',
-//   gridItemsSelector: '.filtr-item',
-//   spinner: {
-//     enabled: true,
-//   },
-// });
+//mixitup
+var containerEl1 = document.querySelector('[data-ref="productMix"]');
+var containerEl2 = document.querySelector('[data-ref="designMix"]');
 
-var mixer = mixitup('.product__content');
-var mixer = mixitup('.design__content');
+var config = {
+  controls: {
+    scope: 'local'
+  }
+};
+
+var mixer1 = mixitup(containerEl1, config);
+var mixer2 = mixitup(containerEl2, config);
